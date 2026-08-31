@@ -1,0 +1,868 @@
+/* =====================================================
+   MY WORK — MAIN SECTION
+===================================================== */
+
+.mywork {
+    width: 100%;
+
+    padding: 120px 6.5% 80px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.mywork-header {
+    width: 100%;
+
+    margin-bottom: 65px;
+}
+
+
+/* SMALL LABEL */
+
+.mywork-label {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 25px;
+
+    color: #777780;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.mywork-label span {
+    width: 40px;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        #b415ff,
+        #df8908
+    );
+}
+
+
+/* =====================================================
+   HEADING + DESCRIPTION
+===================================================== */
+
+.mywork-heading-wrap {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.mywork-heading-wrap h2 {
+    margin: 0;
+
+    max-width: 850px;
+
+    color: #ffffff;
+
+    font-size: clamp(55px, 6vw, 100px);
+
+    line-height: 0.95;
+
+    font-weight: 700;
+
+    letter-spacing: -5px;
+}
+
+.mywork-heading-wrap h2 span {
+    background: linear-gradient(
+        135deg,
+        #b415ff 0%,
+        #d14d9d 45%,
+        #df8908 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.mywork-heading-wrap p {
+    width: 340px;
+
+    margin: 10px 0 0;
+
+    color: #85828d;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   PROJECT GRID
+===================================================== */
+
+.mywork-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 55px 30px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   PROJECT CARD
+===================================================== */
+
+.work-card {
+    min-width: 0;
+
+    border: 1px solid #29272d;
+
+    background: #121112;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.45s ease,
+        box-shadow 0.5s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #4a4050;
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================================
+   PROJECT IMAGE
+===================================================== */
+
+.work-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: #181719;
+}
+
+.work-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+        filter 0.6s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.work-card:hover .work-image img {
+    transform: scale(1.05);
+
+    filter: brightness(0.55);
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
+.work-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(180, 21, 255, 0.15),
+            rgba(223, 137, 8, 0.12)
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.55s ease;
+}
+
+.work-card:hover .work-image-overlay {
+    opacity: 1;
+}
+
+
+/* LIVE BUTTON */
+
+.work-image-overlay button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: none;
+
+    padding: 14px 22px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transform: translateY(15px);
+
+    opacity: 0;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.work-card:hover .work-image-overlay button {
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+.work-image-overlay button span {
+    font-size: 18px;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.work-image-overlay button:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* COMING SOON */
+
+.coming-soon {
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transform: translateY(15px);
+
+    opacity: 0;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.work-card:hover .coming-soon {
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+
+/* =====================================================
+   PROJECT INFO
+===================================================== */
+
+.work-info {
+    display: grid;
+
+    grid-template-columns: 45px 1fr auto;
+
+    align-items: start;
+
+    gap: 15px;
+
+    padding: 25px 25px 28px;
+}
+
+
+/* NUMBER */
+
+.work-number {
+    padding-top: 3px;
+
+    color: #5f5c67;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.work-content {
+    min-width: 0;
+}
+
+.work-content h3 {
+    margin: 0 0 5px;
+
+    color: #eeeeef;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.3px;
+
+    transition:
+        color 0.35s ease,
+        transform 0.4s ease;
+}
+
+.work-content p {
+    margin: 0 0 12px;
+
+    color: #777780;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =====================================================
+   TECH STACK
+===================================================== */
+
+.work-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+.work-tech span {
+    padding: 5px 10px;
+
+    border: 1px solid #2d2c33;
+
+    border-radius: 30px;
+
+    color: #777780;
+
+    font-size: 8px;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.work-links {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 7px;
+}
+
+.work-links button,
+.work-placeholder {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #302f36;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #62616a;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.45s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.work-placeholder {
+    cursor: default;
+}
+
+
+/* =====================================================
+   CARD HOVER
+===================================================== */
+
+.work-card:hover .work-content h3 {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+.work-card:hover .work-tech span {
+    color: #aaa6b0;
+
+    border-color: #403c47;
+}
+
+.work-card:hover .work-links button {
+    color: #ffffff;
+
+    border-color: #b415ff;
+
+    background: linear-gradient(
+        135deg,
+        #b415ff,
+        #df8908
+    );
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.mywork-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 80px;
+}
+
+.mywork-bottom p {
+    margin: 0;
+
+    color: #5f5b65;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+}
+
+.mywork-bottom-line {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.mywork-bottom-line span {
+    display: block;
+
+    width: 25px;
+
+    height: 1px;
+
+    background: #353239;
+}
+
+
+/* =====================================================
+   LIGHT THEME
+===================================================== */
+
+body.light-theme .mywork {
+    background: transparent;
+}
+
+body.light-theme .mywork-heading-wrap h2 {
+    color: #202024;
+}
+
+body.light-theme .mywork-label {
+    color: #77727d;
+}
+
+body.light-theme .work-card {
+    background: #faf9fb;
+
+    border-color: #ded9e2;
+}
+
+body.light-theme .work-card:hover {
+    border-color: #c7bdd0;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .work-content h3 {
+    color: #28262c;
+}
+
+body.light-theme .work-content p {
+    color: #77727d;
+}
+
+body.light-theme .work-number {
+    color: #98919d;
+}
+
+body.light-theme .work-tech span {
+    border-color: #ded9e2;
+
+    color: #77727d;
+
+    background: #ffffff;
+}
+
+body.light-theme .work-links button,
+body.light-theme .work-placeholder {
+    border-color: #d8d2dc;
+
+    color: #89838e;
+}
+
+body.light-theme .work-card:hover .work-content h3 {
+    color: #18171b;
+}
+
+body.light-theme .work-card:hover .work-tech span {
+    color: #625c68;
+
+    border-color: #cfc6d5;
+}
+
+body.light-theme .mywork-heading-wrap p {
+    color: #77727d;
+}
+
+body.light-theme .mywork-bottom p {
+    color: #88818d;
+}
+
+body.light-theme .mywork-bottom-line span {
+    background: #d4ced8;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .mywork {
+        padding: 100px 50px 70px;
+    }
+
+    .mywork-heading-wrap h2 {
+        font-size: 70px;
+
+        letter-spacing: -3px;
+    }
+
+    .mywork-heading-wrap p {
+        width: 280px;
+
+        font-size: 14px;
+    }
+
+    .mywork-grid {
+        gap: 35px 25px;
+    }
+
+    .work-info {
+        padding: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .mywork {
+        padding: 100px 20px 60px;
+    }
+
+
+    /* HEADER */
+
+    .mywork-header {
+        margin-bottom: 45px;
+    }
+
+    .mywork-label {
+        gap: 10px;
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .mywork-label span {
+        width: 28px;
+    }
+
+
+    /* HEADING */
+
+    .mywork-heading-wrap {
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .mywork-heading-wrap h2 {
+        width: 100%;
+
+        font-size: 52px;
+
+        line-height: 0.98;
+
+        letter-spacing: -2.5px;
+    }
+
+    .mywork-heading-wrap p {
+        width: 100%;
+
+        max-width: 400px;
+
+        margin: 0;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* GRID */
+
+    .mywork-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    /* IMAGE */
+
+    .work-image {
+        aspect-ratio: 16 / 10;
+    }
+
+
+    /* INFO */
+
+    .work-info {
+        grid-template-columns: 35px 1fr auto;
+
+        gap: 10px;
+
+        padding: 20px;
+    }
+
+    .work-content h3 {
+        font-size: 16px;
+    }
+
+    .work-content p {
+        font-size: 8px;
+    }
+
+
+    /* TECH */
+
+    .work-tech span {
+        padding: 5px 8px;
+
+        font-size: 7px;
+    }
+
+
+    /* LINKS */
+
+    .work-links button,
+    .work-placeholder {
+        width: 32px;
+        height: 32px;
+
+        font-size: 9px;
+    }
+
+
+    /* BOTTOM */
+
+    .mywork-bottom {
+        gap: 12px;
+
+        margin-top: 55px;
+    }
+
+    .mywork-bottom p {
+        font-size: 7px;
+
+        letter-spacing: 2px;
+
+        text-align: center;
+    }
+
+    .mywork-bottom-line span {
+        width: 15px;
+    }
+
+
+    /* MOBILE HOVER */
+
+    .work-card:hover {
+        transform: none;
+    }
+
+    .work-card:hover .work-image img {
+        transform: none;
+
+        filter: none;
+    }
+
+    .work-card:hover .work-image-overlay {
+        opacity: 0;
+    }
+
+    .work-card:hover .work-content h3 {
+        transform: none;
+    }
+
+    .work-card:hover .work-links button {
+        transform: none;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .mywork {
+        padding: 90px 15px 50px;
+    }
+
+    .mywork-heading-wrap h2 {
+        font-size: 43px;
+
+        letter-spacing: -2px;
+    }
+
+    .work-info {
+        grid-template-columns: 30px 1fr auto;
+
+        padding: 17px;
+    }
+
+    .work-content h3 {
+        font-size: 15px;
+    }
+
+    .work-links button,
+    .work-placeholder {
+        width: 29px;
+        height: 29px;
+    }
+
+    .mywork-bottom {
+        gap: 8px;
+    }
+
+    .mywork-bottom p {
+        font-size: 6px;
+
+        letter-spacing: 1.5px;
+    }
+}

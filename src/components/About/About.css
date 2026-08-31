@@ -1,0 +1,603 @@
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+    position: relative;
+
+    width: min(1200px, calc(100% - 120px));
+
+    margin: 100px auto 70px;
+
+    padding: 30px 0;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.about-header {
+    margin-bottom: 48px;
+}
+
+.about-label {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #777780;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+.about-label span {
+    width: 32px;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        #b415ff,
+        #df8908
+    );
+}
+
+
+.about-header h2 {
+    margin: 0;
+
+    max-width: 720px;
+
+    font-size: clamp(
+        55px,
+        7vw,
+        92px
+    );
+
+    line-height: 0.92;
+
+    letter-spacing: -4px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.about-header h2 span {
+    background: linear-gradient(
+        110deg,
+        #b415ff,
+        #df8908
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns:
+        0.88fr
+        1.12fr;
+
+    gap: 75px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.about-intro {
+    max-width: 500px;
+}
+
+.about-intro p {
+    margin: 0 0 22px;
+
+    color: #92929b;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.about-intro .about-lead {
+    margin-bottom: 24px;
+
+    color: #eeeeef;
+
+    font-size: 22px;
+
+    line-height: 1.55;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   DETAILS
+===================================================== */
+
+.about-details {
+    display: flex;
+
+    flex-direction: column;
+
+    border-top: 1px solid #29282e;
+}
+
+
+.about-detail {
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 20px;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid #29282e;
+
+    transition:
+        padding-left 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.about-detail:hover {
+    padding-left: 8px;
+
+    border-color: #b415ff;
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.detail-number {
+    padding-top: 3px;
+
+    color: #65656d;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   DETAIL CONTENT
+===================================================== */
+
+.detail-content h3 {
+    margin: 0 0 8px;
+
+    color: #eeeeef;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+.detail-content p {
+    max-width: 570px;
+
+    margin: 0;
+
+    color: #85858e;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   TECHNOLOGY TAGS
+===================================================== */
+
+.tech-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 14px;
+}
+
+.tech-list span {
+    padding: 6px 10px;
+
+    border: 1px solid #2e2d34;
+
+    border-radius: 50px;
+
+    color: #a4a3aa;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.7px;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.tech-list span:hover {
+    color: #ffffff;
+
+    border-color: #b415ff;
+
+    background: rgba(
+        180,
+        21,
+        255,
+        0.06
+    );
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.about-bottom {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 50px;
+}
+
+.about-bottom p {
+    margin: 0;
+
+    color: #57575f;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+}
+
+.about-bottom-line {
+    width: 42px;
+    height: 1px;
+
+    background: #35343a;
+}
+
+
+/* =====================================================
+   LIGHT MODE
+===================================================== */
+
+body.light-theme .about {
+    color: #1d1c21;
+}
+
+body.light-theme .about-label {
+    color: #8b8991;
+}
+
+body.light-theme .about-header h2 {
+    color: #1c1b20;
+}
+
+body.light-theme .about-intro .about-lead {
+    color: #27252c;
+}
+
+body.light-theme .about-intro p {
+    color: #69666e;
+}
+
+body.light-theme .about-details {
+    border-color: #e2dfe5;
+}
+
+body.light-theme .about-detail {
+    border-color: #e2dfe5;
+}
+
+body.light-theme .about-detail:hover {
+    border-color: #8b16c9;
+}
+
+body.light-theme .detail-number {
+    color: #9a969f;
+}
+
+body.light-theme .detail-content h3 {
+    color: #29272d;
+}
+
+body.light-theme .detail-content p {
+    color: #747078;
+}
+
+body.light-theme .tech-list span {
+    color: #77737d;
+
+    border-color: #ddd9e0;
+}
+
+body.light-theme .tech-list span:hover {
+    color: #8b16c9;
+
+    border-color: #8b16c9;
+
+    background: rgba(
+        180,
+        21,
+        255,
+        0.04
+    );
+}
+
+body.light-theme .about-bottom-line {
+    background: #ddd9e0;
+}
+
+body.light-theme .about-bottom p {
+    color: #a19da5;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .about {
+        width: min(
+            calc(100% - 80px),
+            850px
+        );
+
+        margin-top: 90px;
+    }
+
+    .about-content {
+        gap: 50px;
+    }
+
+    .about-header {
+        margin-bottom: 42px;
+    }
+
+    .about-header h2 {
+        font-size: clamp(
+            52px,
+            8vw,
+            75px
+        );
+    }
+
+    .about-intro .about-lead {
+        font-size: 20px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .about {
+        width: calc(100% - 40px);
+
+        margin: 75px auto 55px;
+
+        padding: 20px 0;
+    }
+
+
+    /* HEADER */
+
+    .about-header {
+        margin-bottom: 38px;
+    }
+
+    .about-label {
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .about-label span {
+        width: 25px;
+    }
+
+    .about-header h2 {
+        font-size: clamp(
+            48px,
+            15vw,
+            68px
+        );
+
+        letter-spacing: -3px;
+    }
+
+
+    /* CONTENT */
+
+    .about-content {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+
+    /* INTRO */
+
+    .about-intro {
+        max-width: none;
+    }
+
+    .about-intro .about-lead {
+        font-size: 19px;
+
+        line-height: 1.5;
+    }
+
+    .about-intro p {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+
+    /* DETAILS */
+
+    .about-detail {
+        grid-template-columns:
+            40px 1fr;
+
+        gap: 15px;
+
+        padding: 20px 0;
+    }
+
+    .about-detail:hover {
+        padding-left: 5px;
+    }
+
+    .detail-number {
+        font-size: 9px;
+    }
+
+    .detail-content h3 {
+        font-size: 12px;
+
+        letter-spacing: 1.2px;
+    }
+
+    .detail-content p {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+
+    /* TAGS */
+
+    .tech-list {
+        margin-top: 12px;
+
+        gap: 6px;
+    }
+
+    .tech-list span {
+        padding: 6px 9px;
+
+        font-size: 8px;
+    }
+
+
+    /* BOTTOM */
+
+    .about-bottom {
+        margin-top: 40px;
+
+        gap: 10px;
+    }
+
+    .about-bottom-line {
+        width: 25px;
+    }
+
+    .about-bottom p {
+        font-size: 6px;
+
+        letter-spacing: 2.5px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .about {
+        width: calc(100% - 30px);
+    }
+
+    .about-header h2 {
+        font-size: 46px;
+
+        letter-spacing: -2.5px;
+    }
+
+    .about-intro .about-lead {
+        font-size: 18px;
+    }
+
+    .about-detail {
+        grid-template-columns:
+            30px 1fr;
+
+        gap: 12px;
+    }
+
+    .about-bottom p {
+        font-size: 6px;
+
+        letter-spacing: 2px;
+    }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about *,
+    .about *::before,
+    .about *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}

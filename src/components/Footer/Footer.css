@@ -1,0 +1,671 @@
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 100px;
+
+    padding: 70px 6.5% 25px;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(180, 21, 255, 0.055),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(223, 137, 8, 0.045),
+            transparent 35%
+        );
+
+    border-top: 1px solid #29272e;
+}
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+.top {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(320px, 0.7fr);
+
+    gap: 80px;
+
+    align-items: start;
+
+    padding-bottom: 65px;
+}
+
+
+/* =====================================================
+   TOP LEFT
+===================================================== */
+
+.top-left {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+.top-left img {
+    width: 105px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.35s ease;
+}
+
+.top-left img:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.85;
+}
+
+.top-left p {
+    max-width: 430px;
+
+    margin: 0;
+
+    color: #77747e;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   TOP RIGHT
+===================================================== */
+
+.top-right {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   EMAIL INPUT
+===================================================== */
+
+.email_input {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    height: 54px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #302e35;
+
+    background: #171619;
+
+    transition:
+        border-color 0.35s ease,
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.email_input:focus-within {
+    border-color: #b415ff;
+
+    background: #1a181c;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(180, 21, 255, 0.06);
+}
+
+.email_input img {
+    width: 18px;
+    height: 18px;
+
+    object-fit: contain;
+
+    opacity: 0.55;
+}
+
+.email_input input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+}
+
+.email_input input::placeholder {
+    color: #626069;
+}
+
+.email_input input:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.65;
+}
+
+
+/* =====================================================
+   SUBSCRIBE
+===================================================== */
+
+.subscribe {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
+    border: 1px solid transparent;
+
+    background: linear-gradient(
+        135deg,
+        #b415ff,
+        #df8908
+    );
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        filter 0.3s ease;
+}
+
+.subscribe:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px
+        rgba(180, 21, 255, 0.18);
+
+    filter: brightness(1.07);
+}
+
+.subscribe:active {
+    transform: translateY(-1px);
+}
+
+.subscribe.subscribed {
+    background: #252229;
+
+    border-color: #403b46;
+
+    color: #c7c2cd;
+
+    cursor: default;
+
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.footer hr {
+    width: 100%;
+
+    height: 1px;
+
+    margin: 0;
+
+    border: none;
+
+    background: #2b2930;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-top: 25px;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.bottom-left {
+    margin: 0;
+
+    color: #55525c;
+
+    font-size: 9px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   BOTTOM LINKS
+===================================================== */
+
+.bottom-right {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.bottom-right p {
+    position: relative;
+
+    margin: 0;
+
+    color: #68646e;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.bottom-right p::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        #b415ff,
+        #df8908
+    );
+
+    transition:
+        width 0.35s ease;
+}
+
+.bottom-right p:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.bottom-right p:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.bottom-right .back-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #aaa5af;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+.bottom-right .back-top:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   LIGHT THEME
+===================================================== */
+
+body.light-theme .footer {
+    color: #29272e;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(180, 21, 255, 0.035),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(223, 137, 8, 0.03),
+            transparent 35%
+        );
+
+    border-top-color: #e1dde4;
+}
+
+body.light-theme .top-left p {
+    color: #77727d;
+}
+
+body.light-theme .email_input {
+    border-color: #ddd8e1;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 5px 20px
+        rgba(30, 20, 40, 0.035);
+}
+
+body.light-theme .email_input:focus-within {
+    border-color: #b415ff;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(180, 21, 255, 0.07);
+}
+
+body.light-theme .email_input input {
+    color: #29272f;
+}
+
+body.light-theme .email_input input::placeholder {
+    color: #a09ba4;
+}
+
+body.light-theme .email_input img {
+    opacity: 0.6;
+}
+
+body.light-theme .subscribe.subscribed {
+    background: #f2eff4;
+
+    border-color: #ddd8e1;
+
+    color: #706a76;
+}
+
+body.light-theme .footer hr {
+    background: #dfdbe3;
+}
+
+body.light-theme .bottom-left {
+    color: #99939d;
+}
+
+body.light-theme .bottom-right p {
+    color: #77727e;
+}
+
+body.light-theme .bottom-right p:hover {
+    color: #27242b;
+}
+
+body.light-theme .bottom-right .back-top {
+    color: #5f5965;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .footer {
+        padding:
+            60px 50px 22px;
+    }
+
+    .top {
+        gap: 50px;
+    }
+
+    .top-left p {
+        max-width: 350px;
+    }
+
+    .bottom-right {
+        gap: 18px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .footer {
+        margin-top: 70px;
+
+        padding:
+            55px 20px 22px;
+    }
+
+
+    /* TOP */
+
+    .top {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding-bottom: 45px;
+    }
+
+
+    /* LEFT */
+
+    .top-left {
+        gap: 17px;
+    }
+
+    .top-left img {
+        width: 90px;
+    }
+
+    .top-left p {
+        max-width: 420px;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    /* EMAIL */
+
+    .email_input {
+        height: 49px;
+
+        padding: 0 13px;
+    }
+
+    .email_input input {
+        font-size: 12px;
+    }
+
+
+    /* SUBSCRIBE */
+
+    .subscribe {
+        min-height: 45px;
+
+        font-size: 9px;
+    }
+
+
+    /* BOTTOM */
+
+    .bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 22px;
+
+        padding-top: 22px;
+    }
+
+    .bottom-left {
+        font-size: 8px;
+    }
+
+    .bottom-right {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        gap: 16px 20px;
+    }
+
+    .bottom-right p {
+        font-size: 8px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .footer {
+        padding:
+            50px 15px 20px;
+    }
+
+    .top {
+        gap: 35px;
+    }
+
+    .top-left img {
+        width: 80px;
+    }
+
+    .top-left p {
+        font-size: 11px;
+    }
+
+    .email_input {
+        height: 46px;
+    }
+
+    .email_input img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .email_input input {
+        font-size: 11px;
+    }
+
+    .subscribe {
+        min-height: 43px;
+
+        font-size: 8px;
+    }
+
+    .bottom-right {
+        gap: 14px 16px;
+    }
+
+    .bottom-right p {
+        font-size: 7px;
+    }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .footer *,
+    .footer *::before,
+    .footer *::after {
+        animation: none !important;
+
+        transition: none !important;
+    }
+}

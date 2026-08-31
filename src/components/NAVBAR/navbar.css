@@ -1,0 +1,893 @@
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: fixed;
+
+    top: 22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 1000;
+
+    width: min(
+        calc(100% - 70px),
+        1250px
+    );
+
+    min-height: 68px;
+
+    padding: 0 14px 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+
+    border-radius: 100px;
+
+    background: rgba(
+        18,
+        17,
+        19,
+        0.72
+    );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 15px 45px rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+.nav-logo {
+    display: block;
+
+    width: 125px;
+    height: auto;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.nav-logo:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   NAV MENU
+===================================================== */
+
+.navmenu {
+    display: flex;
+    align-items: center;
+
+    gap: 38px;
+
+    margin: 0 auto;
+    padding: 0 20px;
+
+    list-style: none;
+}
+
+.navmenu li {
+    position: relative;
+
+    list-style: none;
+
+    padding: 8px 0;
+}
+
+.navmenu a {
+    position: relative;
+
+    display: block;
+
+    color: #b8b8c0;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.2px;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.navmenu a:hover {
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   ACTIVE LINE
+===================================================== */
+
+.navmenu li::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -2px;
+
+    width: 0;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #b415ff,
+        #df8908
+    );
+
+    box-shadow:
+        0 0 10px rgba(
+            180,
+            21,
+            255,
+            0.45
+        );
+
+    transition:
+        width 0.35s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+.navmenu li:hover::after,
+.navmenu li.active::after {
+    width: 100%;
+}
+
+.navmenu li.active a {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   CONNECT BUTTON
+===================================================== */
+
+.nav-connect {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 19px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.7px;
+
+    white-space: nowrap;
+
+    background: linear-gradient(
+        110deg,
+        #b415ff,
+        #df8908
+    );
+
+    box-shadow:
+        0 8px 25px rgba(
+            180,
+            21,
+            255,
+            0.12
+        );
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.nav-connect:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 13px 30px rgba(
+            180,
+            21,
+            255,
+            0.25
+        );
+}
+
+.nav-arrow {
+    font-size: 16px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.nav-connect:hover .nav-arrow {
+    transform: translate(
+        3px,
+        -3px
+    );
+}
+
+
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+.hamburger {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.1
+    );
+
+    border-radius: 50%;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.04
+    );
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hamburger span {
+    width: 17px;
+    height: 1.5px;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.25s ease;
+}
+
+.hamburger:hover {
+    border-color: rgba(
+        180,
+        21,
+        255,
+        0.5
+    );
+
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   HAMBURGER OPEN
+===================================================== */
+
+.hamburger.open span:first-child {
+    transform:
+        translateY(3.75px)
+        rotate(45deg);
+}
+
+.hamburger.open span:last-child {
+    transform:
+        translateY(-3.75px)
+        rotate(-45deg);
+}
+
+
+/* =====================================================
+   THEME SWITCH
+===================================================== */
+
+.theme-switch {
+    position: fixed;
+
+    left: 22px;
+    top: 135px;
+
+    z-index: 99999;
+
+    width: 58px;
+    height: 32px;
+
+    padding: 0;
+
+    border: 1px solid #504d59;
+
+    border-radius: 50px;
+
+    background: #282631;
+
+    cursor: pointer;
+
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.theme-switch:hover {
+    transform: scale(1.06);
+
+    box-shadow:
+        0 8px 25px rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+}
+
+
+/* =====================================================
+   THEME ICON
+===================================================== */
+
+.switch-icon {
+    position: absolute;
+
+    top: 50%;
+    right: 7px;
+
+    transform: translateY(-50%);
+
+    z-index: 1;
+
+    color: #a9a6b1;
+
+    font-size: 12px;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   SWITCH CIRCLE
+===================================================== */
+
+.switch-circle {
+    position: absolute;
+
+    top: 3px;
+    left: 3px;
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: #b415ff;
+
+    box-shadow:
+        0 3px 10px rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+    transition:
+        left 0.4s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        ),
+        background 0.4s ease;
+}
+
+
+/* =====================================================
+   LIGHT THEME
+===================================================== */
+
+.theme-switch.light {
+    background: #eeeeef;
+
+    border-color: #d3d0d8;
+}
+
+.theme-switch.light .switch-circle {
+    left: 29px;
+
+    background: #df8908;
+}
+
+.theme-switch.light .switch-icon {
+    left: 8px;
+    right: auto;
+
+    color: #77737e;
+}
+
+
+/* =====================================================
+   LIGHT NAVBAR
+===================================================== */
+
+body.light-theme .navbar {
+    background: rgba(
+        255,
+        255,
+        255,
+        0.78
+    );
+
+    border-color: rgba(
+        40,
+        35,
+        50,
+        0.08
+    );
+
+    box-shadow:
+        0 15px 45px rgba(
+            40,
+            30,
+            50,
+            0.08
+        );
+}
+
+body.light-theme .navmenu a {
+    color: #77747d;
+}
+
+body.light-theme .navmenu a:hover {
+    color: #1d1b21;
+}
+
+body.light-theme .navmenu li.active a {
+    color: #17151a;
+}
+
+body.light-theme .hamburger {
+    border-color: rgba(
+        30,
+        25,
+        40,
+        0.1
+    );
+
+    background: rgba(
+        30,
+        25,
+        40,
+        0.035
+    );
+}
+
+body.light-theme .hamburger span {
+    background: #28262d;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        width: calc(100% - 60px);
+
+        min-height: 64px;
+
+        padding-left: 20px;
+        padding-right: 12px;
+    }
+
+    .nav-logo {
+        width: 115px;
+    }
+
+    .navmenu {
+        gap: 25px;
+
+        padding: 0 12px;
+    }
+
+    .navmenu a {
+        font-size: 11px;
+
+        letter-spacing: 1px;
+    }
+
+    .nav-connect {
+        padding: 12px 16px;
+
+        font-size: 10px;
+    }
+
+    .theme-switch {
+        left: 18px;
+        top: 115px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        top: 15px;
+
+        width: calc(100% - 32px);
+
+        min-height: 58px;
+
+        padding:
+            0
+            9px
+            0
+            17px;
+
+        border-radius: 22px;
+    }
+
+    .nav-logo {
+        width: 105px;
+    }
+
+
+    /* Hide desktop CTA */
+
+    .nav-connect {
+        display: none;
+    }
+
+
+    /* Hamburger */
+
+    .hamburger {
+        display: flex;
+    }
+
+
+    /* Mobile menu */
+
+    .navmenu {
+        position: absolute;
+
+        top: calc(100% + 10px);
+        right: 0;
+
+        width: 210px;
+
+        margin: 0;
+
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+
+        border-radius: 20px;
+
+        border: 1px solid rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+        background: rgba(
+            20,
+            19,
+            22,
+            0.94
+        );
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        box-shadow:
+            0 20px 50px rgba(
+                0,
+                0,
+                0,
+                0.28
+            );
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform:
+            translateY(-10px)
+            scale(0.97);
+
+        transform-origin: top right;
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .navmenu.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    .navmenu li {
+        width: 100%;
+
+        padding: 0;
+    }
+
+    .navmenu a {
+        width: 100%;
+
+        padding: 12px 14px;
+
+        box-sizing: border-box;
+
+        border-radius: 12px;
+
+        font-size: 12px;
+
+        letter-spacing: 1.2px;
+
+        transition:
+            background 0.3s ease,
+            color 0.3s ease,
+            padding-left 0.3s ease;
+    }
+
+    .navmenu a:hover {
+        padding-left: 18px;
+
+        background: rgba(
+            180,
+            21,
+            255,
+            0.07
+        );
+    }
+
+    .navmenu li::after {
+        display: none;
+    }
+
+    .navmenu li.active a {
+        color: #ffffff;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(
+                    180,
+                    21,
+                    255,
+                    0.13
+                ),
+                rgba(
+                    223,
+                    137,
+                    8,
+                    0.06
+                )
+            );
+    }
+
+
+    /* Light mobile menu */
+
+    body.light-theme .navmenu {
+        background: rgba(
+            255,
+            255,
+            255,
+            0.95
+        );
+
+        border-color: #e6e3e9;
+
+        box-shadow:
+            0 20px 50px rgba(
+                30,
+                20,
+                50,
+                0.12
+            );
+    }
+
+    body.light-theme .navmenu a {
+        color: #55515c;
+    }
+
+    body.light-theme .navmenu a:hover {
+        color: #222027;
+
+        background: rgba(
+            180,
+            21,
+            255,
+            0.05
+        );
+    }
+
+    body.light-theme .navmenu li.active a {
+        color: #202027;
+    }
+
+
+    /* Theme */
+
+    .theme-switch {
+        left: 16px;
+
+        top: auto;
+        bottom: 22px;
+
+        width: 50px;
+        height: 28px;
+    }
+
+    .switch-circle {
+        width: 20px;
+        height: 20px;
+
+        top: 3px;
+        left: 3px;
+    }
+
+    .theme-switch.light .switch-circle {
+        left: 25px;
+    }
+
+    .switch-icon {
+        font-size: 10px;
+
+        right: 6px;
+    }
+
+    .theme-switch.light .switch-icon {
+        left: 6px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        width: calc(100% - 24px);
+
+        padding-left: 14px;
+    }
+
+    .nav-logo {
+        width: 98px;
+    }
+
+    .hamburger {
+        width: 39px;
+        height: 39px;
+    }
+
+    .navmenu {
+        width: 195px;
+
+        padding: 17px;
+    }
+
+    .theme-switch {
+        left: 13px;
+        bottom: 18px;
+    }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .navbar *,
+    .navbar *::before,
+    .navbar *::after,
+    .theme-switch,
+    .switch-circle {
+        transition: none !important;
+        animation: none !important;
+    }
+}
