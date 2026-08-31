@@ -3,18 +3,18 @@
 ===================================================== */
 
 .services {
-
-    width: calc(100% - 40px);
-    max-width: 1465px;
+    width: min(1200px, calc(100% - 120px));
 
     margin: 100px auto 70px;
+
+    padding: 30px 0;
 
     color: #eeeeef;
 
     font-family: inherit;
 
+    box-sizing: border-box;
 }
-
 
 
 /* =====================================================
@@ -22,16 +22,12 @@
 ===================================================== */
 
 .services-header {
-
     margin-bottom: 75px;
-
 }
 
 
 .services-label {
-
     display: flex;
-
     align-items: center;
 
     gap: 12px;
@@ -41,27 +37,29 @@
     color: #777780;
 
     font-size: 9px;
-
     font-weight: 600;
 
     letter-spacing: 3px;
-
 }
 
 
 .services-label span {
-
     width: 35px;
     height: 1px;
 
-    background: #3a3940;
-
+    background: linear-gradient(
+        90deg,
+        #b415ff,
+        #df8908
+    );
 }
 
 
+/* =====================================================
+   HEADING
+===================================================== */
 
 .services-heading-wrap {
-
     display: flex;
 
     align-items: flex-end;
@@ -69,12 +67,10 @@
     justify-content: space-between;
 
     gap: 60px;
-
 }
 
 
 .services-heading-wrap h2 {
-
     margin: 0;
 
     font-size: clamp(
@@ -91,11 +87,33 @@
 
     color: #eeeeef;
 
+    flex: 1;
+
+    white-space: nowrap;
 }
 
 
-.services-heading-wrap > p {
+/* GRADIENT WORD */
 
+.services-heading-wrap h2 span {
+    background: linear-gradient(
+        110deg,
+        #b415ff 20%,
+        #df8908 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.services-heading-wrap > p {
     width: 300px;
 
     flex-shrink: 0;
@@ -107,9 +125,7 @@
     font-size: 13px;
 
     line-height: 1.8;
-
 }
-
 
 
 /* =====================================================
@@ -117,14 +133,11 @@
 ===================================================== */
 
 .services-sections {
-
     width: 100%;
-
 }
 
 
 .services-section {
-
     display: grid;
 
     grid-template-columns:
@@ -136,16 +149,12 @@
     padding: 38px 0;
 
     border-top: 1px solid #29282e;
-
 }
 
 
 .services-section:last-child {
-
     border-bottom: 1px solid #29282e;
-
 }
-
 
 
 /* =====================================================
@@ -153,7 +162,6 @@
 ===================================================== */
 
 .services-section-info {
-
     display: grid;
 
     grid-template-columns:
@@ -163,27 +171,22 @@
     gap: 40px;
 
     align-items: start;
-
 }
 
 
 .section-number {
-
     padding-top: 4px;
 
     color: #62626b;
 
     font-size: 10px;
-
     font-weight: 600;
 
     letter-spacing: 2px;
-
 }
 
 
 .section-content h3 {
-
     margin: 0 0 12px;
 
     color: #eeeeef;
@@ -195,12 +198,10 @@
     font-weight: 600;
 
     letter-spacing: 1px;
-
 }
 
 
 .section-content p {
-
     max-width: 300px;
 
     margin: 0;
@@ -210,9 +211,7 @@
     font-size: 13px;
 
     line-height: 1.8;
-
 }
-
 
 
 /* =====================================================
@@ -220,11 +219,8 @@
 ===================================================== */
 
 .services-list {
-
     border-top: 1px solid #29282e;
-
 }
-
 
 
 /* =====================================================
@@ -232,7 +228,6 @@
 ===================================================== */
 
 .service-item {
-
     position: relative;
 
     width: 100%;
@@ -272,9 +267,7 @@
         padding-left 0.45s ease,
         background 0.45s ease,
         border-color 0.45s ease;
-
 }
-
 
 
 /* =====================================================
@@ -282,17 +275,14 @@
 ===================================================== */
 
 .service-item::before {
-
     content: "";
 
     position: absolute;
 
     left: 0;
-
     bottom: -1px;
 
     width: 0;
-
     height: 1px;
 
     background: linear-gradient(
@@ -309,16 +299,12 @@
             0.36,
             1
         );
-
 }
 
 
 .service-item:hover::before {
-
     width: 100%;
-
 }
-
 
 
 /* =====================================================
@@ -326,7 +312,6 @@
 ===================================================== */
 
 .service-number {
-
     color: #62626b;
 
     font-size: 10px;
@@ -337,16 +322,12 @@
 
     transition:
         color 0.35s ease;
-
 }
 
 
 .service-item:hover .service-number {
-
     color: #b415ff;
-
 }
-
 
 
 /* =====================================================
@@ -354,18 +335,15 @@
 ===================================================== */
 
 .service-main {
-
     position: relative;
 
     min-width: 0;
 
     z-index: 2;
-
 }
 
 
 .service-main h3 {
-
     margin: 0;
 
     color: #eeeeef;
@@ -379,18 +357,59 @@
     transition:
         color 0.35s ease,
         transform 0.45s ease;
-
 }
 
 
 .service-item:hover .service-main h3 {
-
     color: #ffffff;
 
     transform: translateX(4px);
-
 }
 
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.service-main p {
+    margin: 10px 0 0;
+
+    color: #85858e;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   TAGS
+===================================================== */
+
+.service-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 12px;
+}
+
+
+.service-tags span {
+    padding: 5px 10px;
+
+    border: 1px solid #302f36;
+
+    border-radius: 20px;
+
+    color: #777780;
+
+    font-size: 9px;
+
+    letter-spacing: 0.5px;
+}
 
 
 /* =====================================================
@@ -398,11 +417,9 @@
 ===================================================== */
 
 .service-icon {
-
     position: absolute;
 
     left: 50%;
-
     top: 50%;
 
     width: 62px;
@@ -420,10 +437,7 @@
     pointer-events: none;
 
     transform:
-        translate(
-            -50%,
-            -50%
-        )
+        translate(-50%, -50%)
         scale(0.55)
         rotate(-10deg);
 
@@ -439,12 +453,10 @@
             0.36,
             1
         );
-
 }
 
 
 .service-icon img {
-
     width: 48px;
     height: 48px;
 
@@ -460,10 +472,15 @@
                 0.18
             )
         );
-
 }
 
-
+.service-icon img[src*="github"] {
+    filter: invert(1) brightness(2)
+        drop-shadow(
+            0 0 14px
+            rgba(180, 21, 255, 0.18)
+        );
+}
 
 /* =====================================================
    DESKTOP ICON HOVER
@@ -472,23 +489,16 @@
 @media (min-width: 769px) {
 
     .service-item:hover .service-icon {
-
         opacity: 1;
 
         visibility: visible;
 
         transform:
-            translate(
-                -50%,
-                -50%
-            )
+            translate(-50%, -50%)
             scale(1)
             rotate(0deg);
-
     }
-
 }
-
 
 
 /* =====================================================
@@ -496,7 +506,6 @@
 ===================================================== */
 
 .service-arrow {
-
     position: relative;
 
     width: 42px;
@@ -529,12 +538,10 @@
         border-color 0.35s ease,
         background 0.35s ease,
         box-shadow 0.35s ease;
-
 }
 
 
 .service-item:hover .service-arrow {
-
     color: #ffffff;
 
     border-color: #b415ff;
@@ -546,10 +553,7 @@
     );
 
     transform:
-        translate(
-            4px,
-            -4px
-        )
+        translate(4px, -4px)
         rotate(7deg);
 
     box-shadow:
@@ -560,9 +564,7 @@
             255,
             0.16
         );
-
 }
-
 
 
 /* =====================================================
@@ -570,7 +572,6 @@
 ===================================================== */
 
 .service-item:hover {
-
     padding-left: 10px;
 
     background: linear-gradient(
@@ -583,9 +584,7 @@
         ),
         transparent 70%
     );
-
 }
-
 
 
 /* =====================================================
@@ -593,7 +592,6 @@
 ===================================================== */
 
 .services-bottom {
-
     display: flex;
 
     align-items: center;
@@ -601,22 +599,18 @@
     gap: 18px;
 
     margin-top: 40px;
-
 }
 
 
 .services-bottom span {
-
     width: 42px;
     height: 1px;
 
     background: #35343a;
-
 }
 
 
 .services-bottom p {
-
     margin: 0;
 
     color: #57575f;
@@ -626,9 +620,7 @@
     font-weight: 600;
 
     letter-spacing: 4px;
-
 }
-
 
 
 /* =====================================================
@@ -636,7 +628,6 @@
 ===================================================== */
 
 .service-modal-overlay {
-
     position: fixed;
 
     inset: 0;
@@ -668,9 +659,7 @@
         serviceOverlayIn
         0.3s ease
         forwards;
-
 }
-
 
 
 /* =====================================================
@@ -678,7 +667,6 @@
 ===================================================== */
 
 .service-modal {
-
     position: relative;
 
     width: min(
@@ -727,17 +715,10 @@
         modalOpen
         0.35s
         ease-out;
-
 }
 
 
-
-/* =====================================================
-   MODAL ICON
-===================================================== */
-
 .modal-icon {
-
     width: 65px;
     height: 65px;
 
@@ -759,27 +740,18 @@
             255,
             0.025
         );
-
 }
 
 
 .modal-icon img {
-
     width: 42px;
     height: 42px;
 
     object-fit: contain;
-
 }
 
 
-
-/* =====================================================
-   MODAL NUMBER
-===================================================== */
-
 .modal-number {
-
     display: block;
 
     margin-bottom: 8px;
@@ -789,17 +761,10 @@
     font-size: 11px;
 
     letter-spacing: 2px;
-
 }
 
 
-
-/* =====================================================
-   MODAL TITLE
-===================================================== */
-
 .service-modal h2 {
-
     margin: 5px 0 18px;
 
     font-size: 30px;
@@ -817,17 +782,10 @@
     -webkit-background-clip: text;
 
     -webkit-text-fill-color: transparent;
-
 }
 
 
-
-/* =====================================================
-   MODAL DESCRIPTION
-===================================================== */
-
 .modal-description {
-
     color: #d4d4d4;
 
     font-size: 15px;
@@ -835,17 +793,10 @@
     line-height: 1.8;
 
     margin-bottom: 25px;
-
 }
 
 
-
-/* =====================================================
-   CLOSE BUTTON
-===================================================== */
-
 .service-modal-close {
-
     position: absolute;
 
     top: 12px;
@@ -873,12 +824,10 @@
 
     transition:
         all 0.3s ease;
-
 }
 
 
 .service-modal-close:hover {
-
     color: #ffffff;
 
     background: #b415ff;
@@ -886,17 +835,10 @@
     border-color: #b415ff;
 
     transform: rotate(90deg);
-
 }
 
 
-
-/* =====================================================
-   MODAL BUTTON
-===================================================== */
-
 .service-modal-button {
-
     width: 100%;
 
     border: none;
@@ -922,12 +864,10 @@
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
-
 }
 
 
 .service-modal-button:hover {
-
     transform:
         translateY(-3px);
 
@@ -939,9 +879,7 @@
             255,
             0.3
         );
-
 }
-
 
 
 /* =====================================================
@@ -949,46 +887,33 @@
 ===================================================== */
 
 @keyframes serviceOverlayIn {
-
     from {
-
         opacity: 0;
-
     }
 
     to {
-
         opacity: 1;
-
     }
-
 }
 
 
 @keyframes modalOpen {
-
     from {
-
         opacity: 0;
 
         transform:
             scale(0.85)
             translateY(20px);
-
     }
 
     to {
-
         opacity: 1;
 
         transform:
             scale(1)
             translateY(0);
-
     }
-
 }
-
 
 
 /* =====================================================
@@ -996,118 +921,85 @@
 ===================================================== */
 
 body.light-theme .services {
-
     color: #202024;
-
 }
 
 
 body.light-theme .services-heading-wrap h2 {
-
     color: #202024;
-
 }
 
 
 body.light-theme .services-heading-wrap > p {
-
     color: #69656e;
-
 }
 
 
 body.light-theme .services-label {
-
     color: #77727c;
-
 }
 
 
 body.light-theme .services-section {
-
     border-color: #e3e0e5;
-
 }
 
 
 body.light-theme .services-list {
-
     border-color: #e3e0e5;
-
 }
 
 
 body.light-theme .service-item {
-
     border-color: #e3e0e5;
-
 }
 
 
 body.light-theme .section-number {
-
     color: #9b969f;
-
 }
 
 
 body.light-theme .section-content h3 {
-
     color: #29292f;
-
 }
 
 
 body.light-theme .section-content p {
-
     color: #69656e;
-
 }
 
 
 body.light-theme .service-number {
-
     color: #9b969f;
-
 }
 
 
 body.light-theme .service-main h3 {
-
     color: #29292f;
-
 }
 
 
 body.light-theme .service-item:hover .service-main h3 {
-
     color: #17171b;
-
 }
 
 
 body.light-theme .service-arrow {
-
     color: #77727c;
 
     border-color: #ddd8e0;
-
 }
 
 
 body.light-theme .services-bottom span {
-
     background: #dedbe1;
-
 }
 
 
 body.light-theme .services-bottom p {
-
     color: #99949e;
-
 }
-
 
 
 /* =====================================================
@@ -1117,7 +1009,6 @@ body.light-theme .services-bottom p {
 @media (max-width: 768px) {
 
     .services {
-
         width: calc(100% - 40px);
 
         margin:
@@ -1126,42 +1017,32 @@ body.light-theme .services-bottom p {
 
         padding:
             20px 0;
-
     }
 
 
     .services-header {
-
         margin-bottom: 45px;
-
     }
 
 
     .services-label {
-
         font-size: 9px;
 
         letter-spacing: 2.5px;
-
     }
 
 
     .services-label span {
-
         width: 25px;
-
     }
 
 
     .services-heading-wrap {
-
         display: block;
-
     }
 
 
     .services-heading-wrap h2 {
-
         font-size:
             clamp(
                 48px,
@@ -1171,11 +1052,11 @@ body.light-theme .services-bottom p {
 
         letter-spacing: -3px;
 
+        white-space: normal;
     }
 
 
     .services-heading-wrap > p {
-
         width: auto;
 
         max-width: 450px;
@@ -1183,21 +1064,17 @@ body.light-theme .services-bottom p {
         margin-top: 25px;
 
         font-size: 13px;
-
     }
 
 
     .services-section {
-
         display: block;
 
         padding: 35px 0;
-
     }
 
 
     .services-section-info {
-
         grid-template-columns:
             35px
             minmax(0, 1fr);
@@ -1205,35 +1082,27 @@ body.light-theme .services-bottom p {
         gap: 15px;
 
         margin-bottom: 30px;
-
     }
 
 
     .section-number {
-
         font-size: 9px;
-
     }
 
 
     .section-content h3 {
-
         font-size: 18px;
-
     }
 
 
     .section-content p {
-
         max-width: 450px;
 
         font-size: 13px;
-
     }
 
 
     .service-item {
-
         grid-template-columns:
             35px
             minmax(0, 1fr)
@@ -1244,46 +1113,36 @@ body.light-theme .services-bottom p {
         min-height: 65px;
 
         padding: 20px 0;
-
     }
 
 
     /* NO DESKTOP HOVER ON MOBILE */
 
     .service-item:hover {
-
         padding-left: 0;
 
         background: transparent;
-
     }
 
 
     .service-item:hover::before {
-
         width: 0;
-
     }
 
 
     .service-item:hover .service-number {
-
         color: #62626b;
-
     }
 
 
     .service-item:hover .service-main h3 {
-
         color: #eeeeef;
 
         transform: none;
-
     }
 
 
     .service-item:hover .service-arrow {
-
         color: #777780;
 
         border-color: #302f36;
@@ -1293,97 +1152,72 @@ body.light-theme .services-bottom p {
         transform: none;
 
         box-shadow: none;
-
     }
 
 
-    /* HIDE ICON ON MOBILE */
-
     .service-icon {
-
         display: none !important;
-
     }
 
 
     .service-main h3 {
-
         font-size: 15px;
-
     }
 
 
     .service-arrow {
-
         width: 34px;
         height: 34px;
 
         font-size: 14px;
-
     }
 
 
     .services-bottom {
-
         margin-top: 38px;
 
         gap: 10px;
-
     }
 
 
     .services-bottom span {
-
         width: 25px;
-
     }
 
 
     .services-bottom p {
-
         font-size: 7px;
 
         letter-spacing: 2.5px;
-
     }
 
 
     /* MOBILE MODAL */
 
     .service-modal-overlay {
-
         padding: 18px;
-
     }
 
 
     .service-modal {
-
         padding:
             32px 24px;
 
         border-radius: 18px;
-
     }
 
 
     .service-modal h2 {
-
         font-size: 27px;
-
     }
 
 
     .modal-description {
-
         font-size: 13px;
 
         line-height: 1.8;
-
     }
-
 }
-
 
 
 /* =====================================================
@@ -1393,69 +1227,53 @@ body.light-theme .services-bottom p {
 @media (max-width: 400px) {
 
     .services {
-
         width:
             calc(
                 100% - 30px
             );
-
     }
 
 
     .services-heading-wrap h2 {
-
         font-size: 46px;
 
         letter-spacing: -2.5px;
-
     }
 
 
     .service-item {
-
         grid-template-columns:
             28px
             minmax(0, 1fr)
             34px;
 
         gap: 9px;
-
     }
 
 
     .service-main h3 {
-
         font-size: 14px;
-
     }
 
 
     .service-arrow {
-
         width: 30px;
         height: 30px;
 
         font-size: 12px;
-
     }
 
 
     .service-modal {
-
         padding:
             30px 20px;
-
     }
 
 
     .service-modal h2 {
-
         font-size: 25px;
-
     }
-
 }
-
 
 
 /* =====================================================
@@ -1471,7 +1289,5 @@ body.light-theme .services-bottom p {
         animation: none !important;
 
         transition: none !important;
-
     }
-
 }

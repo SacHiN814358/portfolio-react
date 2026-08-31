@@ -1,124 +1,11 @@
 import React, { useState } from 'react'
 import './Services.css'
+import skillSections from './services_data'
 
 
 const Services = () => {
 
     const [selectedSkill, setSelectedSkill] = useState(null)
-
-
-    const skillSections = [
-
-        {
-            number: "01",
-            title: "CORE",
-            description:
-                "The technologies I use to build modern frontend interfaces.",
-
-            skills: [
-                {
-                    number: "01",
-                    name: "HTML",
-                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-                    description:
-                        "The standard markup language I use to structure modern web pages."
-                },
-
-                {
-                    number: "02",
-                    name: "CSS",
-                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-                    description:
-                        "I use CSS to create responsive layouts, animations and polished user interfaces."
-                },
-
-                {
-                    number: "03",
-                    name: "JavaScript",
-                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-                    description:
-                        "I use JavaScript to add logic, interactivity and dynamic functionality to websites."
-                },
-
-                {
-                    number: "04",
-                    name: "React",
-                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                    description:
-                        "I use React to build reusable, interactive and scalable frontend components."
-                }
-            ]
-        },
-
-
-        {
-            number: "02",
-            title: "BUILD",
-            description:
-                "Tools and approaches I use to structure and build projects.",
-
-            skills: [
-                {
-                    number: "01",
-                    name: "Responsive Design",
-                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-                    description:
-                        "I create layouts that work smoothly across mobile, tablet and desktop devices."
-                },
-
-                {
-                    number: "02",
-                    name: "Reusable Components",
-                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                    description:
-                        "I build reusable components to keep projects clean, scalable and easy to maintain."
-                },
-
-                {
-                    number: "03",
-                    name: "Git",
-                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-                    description:
-                        "I use Git for version control and to manage changes throughout my projects."
-                },
-
-                {
-                    number: "04",
-                    name: "GitHub",
-                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-                    description:
-                        "I use GitHub to store, manage and collaborate on my development projects."
-                }
-            ]
-        },
-
-
-        {
-            number: "03",
-            title: "EXPLORING",
-            description:
-                "Technologies I’m currently exploring and improving.",
-
-            skills: [
-                {
-                    number: "01",
-                    name: "Next.js",
-                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-                    description:
-                        "I am exploring Next.js to build faster and more scalable React applications."
-                },
-
-                {
-                    number: "02",
-                    name: "Advanced React",
-                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                    description:
-                        "I am improving my React knowledge through advanced patterns, state management and performance optimization."
-                }
-            ]
-        }
-
-    ]
 
 
     const openModal = (skill) => {
@@ -151,8 +38,7 @@ const Services = () => {
                 <div className="services-heading-wrap">
 
                     <h2>
-                        WHAT I<br />
-                        WORK WITH
+                        What<span> Work</span> I Do
                     </h2>
 
                     <p>
