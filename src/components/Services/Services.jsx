@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { createPortal } from 'react-dom'
 import './Services.css'
 import skillSections from './services_data'
 
@@ -176,10 +177,10 @@ const Services = () => {
 
 
             {/* =====================================================
-               MODAL
+               MODAL — Portal se render hota hai, document.body me
             ===================================================== */}
 
-            {selectedSkill && (
+            {selectedSkill && createPortal(
 
                 <div
                     className="service-modal-overlay"
@@ -251,7 +252,9 @@ const Services = () => {
 
                     </div>
 
-                </div>
+                </div>,
+
+                document.body
 
             )}
 
