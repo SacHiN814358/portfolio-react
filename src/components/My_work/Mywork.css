@@ -107,7 +107,7 @@
 
     color: #85828d;
 
-    font-size: 15px;
+    font-size: 16px;
 
     line-height: 1.8;
 }
@@ -376,7 +376,7 @@
 
     color: #777780;
 
-    font-size: 9px;
+    font-size: 11px;
 
     line-height: 1.5;
 
@@ -407,7 +407,7 @@
 
     color: #777780;
 
-    font-size: 8px;
+    font-size: 9px;
 
     letter-spacing: 0.5px;
 
@@ -715,7 +715,7 @@ body.light-theme .mywork-bottom-line span {
 
         margin: 0;
 
-        font-size: 13px;
+        font-size: 14px;
 
         line-height: 1.7;
     }
@@ -752,7 +752,7 @@ body.light-theme .mywork-bottom-line span {
     }
 
     .work-content p {
-        font-size: 8px;
+        font-size: 10px;
     }
 
 
@@ -761,7 +761,7 @@ body.light-theme .mywork-bottom-line span {
     .work-tech span {
         padding: 5px 8px;
 
-        font-size: 7px;
+        font-size: 8px;
     }
 
 

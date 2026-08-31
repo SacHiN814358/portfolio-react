@@ -608,6 +608,21 @@ body.light-theme .hamburger span {
             17px;
 
         border-radius: 22px;
+
+        /* More visible mobile navbar */
+        background: rgba(
+            18,
+            17,
+            19,
+            0.88
+        );
+
+        border-color: rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
     }
 
     .nav-logo {
@@ -761,6 +776,33 @@ body.light-theme .hamburger span {
                     8,
                     0.06
                 )
+            );
+    }
+
+
+    /* Light mobile navbar */
+
+    body.light-theme .navbar {
+        background: rgba(
+            255,
+            255,
+            255,
+            0.90
+        );
+
+        border-color: rgba(
+            40,
+            35,
+            50,
+            0.12
+        );
+
+        box-shadow:
+            0 15px 45px rgba(
+                40,
+                30,
+                50,
+                0.10
             );
     }
 

@@ -613,3 +613,167 @@ body.light-theme .about .skill hr {
         #b415ff 106%
     ) !important;
 }
+/* =====================================================
+   GLOBAL READABILITY IMPROVEMENT
+   Secondary / body text
+===================================================== */
+
+/* HERO */
+.hero-description {
+    color: #b5b5bd;
+}
+
+.hero-role {
+    color: #d2d2d7;
+}
+
+/* ABOUT */
+.about-para {
+    color: #b5b5bd;
+}
+
+.skill p {
+    color: #b0b0b8;
+}
+
+/* SKILLS */
+.skill-info span {
+    color: #b5b5bd;
+}
+
+/* SERVICES */
+.services_format p,
+.service_description,
+.service-desc,
+.services_format .description {
+    color: #b5b5bd;
+}
+
+/* WORK / PORTFOLIO */
+.mywork-showmore p {
+    color: #b5b5bd;
+}
+
+/* CONTACT */
+.contact_left p,
+.contact_right p,
+.contact_right label {
+    color: #b5b5bd;
+}
+
+
+/* =====================================================
+   MOBILE READABILITY
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Hero intro */
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #b5b5bd;
+    }
+
+    /* About paragraphs */
+    .about-para {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #b5b5bd;
+    }
+
+    /* Skills text */
+    .skill p {
+        font-size: 14px;
+        color: #b5b5bd;
+    }
+
+    .skill-info p {
+        font-size: 16px;
+    }
+
+    .skill-info span {
+        font-size: 14px;
+        color: #b5b5bd;
+    }
+
+    /* Service descriptions */
+    .services_format p,
+    .service_description,
+    .service-desc,
+    .services_format .description {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #b5b5bd;
+    }
+
+    /* Portfolio secondary text */
+    .mywork-showmore p {
+        font-size: 14px;
+        color: #b5b5bd;
+    }
+
+    /* Contact secondary text */
+    .contact_left p,
+    .contact_right p,
+    .contact_right label {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #b5b5bd;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .about-para {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .skill p {
+        font-size: 13px;
+    }
+
+    .services_format p,
+    .service_description,
+    .service-desc,
+    .services_format .description {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .contact_left p,
+    .contact_right p,
+    .contact_right label {
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================================
+   LIGHT MODE
+===================================================== */
+
+body.light-theme .hero-description,
+body.light-theme .about-para,
+body.light-theme .skill p,
+body.light-theme .skill-info span,
+body.light-theme .services_format p,
+body.light-theme .service_description,
+body.light-theme .service-desc,
+body.light-theme .services_format .description,
+body.light-theme .mywork-showmore p,
+body.light-theme .contact_left p,
+body.light-theme .contact_right p,
+body.light-theme .contact_right label {
+    color: #65656d;
+}

@@ -1,184 +1,300 @@
-import React, { useEffect, useState } from "react";
-import "./Services.css";
+import React, { useState } from 'react'
+import './Services.css'
+
 
 const Services = () => {
-    const [selectedService, setSelectedService] = useState(null);
 
-    const services = [
+    const [selectedSkill, setSelectedSkill] = useState(null)
+
+
+    const skillSections = [
+
         {
             number: "01",
-            title: "Frontend Development",
-            short:
-                "Building responsive and interactive interfaces with clean, maintainable code.",
+            title: "CORE",
             description:
-                "I build modern frontend experiences focused on responsive layouts, reusable components, smooth interactions and a clean user experience.",
-            tags: ["React", "JavaScript", "HTML", "CSS"],
+                "The technologies I use to build modern frontend interfaces.",
+
+            skills: [
+                {
+                    number: "01",
+                    name: "HTML",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+                    description:
+                        "The standard markup language I use to structure modern web pages."
+                },
+
+                {
+                    number: "02",
+                    name: "CSS",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+                    description:
+                        "I use CSS to create responsive layouts, animations and polished user interfaces."
+                },
+
+                {
+                    number: "03",
+                    name: "JavaScript",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+                    description:
+                        "I use JavaScript to add logic, interactivity and dynamic functionality to websites."
+                },
+
+                {
+                    number: "04",
+                    name: "React",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                    description:
+                        "I use React to build reusable, interactive and scalable frontend components."
+                }
+            ]
         },
+
+
         {
             number: "02",
-            title: "Responsive Web Design",
-            short:
-                "Designing websites that feel natural across desktop, tablet and mobile.",
+            title: "BUILD",
             description:
-                "I create flexible layouts that adapt to different screen sizes while keeping the interface consistent, readable and easy to use.",
-            tags: ["Responsive UI", "CSS", "Flexbox", "Grid"],
+                "Tools and approaches I use to structure and build projects.",
+
+            skills: [
+                {
+                    number: "01",
+                    name: "Responsive Design",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+                    description:
+                        "I create layouts that work smoothly across mobile, tablet and desktop devices."
+                },
+
+                {
+                    number: "02",
+                    name: "Reusable Components",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                    description:
+                        "I build reusable components to keep projects clean, scalable and easy to maintain."
+                },
+
+                {
+                    number: "03",
+                    name: "Git",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+                    description:
+                        "I use Git for version control and to manage changes throughout my projects."
+                },
+
+                {
+                    number: "04",
+                    name: "GitHub",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+                    description:
+                        "I use GitHub to store, manage and collaborate on my development projects."
+                }
+            ]
         },
+
+
         {
             number: "03",
-            title: "Interactive Experiences",
-            short:
-                "Adding thoughtful motion and interactions that make interfaces feel alive.",
+            title: "EXPLORING",
             description:
-                "From hover states to scroll-based reveals and subtle transitions, I focus on interactions that improve the experience without becoming distracting.",
-            tags: ["Animations", "Interactions", "Scroll Effects", "UI"],
-        },
-        {
-            number: "04",
-            title: "UI Implementation",
-            short:
-                "Turning designs and ideas into polished, functional web interfaces.",
-            description:
-                "I translate visual ideas into working interfaces with attention to spacing, typography, responsiveness and the small details that make a design feel complete.",
-            tags: ["UI", "React", "Components", "Pixel Detail"],
-        },
-    ];
+                "Technologies I’m currently exploring and improving.",
 
-    // =====================================================
-    // MODAL
-    // =====================================================
+            skills: [
+                {
+                    number: "01",
+                    name: "Next.js",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+                    description:
+                        "I am exploring Next.js to build faster and more scalable React applications."
+                },
 
-    const openModal = (service) => {
-        setSelectedService(service);
-        document.body.style.overflow = "hidden";
-    };
+                {
+                    number: "02",
+                    name: "Advanced React",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                    description:
+                        "I am improving my React knowledge through advanced patterns, state management and performance optimization."
+                }
+            ]
+        }
+
+    ]
+
+
+    const openModal = (skill) => {
+        setSelectedSkill(skill)
+    }
+
 
     const closeModal = () => {
-        setSelectedService(null);
-        document.body.style.overflow = "";
-    };
+        setSelectedSkill(null)
+    }
 
-    // =====================================================
-    // ESC KEY
-    // =====================================================
-
-    useEffect(() => {
-        const handleKeyDown = (event) => {
-            if (event.key === "Escape") {
-                closeModal();
-            }
-        };
-
-        window.addEventListener("keydown", handleKeyDown);
-
-        return () => {
-            window.removeEventListener("keydown", handleKeyDown);
-            document.body.style.overflow = "";
-        };
-    }, []);
 
     return (
-        <>
-            <section id="services" className="services">
 
-                {/* ================= HEADER ================= */}
+        <div className="services" id="services">
 
-                <div className="services-header">
 
-                    <div className="services-label">
-                        <span></span>
-                        02 — WHAT I DO
-                    </div>
+            {/* =====================================================
+               HEADER
+            ===================================================== */}
 
-                    <div className="services-heading-wrap">
+            <div className="services-header">
 
-                        <h2>
-                            I build things
-                            <span> people use.</span>
-                        </h2>
-
-                        <p>
-                            From clean interfaces to interactive
-                            experiences, I focus on making the web
-                            feel simple, useful and enjoyable.
-                        </p>
-
-                    </div>
-
+                <div className="services-label">
+                    <span></span>
+                    SKILLS
                 </div>
 
 
-                {/* ================= SERVICE LIST ================= */}
+                <div className="services-heading-wrap">
 
-                <div className="services-list">
+                    <h2>
+                        WHAT I<br />
+                        WORK WITH
+                    </h2>
 
-                    {services.map((service) => (
-                        <button
-                            type="button"
-                            className="service-item"
-                            key={service.number}
-                            onClick={() => openModal(service)}
-                        >
+                    <p>
+                        A focused set of technologies and tools
+                        I use to design, build and improve
+                        modern web experiences.
+                    </p>
 
-                            <span className="service-number">
-                                {service.number}
+                </div>
+
+            </div>
+
+
+
+            {/* =====================================================
+               SKILL SECTIONS
+            ===================================================== */}
+
+            <div className="services-sections">
+
+                {skillSections.map((section, sectionIndex) => (
+
+                    <div
+                        className="services-section"
+                        key={sectionIndex}
+                    >
+
+
+                        {/* LEFT SIDE */}
+
+                        <div className="services-section-info">
+
+                            <span className="section-number">
+                                {section.number}
                             </span>
 
-                            <div className="service-main">
+
+                            <div className="section-content">
 
                                 <h3>
-                                    {service.title}
+                                    {section.title}
                                 </h3>
 
                                 <p>
-                                    {service.short}
+                                    {section.description}
                                 </p>
-
-                                <div className="service-tags">
-
-                                    {service.tags
-                                        .slice(0, 3)
-                                        .map((tag) => (
-                                            <span key={tag}>
-                                                {tag}
-                                            </span>
-                                        ))}
-
-                                </div>
 
                             </div>
 
-                            <span className="service-arrow">
-                                ↗
-                            </span>
-
-                        </button>
-                    ))}
-
-                </div>
+                        </div>
 
 
-                {/* ================= BOTTOM ================= */}
 
-                <div className="services-bottom">
+                        {/* RIGHT SIDE */}
 
-                    <span></span>
+                        <div className="services-list">
 
-                    <p>
-                        IDEAS → INTERFACE → EXPERIENCE
-                    </p>
+                            {section.skills.map((skill) => (
 
-                    <span></span>
-
-                </div>
-
-            </section>
+                                <button
+                                    className="service-item"
+                                    key={skill.number}
+                                    onClick={() => openModal(skill)}
+                                >
 
 
-            {/* =================================================
-                MODAL
-            ================================================= */}
+                                    {/* NUMBER */}
 
-            {selectedService && (
+                                    <span className="service-number">
+                                        {skill.number}
+                                    </span>
+
+
+
+                                    {/* MAIN */}
+
+                                    <div className="service-main">
+
+                                        <h3>
+                                            {skill.name}
+                                        </h3>
+
+                                    </div>
+
+
+
+                                    {/* ICON */}
+
+                                    <div className="service-icon">
+
+                                        <img
+                                            src={skill.icon}
+                                            alt=""
+                                        />
+
+                                    </div>
+
+
+
+                                    {/* ARROW */}
+
+                                    <span className="service-arrow">
+                                        ↗
+                                    </span>
+
+
+                                </button>
+
+                            ))}
+
+                        </div>
+
+                    </div>
+
+                ))}
+
+            </div>
+
+
+
+            {/* =====================================================
+               BOTTOM
+            ===================================================== */}
+
+            <div className="services-bottom">
+
+                <span></span>
+
+                <p>
+                    HOVER TO EXPLORE
+                </p>
+
+            </div>
+
+
+
+            {/* =====================================================
+               MODAL
+            ===================================================== */}
+
+            {selectedSkill && (
+
                 <div
                     className="service-modal-overlay"
                     onClick={closeModal}
@@ -186,55 +302,77 @@ const Services = () => {
 
                     <div
                         className="service-modal"
-                        onClick={(event) =>
-                            event.stopPropagation()
-                        }
+                        onClick={(e) => e.stopPropagation()}
                     >
 
+
+                        {/* CLOSE */}
+
                         <button
-                            type="button"
                             className="service-modal-close"
                             onClick={closeModal}
-                            aria-label="Close service details"
                         >
                             ×
                         </button>
 
-                        <span className="modal-number">
-                            {selectedService.number}
-                        </span>
 
-                        <h2>
-                            {selectedService.title}
-                        </h2>
 
-                        <p className="modal-description">
-                            {selectedService.description}
-                        </p>
+                        {/* ICON */}
 
-                        <div className="modal-tags">
-                            {selectedService.tags.map((tag) => (
-                                <span key={tag}>
-                                    {tag}
-                                </span>
-                            ))}
+                        <div className="modal-icon">
+
+                            <img
+                                src={selectedSkill.icon}
+                                alt=""
+                            />
+
                         </div>
 
+
+
+                        {/* NUMBER */}
+
+                        <span className="modal-number">
+                            {selectedSkill.number}
+                        </span>
+
+
+
+                        {/* TITLE */}
+
+                        <h2>
+                            {selectedSkill.name}
+                        </h2>
+
+
+
+                        {/* DESCRIPTION */}
+
+                        <p className="modal-description">
+                            {selectedSkill.description}
+                        </p>
+
+
+
+                        {/* BUTTON */}
+
                         <button
-                            type="button"
-                            className="modal-done"
+                            className="service-modal-button"
                             onClick={closeModal}
                         >
-                            Got it
-                            <span>↗</span>
+                            CLOSE
                         </button>
 
                     </div>
 
                 </div>
-            )}
-        </>
-    );
-};
 
-export default Services;
+            )}
+
+        </div>
+
+    )
+}
+
+
+export default Services
