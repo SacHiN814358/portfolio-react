@@ -18,7 +18,7 @@
 .mywork-header {
     width: 100%;
 
-    margin-bottom: 65px;
+    margin-bottom: 48px;
 }
 
 
@@ -62,15 +62,19 @@
 .mywork-heading-wrap {
     display: flex;
 
-    align-items: flex-start;
+    align-items: center;
 
     justify-content: space-between;
 
-    gap: 60px;
+    gap: 40px;
+}
+
+.mywork-heading-text {
+    flex: 1;
 }
 
 .mywork-heading-wrap h2 {
-    margin: 0;
+    margin: 0 0 18px;
 
     max-width: 850px;
 
@@ -101,15 +105,26 @@
 
 
 .mywork-heading-wrap p {
-    width: 340px;
+    margin: 0;
 
-    margin: 10px 0 0;
+    max-width: 400px;
 
     color: #85828d;
 
     font-size: 16px;
 
     line-height: 1.8;
+}
+
+.mywork-visual {
+    flex-shrink: 0;
+    width: 260px;
+}
+
+.mywork-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
@@ -644,9 +659,11 @@ body.light-theme .mywork-bottom-line span {
     }
 
     .mywork-heading-wrap p {
-        width: 280px;
-
         font-size: 14px;
+    }
+
+    .mywork-visual {
+        display: none;
     }
 
     .mywork-grid {
@@ -864,5 +881,32 @@ body.light-theme .mywork-bottom-line span {
         font-size: 6px;
 
         letter-spacing: 1.5px;
+    }
+}
+
+
+.mywork-heading-wrap {
+    position: relative;
+}
+
+.mywork-visual {
+    width: 320px;
+    top: -80px;
+    flex-shrink: 0;
+
+    opacity: 0.9;
+}
+
+.mywork-heading-wrap > p {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .mywork-visual {
+        display: none;
+    }
+
+    .mywork-heading-wrap > p {
+        display: block;
     }
 }

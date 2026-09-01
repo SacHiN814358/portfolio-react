@@ -782,3 +782,52 @@ body.light-theme .skills-bottom p {
         transition: none !important;
     }
 }
+
+/* =====================================================
+   SKILL CARD HOVER ICON (Matching Services section)
+===================================================== */
+
+.skill-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.55) rotate(-10deg);
+    z-index: 1;
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease,
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skill-icon img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 14px rgba(180, 21, 255, 0.28));
+}
+
+.skill-icon img[src*="github"],
+.skill-icon img[src*="nextjs"] {
+    filter: invert(1) brightness(2) drop-shadow(0 0 14px rgba(180, 21, 255, 0.28));
+}
+
+body.light-theme .skill-icon img[src*="github"],
+body.light-theme .skill-icon img[src*="nextjs"] {
+    filter: invert(0) brightness(0.2);
+}
+
+@media (min-width: 769px) {
+    .skill-card:hover .skill-icon {
+        opacity: 0.95;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+}

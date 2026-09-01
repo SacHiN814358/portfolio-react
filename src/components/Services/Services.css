@@ -1291,3 +1291,126 @@ body.light-theme .services-bottom p {
         transition: none !important;
     }
 }
+
+/* ============ BACKGROUND DEPTH ============ */
+
+.services {
+    position: relative;
+}
+
+.services::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -150px;
+
+    width: 500px;
+    height: 500px;
+
+    background: radial-gradient(
+        circle,
+        rgba(180, 21, 255, 0.08),
+        transparent 70%
+    );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* ============ SKILLS LABEL AS PILL ============ */
+
+.services-label {
+    display: inline-flex;
+    width: fit-content;
+
+    padding: 6px 14px 6px 8px;
+
+    border: 1px solid #2e2d34;
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.02);
+}
+
+
+/* ============ SECTION TITLE ACCENT ============ */
+
+.section-content h3 {
+    position: relative;
+    padding-left: 16px;
+}
+
+.section-content h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+
+    width: 3px;
+    height: 16px;
+
+    border-radius: 2px;
+
+    background: linear-gradient(
+        180deg,
+        #b415ff,
+        #df8908
+    );
+}
+
+
+/* ============ NUMBER CONTRAST ============ */
+
+.section-number {
+    display: inline-block;
+
+    padding: 4px 10px;
+
+    border: 1px solid #2e2d34;
+    border-radius: 20px;
+
+    color: #a4a3aa;
+}
+
+.services-heading-wrap {
+    position: relative;
+}
+
+.services-visual {
+    position: absolute;
+    right: 40px;
+    top: -40px;
+
+    width: 280px;
+
+    opacity: 0.9;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.services-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .services-visual {
+        display: none;
+    }
+}
+
+.services-heading-wrap > p {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .services-heading-wrap > p {
+        display: block;
+    }
+
+    .services-visual {
+        display: none;
+    }
+}

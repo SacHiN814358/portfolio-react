@@ -1,4 +1,3 @@
-import React from "react";
 import "./Skills.css";
 
 const Skills = () => {
@@ -9,10 +8,22 @@ const Skills = () => {
             description:
                 "The technologies I use to build modern frontend interfaces.",
             skills: [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "React",
+                {
+                    name: "HTML",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                },
+                {
+                    name: "CSS",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                },
+                {
+                    name: "JavaScript",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                },
+                {
+                    name: "React",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
             ],
         },
 
@@ -22,10 +33,22 @@ const Skills = () => {
             description:
                 "Tools and approaches I use to structure and build projects.",
             skills: [
-                "Responsive Design",
-                "Reusable Components",
-                "Git",
-                "GitHub",
+                {
+                    name: "Responsive Design",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                },
+                {
+                    name: "Reusable Components",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
+                {
+                    name: "Git",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                },
+                {
+                    name: "GitHub",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                },
             ],
         },
 
@@ -35,14 +58,25 @@ const Skills = () => {
             description:
                 "Technologies I’m currently exploring and improving.",
             skills: [
-                "Next.js",
-                "Advanced React",
-                "Modern UI",
-                "Web Interactions",
+                {
+                    name: "Next.js",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                },
+                {
+                    name: "Advanced React",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
+                {
+                    name: "Modern UI",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                },
+                {
+                    name: "Web Interactions",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                },
             ],
         },
     ];
-
 
     return (
         <section id="skills" className="skills">
@@ -116,33 +150,34 @@ const Skills = () => {
 
                             <div className="skills-grid">
 
-                                {group.skills.map(
-                                    (skill, index) => (
-                                        <div
-                                            className="skill-card"
-                                            key={skill}
-                                        >
+                                {group.skills.map((skill, index) => (
+                                    <div
+                                        className="skill-card"
+                                        key={skill.name}
+                                    >
 
-                                            <span className="skill-index">
-                                                {String(
-                                                    index + 1
-                                                ).padStart(
-                                                    2,
-                                                    "0"
-                                                )}
-                                            </span>
+                                        <span className="skill-index">
+                                            {String(index + 1).padStart(2, "0")}
+                                        </span>
 
-                                            <span className="skill-name">
-                                                {skill}
-                                            </span>
+                                        <span className="skill-name">
+                                            {skill.name}
+                                        </span>
 
-                                            <span className="skill-arrow">
-                                                ↗
-                                            </span>
-
+                                        {/* HOVER TECHNOLOGY ICON */}
+                                        <div className="skill-icon">
+                                            <img
+                                                src={skill.icon}
+                                                alt={skill.name}
+                                            />
                                         </div>
-                                    )
-                                )}
+
+                                        <span className="skill-arrow">
+                                            ↗
+                                        </span>
+
+                                    </div>
+                                ))}
 
                             </div>
 

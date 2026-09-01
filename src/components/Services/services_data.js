@@ -1,102 +1,100 @@
-const skillSections = [
-
+const servicesData = [
     {
         number: "01",
-        title: "CORE",
+        title: "WEB APPLICATIONS",
         description:
-            "The core technologies I work with to build modern frontend interfaces.",
+            "Dynamic, scalable, and responsive web applications built with modern frontend architectures.",
         skills: [
             {
                 number: "01",
-                name: "HTML",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+                name: "Interactive Web Apps",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
                 description:
-                    "I structure every project's markup using semantic, accessible HTML."
+                    "Full-fledged Single Page Applications (SPAs) with dynamic state management, smooth client-side routing, and responsive user flows."
             },
             {
                 number: "02",
-                name: "CSS",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+                name: "Custom Admin Dashboards",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
                 description:
-                    "I style and design responsive layouts, animations and interfaces using CSS."
+                    "Data-driven management panels, analytics portals, and interactive control centers for monitoring business metrics and workflows."
             },
             {
                 number: "03",
-                name: "JavaScript",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+                name: "API & Backend Integrations",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
                 description:
-                    "I add logic, interactivity and dynamic behaviour to the websites I build."
+                    "Seamlessly connecting frontend interfaces with RESTful APIs, authentication workflows (EmailJS, Auth), and cloud services."
             },
             {
                 number: "04",
-                name: "React",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                name: "SaaS & Product MVPs",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
                 description:
-                    "I develop reusable, interactive components and full frontend apps using React."
+                    "Rapid prototyping and building production-ready Minimum Viable Products from ground up for startups, clients, and creators."
             }
         ]
     },
 
     {
         number: "02",
-        title: "BUILD",
+        title: "INTERFACES & WEBSITES",
         description:
-            "How I structure and approach building every project.",
+            "Pixel-perfect, engaging, and conversion-focused web interfaces designed for modern users.",
         skills: [
             {
                 number: "01",
-                name: "Responsive Design",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+                name: "High-Converting Landing Pages",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
                 description:
-                    "I make sure every layout works smoothly across mobile, tablet and desktop."
+                    "Modern, high-impact landing pages crafted with fast loading speeds, compelling visual hierarchies, and clear calls-to-action."
             },
             {
                 number: "02",
-                name: "Reusable Components",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                name: "Responsive Multi-Device Layouts",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
                 description:
-                    "I build reusable components to keep projects clean and easy to scale."
+                    "Adaptive layouts that look stunning and function effortlessly across smartphones, tablets, laptops, and ultra-wide screens."
             },
             {
                 number: "03",
-                name: "Git",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+                name: "Reusable UI Component Systems",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
                 description:
-                    "I manage version control and track changes across all my projects with Git."
+                    "Modular, reusable component libraries, design systems, and accessible interactive UI elements built for long-term scalability."
             },
             {
                 number: "04",
-                name: "GitHub",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+                name: "Interactive Animations & Micro-Interactions",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
                 description:
-                    "I use GitHub to host, manage and collaborate on my development work."
+                    "Engaging scroll reveal animations, smooth hover states, dynamic cursors, and delightful visual micro-interactions."
             }
         ]
     },
 
     {
         number: "03",
-        title: "EXPLORING",
+        title: "OPTIMIZATION & MAINTENANCE",
         description:
-            "What I'm currently working on improving.",
+            "Ensuring peak performance, clean code quality, accessibility, and smooth user experiences.",
         skills: [
             {
                 number: "01",
-                name: "Next.js",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+                name: "Speed & Performance Optimization",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg",
                 description:
-                    "I'm building faster, more scalable apps by learning Next.js."
+                    "Optimizing bundle sizes, lazy-loading assets, compressing images, and fine-tuning rendering to achieve top Lighthouse scores."
             },
             {
                 number: "02",
-                name: "Advanced React",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                name: "Code Refactoring & Modernization",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
                 description:
-                    "I'm sharpening my React skills through advanced patterns and performance work."
+                    "Migrating outdated codebases to clean modular React standards, improving maintainability, and fixing bugs across projects."
             }
         ]
     }
+];
 
-]
-
-export default skillSections;
+export default servicesData;

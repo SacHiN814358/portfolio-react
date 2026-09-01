@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { createPortal } from 'react-dom'
 import './Services.css'
+// import servicesGraphic from "../assets/services-graphic.svg";
+import servicesGraphic from "../../assets/services-graphic.svg";
 import skillSections from './services_data'
 
 
@@ -32,21 +34,23 @@ const Services = () => {
 
                 <div className="services-label">
                     <span></span>
-                    SKILLS
+                    SERVICES & SOLUTIONS
                 </div>
 
 
                 <div className="services-heading-wrap">
 
                     <h2>
-                        What<span> Work</span> I Do
+                        I<span> Build</span> Things <br /> People Use
                     </h2>
 
                     <p>
-                        A focused set of technologies and tools
-                        I use to design, build and improve
-                        modern web experiences.
+                        From interactive web applications and SaaS dashboards to high-converting landing pages,
+                        here is how I help turn ideas into functional digital products.
                     </p>
+                    <div className="services-visual">
+                        <img src={servicesGraphic} alt="Decorative accent graphic" />
+                    </div>
 
                 </div>
 

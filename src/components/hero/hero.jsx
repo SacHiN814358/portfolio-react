@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./hero.css";
 import profile_img from "../../assets/profile_img.svg";
 
@@ -15,19 +15,16 @@ const Hero = () => {
 
     useEffect(() => {
         const currentWord = words[wordIndex];
-
         const speed = isDeleting ? 55 : 90;
 
         const timer = setTimeout(() => {
             if (!isDeleting) {
                 setText(currentWord.substring(0, text.length + 1));
-
                 if (text === currentWord) {
                     setTimeout(() => setIsDeleting(true), 1200);
                 }
             } else {
                 setText(currentWord.substring(0, text.length - 1));
-
                 if (text === "") {
                     setIsDeleting(false);
                     setWordIndex((prev) => (prev + 1) % words.length);
@@ -39,7 +36,7 @@ const Hero = () => {
     }, [text, isDeleting, wordIndex]);
 
     return (
-        <section id="homee" className="hero">
+        <section id="home" className="hero">
 
             {/* Background decoration */}
             <div className="hero-glow hero-glow-one"></div>
@@ -52,7 +49,7 @@ const Hero = () => {
 
                     <div className="hero-eyebrow">
                         <span className="eyebrow-line"></span>
-                        HELLO, I'M
+                        HELLO, I AM
                     </div>
 
                     <h1>
@@ -61,8 +58,7 @@ const Hero = () => {
                     </h1>
 
                     <div className="hero-role">
-                        <span className="role-label">I'M</span>
-
+                        <span className="role-label">I AM</span>
                         <span className="typing-text">
                             {text}
                             <span className="cursor">|</span>
@@ -76,12 +72,12 @@ const Hero = () => {
 
                     <div className="hero-actions">
 
-                        <a href="#mywork" className="hero-primary">
+                        <a href="#work" className="hero-primary">
                             <span>VIEW MY WORK</span>
                             <span className="hero-arrow">↗</span>
                         </a>
 
-                        <a href="#contactt" className="hero-secondary">
+                        <a href="#contact" className="hero-secondary">
                             <span>LET'S TALK</span>
                             <span className="hero-arrow">↗</span>
                         </a>
@@ -100,17 +96,13 @@ const Hero = () => {
                 <div className="hero-right">
 
                     <div className="hero-image-wrapper">
-
                         <div className="hero-image-ring"></div>
-
                         <div className="hero-image-glow"></div>
-
                         <img
                             src={profile_img}
                             alt="Sachin"
                             className="hero-profile"
                         />
-
                     </div>
 
                     <div className="hero-location">

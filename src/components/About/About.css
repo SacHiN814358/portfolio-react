@@ -20,7 +20,28 @@
 ===================================================== */
 
 .about-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
     margin-bottom: 48px;
+}
+
+.about-header-text {
+    flex: 1;
+}
+
+.about-visual {
+    flex-shrink: 0;
+    width: 260px;
+}
+
+.about-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .about-label {
@@ -397,6 +418,9 @@ body.light-theme .about-bottom p {
     }
 
     .about-header {
+        flex-direction: column;
+        align-items: flex-start;
+
         margin-bottom: 42px;
     }
 
@@ -406,6 +430,10 @@ body.light-theme .about-bottom p {
             8vw,
             75px
         );
+    }
+
+    .about-visual {
+        display: none;
     }
 
     .about-intro .about-lead {

@@ -1,0 +1,48 @@
+<svg width="100%" viewBox="60 60 560 480" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="d1" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#c93bff"/>
+<stop offset="100%" stop-color="#ff9d1f"/>
+</linearGradient>
+<linearGradient id="d2" x1="0%" y1="100%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#ff9d1f"/>
+<stop offset="100%" stop-color="#c93bff"/>
+</linearGradient>
+<radialGradient id="dglow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#c93bff" stop-opacity="0.3"/>
+<stop offset="100%" stop-color="#c93bff" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<circle cx="340" cy="300" r="230" fill="url(#dglow)"/>
+<g transform="translate(210,320)" opacity="0.45">
+<rect x="0" y="0" width="190" height="125" rx="12" fill="none" stroke="#b415ff" stroke-width="1.5"/>
+</g>
+<g transform="translate(250,280)" opacity="0.7">
+<rect x="0" y="0" width="190" height="125" rx="12" fill="none" stroke="#df8908" stroke-width="1.5"/>
+</g>
+<g transform="translate(290,240)">
+<rect x="0" y="0" width="190" height="125" rx="12" fill="#141017" stroke="url(#d1)" stroke-width="2"/>
+<line x1="20" y1="28" x2="130" y2="28" stroke="#6a6870" stroke-width="4" stroke-linecap="round"/>
+<line x1="20" y1="50" x2="95" y2="50" stroke="#3d3b42" stroke-width="4" stroke-linecap="round"/>
+<rect x="20" y="74" width="58" height="34" rx="6" fill="url(#d1)" opacity="0.9"/>
+<rect x="86" y="74" width="58" height="34" rx="6" fill="none" stroke="#df8908" stroke-width="1.5"/>
+</g>
+<g transform="translate(150,140)">
+<circle cx="0" cy="0" r="42" fill="none" stroke="url(#d2)" stroke-width="3.5"/>
+<circle cx="0" cy="0" r="14" fill="url(#d2)"/>
+<line x1="0" y1="-56" x2="0" y2="-42" stroke="#b415ff" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="0" y1="42" x2="0" y2="56" stroke="#df8908" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="-56" y1="0" x2="-42" y2="0" stroke="#b415ff" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="42" y1="0" x2="56" y2="0" stroke="#df8908" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="-40" y1="-40" x2="-30" y2="-30" stroke="#b415ff" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="40" y1="40" x2="30" y2="30" stroke="#df8908" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="40" y1="-40" x2="30" y2="-30" stroke="#df8908" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="-40" y1="40" x2="-30" y2="30" stroke="#b415ff" stroke-width="3.5" stroke-linecap="round"/>
+</g>
+<path d="M 175 190 C 220 220, 250 235, 290 260" fill="none" stroke="url(#d1)" stroke-width="1.5" opacity="0.5" stroke-dasharray="1 6" stroke-linecap="round"/>
+<circle cx="540" cy="200" r="5" fill="#b415ff"/>
+<circle cx="560" cy="400" r="6" fill="#df8908"/>
+<circle cx="190" cy="450" r="4" fill="#e0499a"/>
+<circle cx="500" cy="350" r="4" fill="#df8908"/>
+<circle cx="230" cy="130" r="3" fill="#b415ff"/>
+</svg>

@@ -11,26 +11,19 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
-
     margin: 0;
     padding: 0;
-
     overflow-x: hidden;
 }
 
 body {
     min-height: 100vh;
-
     margin: 0;
     padding: 0;
-
     overflow-x: hidden;
-
     background: #161513;
     color: white;
-
-    font-family: 'Outfit', sans-serif;
-
+    font-family: "Outfit", sans-serif;
     transition:
         background-color 0.4s ease,
         color 0.4s ease;
@@ -94,9 +87,7 @@ body.light-theme .hamburger {
     body.light-theme .navmenu {
         background: rgba(255, 255, 255, 0.98) !important;
         border: 1px solid #e8e5eb;
-
-        box-shadow:
-            0 15px 40px rgba(30, 20, 50, 0.12);
+        box-shadow: 0 15px 40px rgba(30, 20, 50, 0.12);
     }
 
     body.light-theme .hamburger {
@@ -131,16 +122,6 @@ body.light-theme .about {
     background: transparent !important;
 }
 
-body.light-theme .about-sec,
-body.light-theme .right,
-body.light-theme .about-para,
-body.light-theme .about_skills,
-body.light-theme .left,
-body.light-theme .about-achievments {
-    background: transparent !important;
-    background-color: transparent !important;
-}
-
 body.light-theme .about h1,
 body.light-theme .about h2,
 body.light-theme .about h3 {
@@ -153,72 +134,7 @@ body.light-theme .about p {
 
 
 /* =====================================================
-   ABOUT SKILLS
-   IMPORTANT:
-   These are NOT cards.
-   They must stay transparent.
-===================================================== */
-
-body.light-theme .about .skill {
-    background: transparent !important;
-    background-color: transparent !important;
-
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-
-    /* SAME SLOW TRANSITION AS DARK MODE */
-    transition:
-        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) !important;
-
-    will-change: transform;
-}
-
-body.light-theme .about .skill:hover {
-    transform: translateY(-6px) scale(1.03) !important;
-}
-
-body.light-theme .about .skill p {
-    background: transparent !important;
-    color: #333 !important;
-}
-
-
-/* =====================================================
-   ABOUT SKILL BAR
-   REMOVE WHITE HR
-===================================================== */
-
-body.light-theme .about .skill hr {
-    background: linear-gradient(
-        267deg,
-        #df8908 -5.09%,
-        #b415ff 106%
-    ) !important;
-
-    background-color: transparent !important;
-
-    border: none !important;
-    border-top: none !important;
-    border-bottom: none !important;
-
-    outline: none !important;
-
-    box-shadow: none !important;
-
-    appearance: none;
-    -webkit-appearance: none;
-}
-
-body.light-theme .about .skill hr::before,
-body.light-theme .about .skill hr::after {
-    content: none !important;
-    display: none !important;
-}
-
-
-/* =====================================================
-   SKILLS PAGE
+   SKILLS
 ===================================================== */
 
 body.light-theme .skills {
@@ -235,20 +151,10 @@ body.light-theme .skills p {
     color: #5d5d66;
 }
 
-
-/* =====================================================
-   SKILLS CARDS
-   These CAN remain white
-===================================================== */
-
-body.light-theme .skill-card,
-body.light-theme .skills_format {
+body.light-theme .skill-card {
     background: #ffffff !important;
-
     border-color: #e4e1e8 !important;
-
-    box-shadow:
-        0 8px 30px rgba(25, 20, 35, 0.06);
+    box-shadow: 0 8px 30px rgba(25, 20, 35, 0.06);
 }
 
 
@@ -260,18 +166,19 @@ body.light-theme .services {
     color: #202024;
 }
 
-body.light-theme .service_title h1 {
+body.light-theme .services h2,
+body.light-theme .services h3 {
     color: #202024;
 }
 
-body.light-theme .services_format {
+body.light-theme .services p {
+    color: #62626b;
+}
+
+body.light-theme .service-item {
     background: #ffffff !important;
-
     border: 1px solid #e4e1e8 !important;
-
-    box-shadow:
-        0 8px 30px rgba(25, 20, 35, 0.055);
-
+    box-shadow: 0 8px 30px rgba(25, 20, 35, 0.055);
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease,
@@ -279,27 +186,15 @@ body.light-theme .services_format {
         background 0.3s ease;
 }
 
-body.light-theme .services_format h3 {
+body.light-theme .service-item h3 {
     color: #29292f;
 }
 
-body.light-theme .services_format p {
-    color: #62626b;
-}
-
-body.light-theme .services_format:hover {
-    background: linear-gradient(
-        135deg,
-        #ffffff,
-        #fffaff
-    ) !important;
-
+body.light-theme .service-item:hover {
+    background: linear-gradient(135deg, #ffffff, #fffaff) !important;
     border-color: #d39ae8 !important;
-
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 18px 45px rgba(180, 21, 255, 0.10);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(180, 21, 255, 0.10);
 }
 
 
@@ -307,44 +202,36 @@ body.light-theme .services_format:hover {
    SERVICE MODAL
 ===================================================== */
 
-body.light-theme .service_modal_overlay {
+body.light-theme .service-modal-overlay {
     background: rgba(15, 12, 20, 0.48);
 }
 
-body.light-theme .service_modal {
+body.light-theme .service-modal {
     background: #ffffff !important;
-
     border: 1px solid #d9b9e5;
-
-    box-shadow:
-        0 25px 80px rgba(20, 15, 30, 0.25);
+    box-shadow: 0 25px 80px rgba(20, 15, 30, 0.25);
 }
 
-body.light-theme .service_modal > span {
+body.light-theme .service-modal > span {
     color: #85818b;
 }
 
-body.light-theme .service_modal p {
+body.light-theme .service-modal p {
     color: #5d5d66;
 }
 
-body.light-theme .service_modal_close {
+body.light-theme .service-modal-close {
     background: #f0eef2;
     color: #29292f;
 }
 
-body.light-theme .service_modal_close:hover {
+body.light-theme .service-modal-close:hover {
     background: #b415ff;
     color: white;
 }
 
-
-/* =====================================================
-   PORTFOLIO
-===================================================== */
-
-body.light-theme .mywork-title h1 {
-    color: #202024;
+body.light-theme .service-modal-button {
+    color: #ffffff;
 }
 
 
@@ -357,12 +244,7 @@ body.light-theme .contact-title h1 {
 }
 
 body.light-theme .contact_left h1 {
-    background: linear-gradient(
-        270deg,
-        #df8908,
-        #b415ff
-    );
-
+    background: linear-gradient(270deg, #df8908, #b415ff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -392,13 +274,9 @@ body.light-theme .contact_right label {
 body.light-theme .contact_right input,
 body.light-theme .contact_right textarea {
     background: #ffffff !important;
-
     color: #29292f !important;
-
     border: 1px solid #dfdce4 !important;
-
-    box-shadow:
-        0 5px 20px rgba(30, 20, 40, 0.035);
+    box-shadow: 0 5px 20px rgba(30, 20, 40, 0.035);
 }
 
 body.light-theme .contact_right input::placeholder,
@@ -409,9 +287,7 @@ body.light-theme .contact_right textarea::placeholder {
 body.light-theme .contact_right input:focus,
 body.light-theme .contact_right textarea:focus {
     border-color: #b415ff !important;
-
-    box-shadow:
-        0 0 0 3px rgba(180, 21, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(180, 21, 255, 0.08);
 }
 
 
@@ -420,7 +296,17 @@ body.light-theme .contact_right textarea:focus {
 ===================================================== */
 
 body.light-theme .footer {
+    position: relative;
+    width: 100%;
+    margin: 80px 0 0;
+    padding: 60px 170px 10px;
+    box-sizing: border-box;
     color: #29292f;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(180, 21, 255, 0.08), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(223, 137, 8, 0.07), transparent 45%),
+        linear-gradient(135deg, rgba(180, 21, 255, 0.035), rgba(223, 137, 8, 0.035));
+    border-radius: 30px 30px 0 0;
 }
 
 body.light-theme .top-left {
@@ -433,11 +319,8 @@ body.light-theme .bottom {
 
 body.light-theme .email_input {
     background: #ffffff !important;
-
     border: 1px solid #dfdce4;
-
-    box-shadow:
-        0 6px 22px rgba(30, 20, 40, 0.04);
+    box-shadow: 0 6px 22px rgba(30, 20, 40, 0.04);
 }
 
 body.light-theme .email_input input {
@@ -461,9 +344,7 @@ body.light-theme .footer hr {
 body.light-theme .theme-switch {
     background: #eeeeef;
     border-color: #d0ced4;
-
-    box-shadow:
-        inset 0 1px 2px rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 body.light-theme .theme-switch .switch-circle {
@@ -472,19 +353,7 @@ body.light-theme .theme-switch .switch-circle {
 
 
 /* =====================================================
-   BUTTONS
-===================================================== */
-
-body.light-theme .nav-connect a,
-body.light-theme .hero-connect,
-body.light-theme .service_modal_button {
-    color: #ffffff;
-}
-
-
-/* =====================================================
    GENERAL THEME TRANSITIONS
-   DO NOT INCLUDE .about .skill HERE
 ===================================================== */
 
 body,
@@ -493,8 +362,8 @@ body,
 .navmenu a,
 .hero h1,
 .hero p,
-.services_format,
-.service_modal,
+.service-item,
+.service-modal,
 .contact_right input,
 .contact_right textarea,
 .email_input {
@@ -510,9 +379,6 @@ body,
    KEEP ANIMATIONS SAME IN DAY MODE
 ===================================================== */
 
-
-/* Hero */
-
 body.light-theme .hero img {
     animation: heroFloat 4s ease-in-out infinite;
 }
@@ -525,100 +391,27 @@ body.light-theme .hero p {
     animation: heroDescription 1s ease-out 0.3s forwards;
 }
 
-body.light-theme .heroaction {
+body.light-theme .hero-actions {
     animation: heroButtons 1s ease-out 0.6s forwards;
 }
-
-
-/* Typing cursor */
 
 body.light-theme .cursor {
     animation: blink 0.7s infinite;
 }
 
-
-/* Service cards */
-
-body.light-theme .services_format {
-    animation: serviceCard 0.6s ease-out forwards;
-}
-
-
-/* Modal */
-
-body.light-theme .service_modal_overlay {
+body.light-theme .service-modal-overlay {
     animation: modalOverlay 0.3s ease;
 }
 
-body.light-theme .service_modal {
+body.light-theme .service-modal {
     animation: modalOpen 0.35s ease;
 }
 
 
 /* =====================================================
-   DAY MODE FOOTER - FULL WIDTH
+   GLOBAL READABILITY — dark mode secondary text
 ===================================================== */
 
-body.light-theme .footer {
-    position: relative;
-
-    width: 100%;
-    margin: 80px 0 0;
-    padding: 60px 170px 10px;
-
-    box-sizing: border-box;
-
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(180, 21, 255, 0.08),
-            transparent 45%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(223, 137, 8, 0.07),
-            transparent 45%
-        ),
-        linear-gradient(
-            135deg,
-            rgba(180, 21, 255, 0.035),
-            rgba(223, 137, 8, 0.035)
-        );
-
-    border-radius: 30px 30px 0 0;
-}
-
-
-/* =====================================================
-   EXTRA SAFETY:
-   ABOUT SECTION NEVER GETS WHITE BACKGROUND
-===================================================== */
-
-body.light-theme .about,
-body.light-theme .about-sec,
-body.light-theme .right,
-body.light-theme .left,
-body.light-theme .about-para,
-body.light-theme .about_skills,
-body.light-theme .about .skill,
-body.light-theme .about .skill p {
-    background-color: transparent !important;
-    background-image: none !important;
-}
-
-body.light-theme .about .skill hr {
-    background-image: linear-gradient(
-        267deg,
-        #df8908 -5.09%,
-        #b415ff 106%
-    ) !important;
-}
-/* =====================================================
-   GLOBAL READABILITY IMPROVEMENT
-   Secondary / body text
-===================================================== */
-
-/* HERO */
 .hero-description {
     color: #b5b5bd;
 }
@@ -627,34 +420,6 @@ body.light-theme .about .skill hr {
     color: #d2d2d7;
 }
 
-/* ABOUT */
-.about-para {
-    color: #b5b5bd;
-}
-
-.skill p {
-    color: #b0b0b8;
-}
-
-/* SKILLS */
-.skill-info span {
-    color: #b5b5bd;
-}
-
-/* SERVICES */
-.services_format p,
-.service_description,
-.service-desc,
-.services_format .description {
-    color: #b5b5bd;
-}
-
-/* WORK / PORTFOLIO */
-.mywork-showmore p {
-    color: #b5b5bd;
-}
-
-/* CONTACT */
 .contact_left p,
 .contact_right p,
 .contact_right label {
@@ -668,52 +433,12 @@ body.light-theme .about .skill hr {
 
 @media (max-width: 768px) {
 
-    /* Hero intro */
     .hero-description {
         font-size: 16px;
         line-height: 1.75;
         color: #b5b5bd;
     }
 
-    /* About paragraphs */
-    .about-para {
-        font-size: 16px;
-        line-height: 1.75;
-        color: #b5b5bd;
-    }
-
-    /* Skills text */
-    .skill p {
-        font-size: 14px;
-        color: #b5b5bd;
-    }
-
-    .skill-info p {
-        font-size: 16px;
-    }
-
-    .skill-info span {
-        font-size: 14px;
-        color: #b5b5bd;
-    }
-
-    /* Service descriptions */
-    .services_format p,
-    .service_description,
-    .service-desc,
-    .services_format .description {
-        font-size: 15px;
-        line-height: 1.7;
-        color: #b5b5bd;
-    }
-
-    /* Portfolio secondary text */
-    .mywork-showmore p {
-        font-size: 14px;
-        color: #b5b5bd;
-    }
-
-    /* Contact secondary text */
     .contact_left p,
     .contact_right p,
     .contact_right label {
@@ -734,23 +459,6 @@ body.light-theme .about .skill hr {
         font-size: 15px;
     }
 
-    .about-para {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    .skill p {
-        font-size: 13px;
-    }
-
-    .services_format p,
-    .service_description,
-    .service-desc,
-    .services_format .description {
-        font-size: 14px;
-        line-height: 1.65;
-    }
-
     .contact_left p,
     .contact_right p,
     .contact_right label {
@@ -760,18 +468,10 @@ body.light-theme .about .skill hr {
 
 
 /* =====================================================
-   LIGHT MODE
+   LIGHT MODE — SECONDARY TEXT OVERRIDES
 ===================================================== */
 
 body.light-theme .hero-description,
-body.light-theme .about-para,
-body.light-theme .skill p,
-body.light-theme .skill-info span,
-body.light-theme .services_format p,
-body.light-theme .service_description,
-body.light-theme .service-desc,
-body.light-theme .services_format .description,
-body.light-theme .mywork-showmore p,
 body.light-theme .contact_left p,
 body.light-theme .contact_right p,
 body.light-theme .contact_right label {

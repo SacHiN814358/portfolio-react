@@ -1,5 +1,5 @@
-import React from "react";
 import "./Mywork.css";
+import workGraphic from "../../assets/work-graphic.svg";
 import mywork_data from "../../assets/mywork_data";
 
 const Mywork = () => {
@@ -28,16 +28,22 @@ const Mywork = () => {
 
                 <div className="mywork-heading-wrap">
 
-                    <h2>
-                        Things I've
-                        <span> built.</span>
-                    </h2>
+                    <div className="mywork-heading-text">
+                        <h2>
+                            Things I've
+                            <span> built.</span>
+                        </h2>
 
-                    <p>
-                        A collection of experiments,
-                        interfaces and projects I'm building
-                        while growing as a frontend developer.
-                    </p>
+                        <p>
+                            A collection of experiments,
+                            interfaces and projects I'm building
+                            while growing as a frontend developer.
+                        </p>
+                    </div>
+
+                    <div className="mywork-visual">
+                        <img src={workGraphic} alt="Showcase illustration" />
+                    </div>
 
                 </div>
 

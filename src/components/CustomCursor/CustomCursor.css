@@ -1,33 +1,20 @@
-.custom-cursor {
+/* =====================================================
+   NEON FLUID COMET TRAIL CURSOR CANVAS
+===================================================== */
+
+.neon-fluid-cursor-canvas {
     position: fixed;
-
-    width: 18px;
-    height: 18px;
-
-    border: 2px solid #b415ff;
-    border-radius: 50%;
-
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
-
-    transform: translate(-50%, -50%);
-
-    z-index: 10000;
-
-    box-shadow:
-        0 0 10px rgba(180, 21, 255, 0.5);
-
-    transition:
-        width 0.2s ease,
-        height 0.2s ease,
-        border-color 0.2s ease;
+    z-index: 99999;
 }
 
-
-/* Don't show custom cursor on touch devices */
-
-@media (max-width: 768px) {
-
-    .custom-cursor {
-        display: none;
+/* Hide on touch devices / mobile */
+@media (max-width: 768px), (pointer: coarse) {
+    .neon-fluid-cursor-canvas {
+        display: none !important;
     }
 }

@@ -1,26 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./navbar.css";
-
+import { useTheme } from "../../context/ThemeContext";
 import logoWhite from "../../assets/logo-whitee.png";
 import logoBlack from "../../assets/logo-blackk.png";
 
 const Navbar = () => {
+    const { isLight, toggleTheme } = useTheme();
     const [menu, setMenu] = useState("home");
     const [open, setOpen] = useState(false);
-    const [isLight, setIsLight] = useState(false);
-
-    // =====================================================
-    // THEME
-    // =====================================================
-
-    useEffect(() => {
-        document.body.classList.toggle("light-theme", isLight);
-
-        return () => {
-            document.body.classList.remove("light-theme");
-        };
-    }, [isLight]);
-
 
     // =====================================================
     // SMOOTH SCROLL
@@ -38,15 +25,8 @@ const Navbar = () => {
         setOpen(false);
 
         const navbar = document.querySelector(".navbar");
-
-        const navbarHeight = navbar
-            ? navbar.getBoundingClientRect().height
-            : 0;
-
-        const elementPosition =
-            element.getBoundingClientRect().top +
-            window.scrollY;
-
+        const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
         const offset = navbarHeight + 25;
 
         window.scrollTo({
@@ -55,45 +35,30 @@ const Navbar = () => {
         });
     };
 
-
     // =====================================================
-    // ACTIVE SECTION
+    // ACTIVE SECTION HIGHLIGHT
     // =====================================================
 
     useEffect(() => {
         const sections = [
-            { id: "homee", name: "home" },
-            { id: "About", name: "about" },
+            { id: "home",     name: "home"     },
+            { id: "about",    name: "about"    },
+            { id: "skills",   name: "skills"   },
             { id: "services", name: "services" },
-            { id: "work", name: "work" },
-            { id: "contactt", name: "contact" },
+            { id: "work",     name: "work"     },
+            { id: "contact",  name: "contact"  },
         ];
 
         const handleScroll = () => {
-            const triggerPoint =
-                window.innerHeight * 0.35;
-
+            const triggerPoint = window.innerHeight * 0.35;
             let currentSection = "home";
 
-            for (
-                let i = sections.length - 1;
-                i >= 0;
-                i--
-            ) {
-                const element =
-                    document.getElementById(
-                        sections[i].id
-                    );
-
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const element = document.getElementById(sections[i].id);
                 if (!element) continue;
-
-                const rect =
-                    element.getBoundingClientRect();
-
+                const rect = element.getBoundingClientRect();
                 if (rect.top <= triggerPoint) {
-                    currentSection =
-                        sections[i].name;
-
+                    currentSection = sections[i].name;
                     break;
                 }
             }
@@ -101,40 +66,22 @@ const Navbar = () => {
             setMenu(currentSection);
         };
 
-        window.addEventListener(
-            "scroll",
-            handleScroll,
-            { passive: true }
-        );
-
+        window.addEventListener("scroll", handleScroll, { passive: true });
         handleScroll();
 
         return () => {
-            window.removeEventListener(
-                "scroll",
-                handleScroll
-            );
+            window.removeEventListener("scroll", handleScroll);
         };
     }, []);
-
 
     // =====================================================
     // MENU CLICK
     // =====================================================
 
-    const handleMenuClick = (
-        event,
-        id,
-        menuName
-    ) => {
+    const handleMenuClick = (event, id, menuName) => {
         event.preventDefault();
-
-        scrollToSection(
-            id,
-            menuName
-        );
+        scrollToSection(id, menuName);
     };
-
 
     // =====================================================
     // RENDER
@@ -142,198 +89,63 @@ const Navbar = () => {
 
     return (
         <>
-            {/* =================================================
-                NAVBAR
-            ================================================= */}
+            {/* ================================================= NAVBAR ================================================= */}
 
             <nav className="navbar">
 
-                {/* ================= LOGO ================= */}
-
+                {/* LOGO */}
                 <a
-                    href="#homee"
+                    href="#home"
                     className="nav-logo-link"
-                    onClick={(e) =>
-                        handleMenuClick(
-                            e,
-                            "homee",
-                            "home"
-                        )
-                    }
+                    onClick={(e) => handleMenuClick(e, "home", "home")}
                 >
                     <img
                         className="nav-logo"
-                        src={
-                            isLight
-                                ? logoWhite
-                                : logoBlack
-                        }
+                        src={isLight ? logoWhite : logoBlack}
                         alt="Sachin"
                     />
                 </a>
 
+                {/* MENU */}
+                <ul className={`navmenu ${open ? "active" : ""}`}>
 
-                {/* ================= MENU ================= */}
-
-                <ul
-                    className={`navmenu ${
-                        open ? "active" : ""
-                    }`}
-                >
-
-                    {/* HOME */}
-
-                    <li
-                        className={
-                            menu === "home"
-                                ? "active"
-                                : ""
-                        }
-                    >
-                        <a
-                            href="#homee"
-                            onClick={(e) =>
-                                handleMenuClick(
-                                    e,
-                                    "homee",
-                                    "home"
-                                )
-                            }
-                        >
-                            HOME
-                        </a>
+                    <li className={menu === "home" ? "active" : ""}>
+                        <a href="#home" onClick={(e) => handleMenuClick(e, "home", "home")}>HOME</a>
                     </li>
 
-
-                    {/* ABOUT */}
-
-                    <li
-                        className={
-                            menu === "about"
-                                ? "active"
-                                : ""
-                        }
-                    >
-                        <a
-                            href="#About"
-                            onClick={(e) =>
-                                handleMenuClick(
-                                    e,
-                                    "About",
-                                    "about"
-                                )
-                            }
-                        >
-                            ABOUT
-                        </a>
+                    <li className={menu === "about" ? "active" : ""}>
+                        <a href="#about" onClick={(e) => handleMenuClick(e, "about", "about")}>ABOUT</a>
                     </li>
 
-
-                    {/* SERVICES */}
-
-                    <li
-                        className={
-                            menu === "services"
-                                ? "active"
-                                : ""
-                        }
-                    >
-                        <a
-                            href="#services"
-                            onClick={(e) =>
-                                handleMenuClick(
-                                    e,
-                                    "services",
-                                    "services"
-                                )
-                            }
-                        >
-                            SERVICES
-                        </a>
+                    <li className={menu === "services" ? "active" : ""}>
+                        <a href="#services" onClick={(e) => handleMenuClick(e, "services", "services")}>SERVICES</a>
                     </li>
 
-
-                    {/* WORK */}
-
-                    <li
-                        className={
-                            menu === "work"
-                                ? "active"
-                                : ""
-                        }
-                    >
-                        <a
-                            href="#work"
-                            onClick={(e) =>
-                                handleMenuClick(
-                                    e,
-                                    "work",
-                                    "work"
-                                )
-                            }
-                        >
-                            WORK
-                        </a>
+                    <li className={menu === "work" ? "active" : ""}>
+                        <a href="#work" onClick={(e) => handleMenuClick(e, "work", "work")}>WORK</a>
                     </li>
 
-
-                    {/* CONTACT */}
-
-                    <li
-                        className={
-                            menu === "contact"
-                                ? "active"
-                                : ""
-                        }
-                    >
-                        <a
-                            href="#contactt"
-                            onClick={(e) =>
-                                handleMenuClick(
-                                    e,
-                                    "contactt",
-                                    "contact"
-                                )
-                            }
-                        >
-                            CONTACT
-                        </a>
+                    <li className={menu === "contact" ? "active" : ""}>
+                        <a href="#contact" onClick={(e) => handleMenuClick(e, "contact", "contact")}>CONTACT</a>
                     </li>
 
                 </ul>
 
-
-                {/* ================= LET'S TALK ================= */}
-
+                {/* LET'S TALK */}
                 <a
-                    href="#contactt"
+                    href="#contact"
                     className="nav-connect"
-                    onClick={(e) =>
-                        handleMenuClick(
-                            e,
-                            "contactt",
-                            "contact"
-                        )
-                    }
+                    onClick={(e) => handleMenuClick(e, "contact", "contact")}
                 >
                     <span>LET'S TALK</span>
-
-                    <span className="nav-arrow">
-                        ↗
-                    </span>
+                    <span className="nav-arrow">↗</span>
                 </a>
 
-
-                {/* ================= HAMBURGER ================= */}
-
+                {/* HAMBURGER */}
                 <button
                     type="button"
-                    className={`hamburger ${
-                        open ? "open" : ""
-                    }`}
-                    onClick={() =>
-                        setOpen(!open)
-                    }
+                    className={`hamburger ${open ? "open" : ""}`}
+                    onClick={() => setOpen(!open)}
                     aria-label="Toggle navigation menu"
                     aria-expanded={open}
                 >
@@ -343,27 +155,15 @@ const Navbar = () => {
 
             </nav>
 
-
-            {/* =================================================
-                THEME SWITCH
-            ================================================= */}
+            {/* ================================================= THEME SWITCH ================================================= */}
 
             <button
                 type="button"
-                className={`theme-switch ${
-                    isLight
-                        ? "light"
-                        : "dark"
-                }`}
-                onClick={() =>
-                    setIsLight(!isLight)
-                }
+                className={`theme-switch ${isLight ? "light" : "dark"}`}
+                onClick={toggleTheme}
                 aria-label="Toggle day and night mode"
             >
-                <span className="switch-icon">
-                    {isLight ? "☼" : "☾"}
-                </span>
-
+                <span className="switch-icon">{isLight ? "☼" : "☾"}</span>
                 <span className="switch-circle"></span>
             </button>
         </>

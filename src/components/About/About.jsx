@@ -1,23 +1,31 @@
-import React from "react";
 import "./About.css";
+import aboutGraphic from "../../assets/about-graphic.svg";
 
 const About = () => {
     return (
-        <section id="About" className="about">
+        <section id="about" className="about">
 
             {/* ================= HEADER ================= */}
 
             <div className="about-header">
 
-                <div className="about-label">
-                    <span></span>
-                    01 — ABOUT ME
+                <div className="about-header-text">
+
+                    <div className="about-label">
+                        <span></span>
+                        01 — ABOUT ME
+                    </div>
+
+                    <h2>
+                        More than just
+                        <span> code.</span>
+                    </h2>
+
                 </div>
 
-                <h2>
-                    More than just
-                    <span> code.</span>
-                </h2>
+                <div className="about-visual">
+                    <img src={aboutGraphic} alt="Code meets creativity illustration" />
+                </div>
 
             </div>
 

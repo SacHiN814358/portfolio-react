@@ -1,0 +1,47 @@
+<svg width="100%" viewBox="70 40 580 520" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="q1" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#c93bff"/>
+<stop offset="100%" stop-color="#ff9d1f"/>
+</linearGradient>
+<linearGradient id="q2" x1="0%" y1="100%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#ff9d1f"/>
+<stop offset="100%" stop-color="#c93bff"/>
+</linearGradient>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#c93bff" stop-opacity="0.35"/>
+<stop offset="100%" stop-color="#c93bff" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<circle cx="360" cy="300" r="260" fill="url(#glow)"/>
+<circle cx="360" cy="300" r="200" fill="none" stroke="#b415ff" stroke-width="0.5" opacity="0.25"/>
+<circle cx="360" cy="300" r="150" fill="none" stroke="#df8908" stroke-width="0.5" opacity="0.2"/>
+<g transform="translate(140,260)" opacity="0.95">
+<path d="M -18 -55 L -55 0 L -18 55" fill="none" stroke="url(#q1)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g transform="translate(575,340)" opacity="0.95">
+<path d="M 18 -55 L 55 0 L 18 55" fill="none" stroke="url(#q2)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M 170 220 C 260 150, 300 150, 360 200" fill="none" stroke="url(#q1)" stroke-width="1.5" opacity="0.5" stroke-dasharray="1 7" stroke-linecap="round"/>
+<path d="M 400 420 C 470 470, 500 460, 545 400" fill="none" stroke="url(#q2)" stroke-width="1.5" opacity="0.5" stroke-dasharray="1 7" stroke-linecap="round"/>
+<g transform="translate(360,300)">
+<circle cx="0" cy="0" r="88" fill="none" stroke="url(#q1)" stroke-width="1" opacity="0.5"/>
+<path d="M -38 -12 C -38 -60, 38 -60, 38 -12 C 38 18, 15 24, 15 52 L -15 52 C -15 24, -38 18, -38 -12 Z" fill="url(#q1)" opacity="0.95"/>
+<path d="M -12 0 L -2 -14 L 6 -3 L 16 -20" fill="none" stroke="#0a0a0d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<rect x="-16" y="56" width="32" height="11" rx="2" fill="#eceaea"/>
+<rect x="-11" y="70" width="22" height="8" rx="2" fill="#d2d0d2"/>
+<line x1="0" y1="-118" x2="0" y2="-96" stroke="url(#q2)" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="-83" y1="-41" x2="-68" y2="-32" stroke="#b415ff" stroke-width="2" stroke-linecap="round"/>
+<line x1="83" y1="-41" x2="68" y2="-32" stroke="#df8908" stroke-width="2" stroke-linecap="round"/>
+<line x1="-90" y1="18" x2="-72" y2="14" stroke="#b415ff" stroke-width="2" stroke-linecap="round"/>
+<line x1="90" y1="18" x2="72" y2="14" stroke="#df8908" stroke-width="2" stroke-linecap="round"/>
+<line x1="-60" y1="66" x2="-48" y2="55" stroke="#b415ff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+<line x1="60" y1="66" x2="48" y2="55" stroke="#df8908" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+</g>
+<circle cx="150" cy="420" r="4" fill="#df8908"/>
+<circle cx="120" cy="150" r="3" fill="#b415ff"/>
+<circle cx="580" cy="180" r="4" fill="#b415ff"/>
+<circle cx="600" cy="500" r="5" fill="#df8908"/>
+<circle cx="260" cy="500" r="3" fill="#e0499a"/>
+<circle cx="470" cy="140" r="3" fill="#e0499a"/>
+</svg>
