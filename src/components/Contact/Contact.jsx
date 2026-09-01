@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import emailjs from "@emailjs/browser"
 import "./Contact.css"
 
@@ -8,6 +8,11 @@ const Contact = () => {
     const [copiedEmail, setCopiedEmail] = useState(false)
     const [status, setStatus] = useState("idle") // "idle" | "sending" | "success" | "error"
     const [errorMessage, setErrorMessage] = useState("")
+
+    // Initialize EmailJS once when component mounts
+    useEffect(() => {
+        emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+    }, [])
 
     const services = [
         "Web Development",
@@ -28,23 +33,37 @@ const Contact = () => {
         setStatus("sending")
         setErrorMessage("")
 
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+        console.log("EmailJS Config:", { serviceId, templateId, publicKey: publicKey ? "***set***" : "MISSING" })
+
+        if (!serviceId || !templateId || !publicKey) {
+            setStatus("error")
+            setErrorMessage("Email service is not configured. Please check environment variables.")
+            return
+        }
+
         try {
-            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
-            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-
-            if (!serviceId || !templateId || !publicKey) {
-                throw new Error("Email service is not fully configured.")
-            }
-
-            await emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+            const result = await emailjs.sendForm(
+                serviceId,
+                templateId,
+                form.current,
+                { publicKey }
+            )
+            console.log("EmailJS success:", result)
             setStatus("success")
             e.target.reset()
             setTimeout(() => setStatus("idle"), 6000)
         } catch (error) {
-            console.error("EmailJS Error:", error)
+            console.error("EmailJS Error full object:", error)
+            console.error("Status:", error?.status)
+            console.error("Text:", error?.text)
+            console.error("Message:", error?.message)
             setStatus("error")
-            setErrorMessage(error?.text || error?.message || "Failed to send message.")
+            const msg = error?.text || error?.message || String(error) || "Failed to send message."
+            setErrorMessage(msg)
             setTimeout(() => setStatus("idle"), 6000)
         }
     }
