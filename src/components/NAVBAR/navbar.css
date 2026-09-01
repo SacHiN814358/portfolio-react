@@ -16,6 +16,8 @@
         calc(100% - 70px),
         1250px
     );
+    max-width: calc(100vw - 32px);
+    box-sizing: border-box;
 
     min-height: 68px;
 
@@ -596,8 +598,12 @@ body.light-theme .hamburger span {
 
     .navbar {
         top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
 
         width: calc(100% - 32px);
+        max-width: calc(100% - 32px);
+        box-sizing: border-box;
 
         min-height: 58px;
 

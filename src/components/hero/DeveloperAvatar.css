@@ -382,27 +382,40 @@ body.light-theme .orbit-badge {
 
 @media (max-width: 768px) {
     .dev-avatar-container {
-        width: min(78vw, 340px);
+        width: min(74vw, 300px);
         margin: 0 auto;
+        max-width: 100%;
     }
 
     .avatar-speech-bubble {
-        top: -20px;
-        right: 0;
-        font-size: 12px;
-        padding: 8px 14px;
+        top: -18px;
+        right: -5px;
+        font-size: 11px;
+        padding: 6px 12px;
     }
 
     .avatar-status-pill {
         bottom: 0%;
         right: 2%;
         font-size: 9px;
-        padding: 5px 10px;
+        padding: 4px 10px;
     }
 
     .orbit-badge {
-        width: 36px;
-        height: 36px;
-        font-size: 14px;
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .badge-react {
+        left: 0%;
+    }
+
+    .badge-code {
+        left: 0%;
+    }
+
+    .badge-star {
+        right: 0%;
     }
 }
