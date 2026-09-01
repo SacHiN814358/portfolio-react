@@ -18,7 +18,7 @@
 .mywork-header {
     width: 100%;
 
-    margin-bottom: 48px;
+    margin-bottom: 75px;
 }
 
 
@@ -80,9 +80,9 @@
 
     color: #ffffff;
 
-    font-size: clamp(55px, 6vw, 100px);
+    font-size: clamp(55px, 7vw, 100px);
 
-    line-height: 0.95;
+    line-height: 0.88;
 
     font-weight: 700;
 

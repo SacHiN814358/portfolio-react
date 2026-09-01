@@ -92,6 +92,13 @@ const servicesData = [
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
                 description:
                     "Migrating outdated codebases to clean modular React standards, improving maintainability, and fixing bugs across projects."
+            },
+            {
+                number: "03",
+                name: "Accessibility & SEO Audits",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+                description:
+                    "Ensuring websites meet WCAG accessibility standards, improving semantic HTML structure, and implementing on-page SEO best practices for better visibility."
             }
         ]
     }
