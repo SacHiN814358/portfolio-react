@@ -5,7 +5,7 @@ import logoWhite from "../../assets/logo-whitee.png";
 import logoBlack from "../../assets/logo-blackk.png";
 
 const Navbar = () => {
-    const { isLight, toggleTheme } = useTheme();
+    const { isLight } = useTheme();
     const [menu, setMenu] = useState("home");
     const [open, setOpen] = useState(false);
 
@@ -154,18 +154,6 @@ const Navbar = () => {
                 </button>
 
             </nav>
-
-            {/* ================================================= THEME SWITCH ================================================= */}
-
-            <button
-                type="button"
-                className={`theme-switch ${isLight ? "light" : "dark"}`}
-                onClick={toggleTheme}
-                aria-label="Toggle day and night mode"
-            >
-                <span className="switch-icon">{isLight ? "☼" : "☾"}</span>
-                <span className="switch-circle"></span>
-            </button>
         </>
     );
 };

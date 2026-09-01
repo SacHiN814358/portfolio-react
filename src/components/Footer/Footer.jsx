@@ -1,6 +1,10 @@
 import "./Footer.css"
+import { useTheme } from "../../context/ThemeContext"
+import logoWhite from "../../assets/logo-whitee.png"
+import logoBlack from "../../assets/logo-blackk.png"
 
 const Footer = () => {
+  const { isLight } = useTheme()
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -16,11 +20,11 @@ const Footer = () => {
 
         {/* BRAND */}
         <div className="footer-brand">
-          <h2>
-            <span>S</span>achin
-          </h2>
-
-          <div className="footer-brand-line"></div>
+          <img
+            src={isLight ? logoWhite : logoBlack}
+            alt="Sachin Logo"
+            className="footer-brand-logo"
+          />
 
           <p>
             Crafting modern, responsive and user-focused web
@@ -87,23 +91,23 @@ const Footer = () => {
           <div className="footer-heading-line"></div>
 
           <a href="#home">
-            <span>›</span> Home
+            <span className="footer-arrow">›</span> Home
           </a>
 
           <a href="#about">
-            <span>›</span> About
+            <span className="footer-arrow">›</span> About
           </a>
 
           <a href="#services">
-            <span>›</span> Services
+            <span className="footer-arrow">›</span> Services
           </a>
 
           <a href="#work">
-            <span>›</span> Work
+            <span className="footer-arrow">›</span> Work
           </a>
 
           <a href="#contact">
-            <span>›</span> Contact
+            <span className="footer-arrow">›</span> Contact
           </a>
         </div>
 
@@ -114,19 +118,19 @@ const Footer = () => {
           <div className="footer-heading-line"></div>
 
           <a href="#services">
-            <span>›</span> Web Development
+            <span className="footer-arrow">›</span> Web Development
           </a>
 
           <a href="#services">
-            <span>›</span> UI/UX Design
+            <span className="footer-arrow">›</span> UI/UX Design
           </a>
 
           <a href="#services">
-            <span>›</span> Frontend Development
+            <span className="footer-arrow">›</span> Frontend Development
           </a>
 
           <a href="#services">
-            <span>›</span> Responsive Design
+            <span className="footer-arrow">›</span> Responsive Design
           </a>
         </div>
 

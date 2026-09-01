@@ -17,7 +17,7 @@
     border-radius: 50%;
     filter: blur(120px);
     pointer-events: none;
-    opacity: 0.12;
+    opacity: 0.06;
     z-index: 0;
 }
 
@@ -542,12 +542,12 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    box-shadow: 0 10px 25px rgba(180, 21, 255, 0.25);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .submit-btn:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 15px 35px rgba(180, 21, 255, 0.35);
+    box-shadow: 0 8px 20px rgba(180, 21, 255, 0.2);
 }
 
 .submit-btn:disabled {
@@ -653,14 +653,14 @@
 }
 
 .direct-email-note {
-    margin: 4px 0 0;
+    margin: 12px 0 0;
     text-align: center;
     color: #7b7886;
     font-size: 13px;
 }
 
 .direct-email-note a {
-    color: #b415ff;
+    color: #c084fc;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.25s ease;

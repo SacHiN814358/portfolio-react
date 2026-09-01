@@ -1,0 +1,408 @@
+/* =====================================================
+   3D PIXAR DEVELOPER AVATAR CONTAINER
+===================================================== */
+
+.dev-avatar-container {
+    position: relative;
+    width: min(35vw, 440px);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* =====================================================
+   AMBIENT GLOW & CYBER HALO RING
+===================================================== */
+
+.avatar-backdrop-glow {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(180, 21, 255, 0.45) 0%, rgba(223, 137, 8, 0.4) 55%, transparent 70%);
+    filter: blur(55px);
+    opacity: 0.4;
+    animation: avatarGlowPulse 4s ease-in-out infinite alternate;
+    transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+.dev-avatar-container:hover .avatar-backdrop-glow {
+    opacity: 0.7;
+    filter: blur(65px);
+}
+
+@keyframes avatarGlowPulse {
+    0% { transform: scale(0.94); }
+    100% { transform: scale(1.08); }
+}
+
+/* Outer Cyber Ring */
+.avatar-cyber-ring {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    border: 1.5px dashed rgba(180, 21, 255, 0.35);
+    border-top-color: #df8908;
+    border-bottom-color: #ff3cac;
+    box-shadow: 0 0 20px rgba(180, 21, 255, 0.15);
+    animation: haloRingRotate 20s linear infinite;
+    pointer-events: none;
+    transition: border-color 0.4s ease;
+}
+
+.dev-avatar-container:hover .avatar-cyber-ring {
+    border-color: rgba(223, 137, 8, 0.65);
+    border-top-color: #b415ff;
+    animation: haloRingRotate 10s linear infinite;
+}
+
+@keyframes haloRingRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+/* Live Status Pill */
+.avatar-status-pill {
+    position: absolute;
+    bottom: 4%;
+    right: 8%;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(18, 15, 28, 0.92);
+    border: 1px solid rgba(180, 21, 255, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(180, 21, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #e0dcf0;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dev-avatar-container:hover .avatar-status-pill {
+    transform: scale(1.05);
+    border-color: #22c55e;
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #22c55e;
+    animation: livePulse 1.8s infinite;
+}
+
+@keyframes livePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+
+/* =====================================================
+   CIRCULAR 3D GLASS AVATAR FRAME
+===================================================== */
+
+.avatar-glass-card {
+    position: relative;
+    width: 86%;
+    height: 86%;
+    border-radius: 50%;
+    background: #0d0b14;
+    border: 2.5px solid rgba(180, 21, 255, 0.45);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(180, 21, 255, 0.2),
+        inset 0 0 25px rgba(180, 21, 255, 0.25);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: avatarFloat 5s ease-in-out infinite;
+}
+
+.dev-avatar-container:hover .avatar-glass-card {
+    border-color: #df8908;
+    box-shadow:
+        0 30px 70px rgba(180, 21, 255, 0.35),
+        0 0 35px rgba(223, 137, 8, 0.3),
+        inset 0 0 35px rgba(223, 137, 8, 0.25);
+    transform: translateY(-6px);
+}
+
+@keyframes avatarFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =====================================================
+   CHARACTER IMAGES (IDLE & WAVING CROSS-FADE)
+===================================================== */
+
+.avatar-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.avatar-idle.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.avatar-idle.hidden {
+    opacity: 0;
+    transform: scale(0.96);
+}
+
+.avatar-waving.visible {
+    opacity: 1;
+    transform: scale(1.02);
+    animation: wavingSubtleMotion 1.2s ease-in-out infinite alternate;
+}
+
+.avatar-waving.hidden {
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+@keyframes wavingSubtleMotion {
+    0% {
+        transform: scale(1.02) rotate(-1.5deg);
+    }
+    100% {
+        transform: scale(1.02) rotate(1.5deg);
+    }
+}
+
+
+/* =====================================================
+   SPEECH BUBBLE POP-UP
+===================================================== */
+
+.avatar-speech-bubble {
+    position: absolute;
+    top: -24px;
+    right: 0px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: rgba(18, 14, 28, 0.95);
+    border: 1.5px solid #b415ff;
+    box-shadow: 0 10px 25px rgba(180, 21, 255, 0.4), 0 0 20px rgba(223, 137, 8, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.6) translateY(20px);
+    transition: opacity 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.speech-tag {
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: rgba(180, 21, 255, 0.2);
+    border: 1px solid rgba(180, 21, 255, 0.4);
+    color: #df8908;
+    font-size: 11px;
+    font-family: monospace;
+}
+
+.avatar-speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 28px;
+    width: 12px;
+    height: 12px;
+    background: #120e1c;
+    border-right: 1.5px solid #b415ff;
+    border-bottom: 1.5px solid #b415ff;
+    transform: rotate(45deg);
+}
+
+.avatar-speech-bubble.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.speech-wave {
+    display: inline-block;
+    animation: waveEmoji 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes waveEmoji {
+    0% { transform: rotate(-15deg); }
+    100% { transform: rotate(20deg); }
+}
+
+
+/* =====================================================
+   ORBITING TECH BADGES
+===================================================== */
+
+.orbit-badge {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(22, 18, 34, 0.9);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    z-index: 4;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge-react {
+    top: 10%;
+    left: -4%;
+    border-color: rgba(97, 218, 251, 0.6);
+    box-shadow: 0 0 18px rgba(97, 218, 251, 0.35);
+    animation: orbitFloat1 6s ease-in-out infinite alternate;
+}
+
+.badge-code {
+    bottom: 14%;
+    left: -6%;
+    color: #df8908;
+    font-size: 13px;
+    border-color: rgba(223, 137, 8, 0.6);
+    box-shadow: 0 0 18px rgba(223, 137, 8, 0.35);
+    animation: orbitFloat2 7s ease-in-out infinite alternate;
+}
+
+.badge-star {
+    top: 22%;
+    right: -4%;
+    color: #b415ff;
+    border-color: rgba(180, 21, 255, 0.6);
+    box-shadow: 0 0 18px rgba(180, 21, 255, 0.35);
+    animation: orbitFloat3 5.5s ease-in-out infinite alternate;
+}
+
+@keyframes orbitFloat1 {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-12px) rotate(8deg); }
+}
+
+@keyframes orbitFloat2 {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(10px) rotate(-6deg); }
+}
+
+@keyframes orbitFloat3 {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-8px) rotate(10deg); }
+}
+
+.dev-avatar-container:hover .orbit-badge {
+    transform: scale(1.15);
+}
+
+
+/* =====================================================
+   LIGHT THEME SUPPORT
+===================================================== */
+
+body.light-theme .avatar-glass-card {
+    background: #f7f5fa;
+    border-color: rgba(180, 21, 255, 0.4);
+    box-shadow:
+        0 20px 50px rgba(180, 21, 255, 0.18),
+        inset 0 0 30px rgba(180, 21, 255, 0.08);
+}
+
+body.light-theme .avatar-speech-bubble {
+    background: #ffffff;
+    border-color: #b415ff;
+    color: #1a1824;
+    box-shadow: 0 10px 25px rgba(180, 21, 255, 0.2);
+}
+
+body.light-theme .avatar-speech-bubble::after {
+    background: #ffffff;
+    border-color: #b415ff;
+}
+
+body.light-theme .avatar-status-pill {
+    background: #ffffff;
+    border-color: #dfdce4;
+    color: #2b2838;
+}
+
+body.light-theme .orbit-badge {
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVENESS
+===================================================== */
+
+@media (max-width: 768px) {
+    .dev-avatar-container {
+        width: min(78vw, 340px);
+        margin: 0 auto;
+    }
+
+    .avatar-speech-bubble {
+        top: -20px;
+        right: 0;
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .avatar-status-pill {
+        bottom: 0%;
+        right: 2%;
+        font-size: 9px;
+        padding: 5px 10px;
+    }
+
+    .orbit-badge {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}

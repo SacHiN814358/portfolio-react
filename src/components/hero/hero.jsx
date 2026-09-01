@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./hero.css";
-import profile_img from "../../assets/profile_img.svg";
+import DeveloperAvatar from "./DeveloperAvatar";
 
 const Hero = () => {
     const words = [
@@ -95,15 +95,7 @@ const Hero = () => {
                 {/* RIGHT SIDE */}
                 <div className="hero-right">
 
-                    <div className="hero-image-wrapper">
-                        <div className="hero-image-ring"></div>
-                        <div className="hero-image-glow"></div>
-                        <img
-                            src={profile_img}
-                            alt="Sachin"
-                            className="hero-profile"
-                        />
-                    </div>
+                    <DeveloperAvatar />
 
                     <div className="hero-location">
                         <span className="location-dot"></span>

@@ -37,39 +37,12 @@
    BRAND
 ========================= */
 
-.footer-brand h2 {
-    margin: 0;
-    font-size: 42px;
-    font-weight: 600;
-    letter-spacing: -1.5px;
-}
-
-.footer-brand h2 span {
-    background: linear-gradient(
-        90deg,
-        #a100ff,
-        #ff4d9d,
-        #ff9d00
-    );
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.footer-brand-line {
-    width: 145px;
-    height: 2px;
-    margin: 14px 0 25px;
-
-    background: linear-gradient(
-        90deg,
-        #9b00ff,
-        #ff3cac,
-        #ff9d00
-    );
-
-    border-radius: 10px;
+.footer-brand-logo {
+    width: 140px;
+    height: auto;
+    display: block;
+    margin: 0 0 18px;
+    object-fit: contain;
 }
 
 .footer-brand p {
@@ -186,10 +159,11 @@
         transform 0.25s ease;
 }
 
-.footer-column > a span {
-    font-size: 25px;
+.footer-column > a .footer-arrow {
+    font-size: 22px;
     line-height: 0;
     color: #aaa;
+    transition: color 0.25s ease;
 }
 
 .footer-column > a:hover {
@@ -197,7 +171,7 @@
     transform: translateX(5px);
 }
 
-.footer-column > a:hover span {
+.footer-column > a:hover .footer-arrow {
     color: #b400ff;
 }
 
@@ -210,20 +184,28 @@
 .footer-contact-item {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 
     color: #b5b5b5;
     text-decoration: none;
 
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.footer-contact a span,
+.footer-contact-item span {
+    font-size: 15px;
+    color: inherit;
+    line-height: 1.5;
 }
 
 .footer-contact svg,
 .footer-contact-item svg {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
     flex-shrink: 0;
     stroke: #b400ff;
 }
