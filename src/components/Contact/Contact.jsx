@@ -9,10 +9,16 @@ const Contact = () => {
     const [status, setStatus] = useState("idle") // "idle" | "sending" | "success" | "error"
     const [errorMessage, setErrorMessage] = useState("")
 
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_kpueso3"
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_i04m489"
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "CVpJBIB9orY3A8RN5"
+
     // Initialize EmailJS once when component mounts
     useEffect(() => {
-        emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
-    }, [])
+        if (PUBLIC_KEY) {
+            emailjs.init(PUBLIC_KEY)
+        }
+    }, [PUBLIC_KEY])
 
     const services = [
         "Web Development",
@@ -33,24 +39,18 @@ const Contact = () => {
         setStatus("sending")
         setErrorMessage("")
 
-        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
-        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-
-        console.log("EmailJS Config:", { serviceId, templateId, publicKey: publicKey ? "***set***" : "MISSING" })
-
-        if (!serviceId || !templateId || !publicKey) {
+        if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
             setStatus("error")
-            setErrorMessage("Email service is not configured. Please check environment variables.")
+            setErrorMessage("Email service is not configured.")
             return
         }
 
         try {
             const result = await emailjs.sendForm(
-                serviceId,
-                templateId,
+                SERVICE_ID,
+                TEMPLATE_ID,
                 form.current,
-                { publicKey }
+                { publicKey: PUBLIC_KEY }
             )
             console.log("EmailJS success:", result)
             setStatus("success")
