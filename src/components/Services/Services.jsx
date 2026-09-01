@@ -34,7 +34,7 @@ const Services = () => {
 
                 <div className="services-label">
                     <span></span>
-                    SERVICES & SOLUTIONS
+                    03 — SERVICES & SOLUTIONS
                 </div>
 
 
