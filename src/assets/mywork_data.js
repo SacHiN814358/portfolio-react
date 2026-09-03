@@ -8,11 +8,11 @@ import project6_img from "../assets/project_6.svg";
 const mywork_data = [
     {
         w_no: 1,
-        w_title: "ResuMate AI",
+        w_title: "ResuCraft AI",
         w_name: "Smart ATS Resume & Cover Letter Builder with Google Gemini AI, Real-time Live Visualizer & Vector PDF Export",
         w_img: project1_img,
         w_tech: ["React", "Gemini AI", "Tailwind CSS", "html2pdf.js", "Vitest"],
-        w_live: "https://resumate-ai.vercel.app",
+        w_live: "https://sachin-resucraft.vercel.app",
         w_github: "https://github.com/SacHiN814358/ai-resume-builder",
     },
     {
