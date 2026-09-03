@@ -1,21 +1,21 @@
 ﻿<svg width="419" height="280" viewBox="0 0 419 280" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="419" y2="280" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0b0d14"/>
-      <stop offset="50%" stop-color="#0f121d"/>
-      <stop offset="100%" stop-color="#08090f"/>
+      <stop offset="0%" stop-color="#090a0f"/>
+      <stop offset="50%" stop-color="#0f111a"/>
+      <stop offset="100%" stop-color="#06070a"/>
     </linearGradient>
     <linearGradient id="accentGrad" x1="0" y1="0" x2="419" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#6366f1"/>
       <stop offset="50%" stop-color="#8b5cf6"/>
       <stop offset="100%" stop-color="#ec4899"/>
     </linearGradient>
-    <linearGradient id="glowGrad" x1="200" y1="100" x2="419" y2="280" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.15"/>
+    <linearGradient id="glowGrad" x1="200" y1="50" x2="419" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.18"/>
       <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
     </linearGradient>
     <filter id="cardShadow" x="-10" y="-10" width="440" height="300" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.7"/>
     </filter>
   </defs>
 
@@ -24,112 +24,98 @@
   <rect width="419" height="280" rx="12" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5"/>
 
   <!-- Subtle Ambient Glow -->
-  <circle cx="340" cy="80" r="120" fill="url(#glowGrad)"/>
+  <circle cx="340" cy="70" r="140" fill="url(#glowGrad)"/>
 
-  <!-- Window Header Bar -->
-  <rect x="1" y="1" width="417" height="32" rx="12" fill="#141724" fill-opacity="0.8"/>
-  <line x1="1" y1="33" x2="418" y2="33" stroke="rgba(255, 255, 255, 0.07)"/>
-  
-  <!-- Window Dots -->
-  <circle cx="20" cy="17" r="4" fill="#ef4444" fill-opacity="0.8"/>
-  <circle cx="32" cy="17" r="4" fill="#f59e0b" fill-opacity="0.8"/>
-  <circle cx="44" cy="17" r="4" fill="#10b981" fill-opacity="0.8"/>
-
-  <!-- Window URL Badge -->
-  <rect x="110" y="8" width="200" height="18" rx="5" fill="#090a0f" stroke="rgba(255,255,255,0.08)"/>
-  <text x="210" y="20.5" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500" text-anchor="middle">sachin-resucraft.vercel.app</text>
-
-  <!-- Content Split Area -->
-  <!-- Left Side: Mini Editor Panel -->
-  <rect x="16" y="46" width="180" height="216" rx="8" fill="#121522" stroke="rgba(255, 255, 255, 0.06)"/>
+  <!-- Left Side: Sleek Editor Panel (Full Height) -->
+  <rect x="14" y="14" width="182" height="252" rx="8" fill="#121522" stroke="rgba(255, 255, 255, 0.07)"/>
   
   <!-- Editor Header -->
-  <rect x="24" y="56" width="20" height="20" rx="5" fill="#4f46e5" fill-opacity="0.2"/>
-  <text x="34" y="70" fill="#818cf8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">✨</text>
-  <text x="50" y="66" fill="#f8fafc" font-family="sans-serif" font-size="11" font-weight="700">ResuCraft</text>
-  <text x="106" y="66" fill="#818cf8" font-family="sans-serif" font-size="11" font-weight="800">AI</text>
-  <text x="50" y="74" fill="#64748b" font-family="sans-serif" font-size="7">Smart ATS Resume Builder</text>
+  <rect x="22" y="24" width="22" height="22" rx="6" fill="#4f46e5" fill-opacity="0.25"/>
+  <text x="33" y="39" fill="#818cf8" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">✨</text>
+  <text x="50" y="35" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="700">ResuCraft</text>
+  <text x="110" y="35" fill="#818cf8" font-family="sans-serif" font-size="12" font-weight="800">AI</text>
+  <text x="50" y="44" fill="#64748b" font-family="sans-serif" font-size="7.5">ATS Resume &amp; Cover Engine</text>
 
   <!-- Mini Form Fields -->
   <!-- Input 1 -->
-  <text x="24" y="93" fill="#94a3b8" font-family="sans-serif" font-size="7.5" font-weight="600">Full Name</text>
-  <rect x="24" y="97" width="164" height="18" rx="4" fill="#090b12" stroke="rgba(255, 255, 255, 0.08)"/>
-  <text x="32" y="109" fill="#f1f5f9" font-family="sans-serif" font-size="8">Sachin Gupta</text>
+  <text x="22" y="66" fill="#94a3b8" font-family="sans-serif" font-size="8" font-weight="600">Full Name</text>
+  <rect x="22" y="71" width="166" height="20" rx="4" fill="#090b12" stroke="rgba(255, 255, 255, 0.08)"/>
+  <text x="30" y="84.5" fill="#f1f5f9" font-family="sans-serif" font-size="8.5">Sachin Gupta</text>
 
   <!-- Input 2 -->
-  <text x="24" y="127" fill="#94a3b8" font-family="sans-serif" font-size="7.5" font-weight="600">Target Role</text>
-  <rect x="24" y="131" width="164" height="18" rx="4" fill="#090b12" stroke="rgba(255, 255, 255, 0.08)"/>
-  <text x="32" y="143" fill="#f1f5f9" font-family="sans-serif" font-size="8">Senior Frontend Developer</text>
+  <text x="22" y="105" fill="#94a3b8" font-family="sans-serif" font-size="8" font-weight="600">Target Role</text>
+  <rect x="22" y="110" width="166" height="20" rx="4" fill="#090b12" stroke="rgba(255, 255, 255, 0.08)"/>
+  <text x="30" y="123.5" fill="#f1f5f9" font-family="sans-serif" font-size="8.5">Senior Frontend Developer</text>
 
   <!-- AI Polish Action Tag -->
-  <rect x="24" y="159" width="164" height="32" rx="5" fill="#1e1b4b" stroke="#4338ca" stroke-width="0.8"/>
-  <text x="32" y="172" fill="#c7d2fe" font-family="sans-serif" font-size="7.5" font-weight="700">✨ AI Bullet Point Enhancer</text>
-  <text x="32" y="183" fill="#818cf8" font-family="sans-serif" font-size="7">Formula: XYZ Metric Optimization</text>
+  <rect x="22" y="140" width="166" height="38" rx="6" fill="#1e1b4b" stroke="#4338ca" stroke-width="0.8"/>
+  <text x="32" y="156" fill="#c7d2fe" font-family="sans-serif" font-size="8.5" font-weight="700">✨ AI Bullet Point Enhancer</text>
+  <text x="32" y="169" fill="#818cf8" font-family="sans-serif" font-size="7.5">XYZ Formula • Instant Polish</text>
 
   <!-- Skills Chips in Editor -->
-  <text x="24" y="204" fill="#94a3b8" font-family="sans-serif" font-size="7.5" font-weight="600">Core Technologies</text>
-  <rect x="24" y="209" width="38" height="14" rx="3" fill="#1e293b"/>
-  <text x="43" y="219" fill="#cbd5e1" font-family="sans-serif" font-size="6.5" font-weight="500" text-anchor="middle">React.js</text>
-  <rect x="66" y="209" width="46" height="14" rx="3" fill="#1e293b"/>
-  <text x="89" y="219" fill="#cbd5e1" font-family="sans-serif" font-size="6.5" font-weight="500" text-anchor="middle">Gemini AI</text>
-  <rect x="116" y="209" width="44" height="14" rx="3" fill="#1e293b"/>
-  <text x="138" y="219" fill="#cbd5e1" font-family="sans-serif" font-size="6.5" font-weight="500" text-anchor="middle">Tailwind</text>
+  <text x="22" y="194" fill="#94a3b8" font-family="sans-serif" font-size="8" font-weight="600">Skills &amp; Tech Stack</text>
+  <rect x="22" y="200" width="38" height="15" rx="3.5" fill="#1e293b"/>
+  <text x="41" y="211" fill="#cbd5e1" font-family="sans-serif" font-size="7" font-weight="500" text-anchor="middle">React.js</text>
+  <rect x="65" y="200" width="48" height="15" rx="3.5" fill="#1e293b"/>
+  <text x="89" y="211" fill="#cbd5e1" font-family="sans-serif" font-size="7" font-weight="500" text-anchor="middle">Gemini AI</text>
+  <rect x="118" y="200" width="46" height="15" rx="3.5" fill="#1e293b"/>
+  <text x="141" y="211" fill="#cbd5e1" font-family="sans-serif" font-size="7" font-weight="500" text-anchor="middle">Tailwind</text>
 
   <!-- Export Button Mini -->
-  <rect x="24" y="232" width="164" height="20" rx="4" fill="#4f46e5"/>
-  <text x="106" y="245" fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">⬇ Download PDF</text>
+  <rect x="22" y="228" width="166" height="24" rx="5" fill="#4f46e5"/>
+  <text x="105" y="243.5" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">⬇ Download PDF</text>
 
 
-  <!-- Right Side: Mini A4 White Resume Preview -->
-  <rect x="208" y="46" width="195" height="216" rx="4" fill="#ffffff" filter="url(#cardShadow)"/>
+  <!-- Right Side: Mini A4 White Resume Sheet (Full Height) -->
+  <rect x="208" y="14" width="197" height="252" rx="4" fill="#ffffff" filter="url(#cardShadow)"/>
   
   <!-- Resume Sheet Header -->
-  <rect x="218" y="56" width="175" height="4" fill="#4f46e5"/>
-  <text x="218" y="72" fill="#0f172a" font-family="sans-serif" font-size="12" font-weight="800">Sachin Gupta</text>
-  <text x="218" y="81" fill="#475569" font-family="sans-serif" font-size="7" font-weight="600">Frontend Specialist &amp; React Developer</text>
+  <rect x="218" y="24" width="177" height="4" fill="#4f46e5"/>
+  <text x="218" y="42" fill="#0f172a" font-family="sans-serif" font-size="13" font-weight="800">Sachin Gupta</text>
+  <text x="218" y="52" fill="#475569" font-family="sans-serif" font-size="7.5" font-weight="600">Frontend Specialist &amp; React Developer</text>
   
-  <text x="218" y="91" fill="#64748b" font-family="sans-serif" font-size="5.5">✉ sachingupta00134@gmail.com  •  ⚲ Gujarat, India</text>
+  <text x="218" y="63" fill="#64748b" font-family="sans-serif" font-size="6">✉ sachingupta00134@gmail.com  •  ⚲ Gujarat, India</text>
 
   <!-- Divider -->
-  <line x1="218" y1="96" x2="393" y2="96" stroke="#e2e8f0" stroke-width="0.8"/>
+  <line x1="218" y1="69" x2="395" y2="69" stroke="#e2e8f0" stroke-width="0.8"/>
 
   <!-- Experience Section -->
-  <text x="218" y="106" fill="#4f46e5" font-family="sans-serif" font-size="6.5" font-weight="bold">WORK EXPERIENCE</text>
-  <text x="218" y="115" fill="#1e293b" font-family="sans-serif" font-size="6.5" font-weight="bold">Lead Frontend Developer</text>
-  <text x="365" y="115" fill="#64748b" font-family="sans-serif" font-size="5">2023 - Present</text>
+  <text x="218" y="81" fill="#4f46e5" font-family="sans-serif" font-size="7" font-weight="bold">WORK EXPERIENCE</text>
+  <text x="218" y="91" fill="#1e293b" font-family="sans-serif" font-size="7" font-weight="bold">Lead Frontend Developer</text>
+  <text x="366" y="91" fill="#64748b" font-family="sans-serif" font-size="5.5">2023 - Present</text>
   
   <!-- Mini Bullets -->
-  <circle cx="221" cy="123" r="1" fill="#4f46e5"/>
-  <text x="225" y="124.5" fill="#334155" font-family="sans-serif" font-size="5">Architected high-scale web modules cutting latency by 40%</text>
+  <circle cx="221" cy="99" r="1.2" fill="#4f46e5"/>
+  <text x="226" y="101" fill="#334155" font-family="sans-serif" font-size="5.5">Architected modular SaaS UI cutting page load latency by 40%</text>
   
-  <circle cx="221" cy="131" r="1" fill="#4f46e5"/>
-  <text x="225" y="132.5" fill="#334155" font-family="sans-serif" font-size="5">Integrated Gemini AI pipeline for automated workflows</text>
+  <circle cx="221" cy="108" r="1.2" fill="#4f46e5"/>
+  <text x="226" y="110" fill="#334155" font-family="sans-serif" font-size="5.5">Integrated Gemini AI pipeline for automated workflows</text>
 
   <!-- Skills Preview Grid -->
-  <text x="218" y="145" fill="#4f46e5" font-family="sans-serif" font-size="6.5" font-weight="bold">TECHNICAL SKILLS</text>
-  <rect x="218" y="150" width="34" height="10" rx="2" fill="#e0e7ff"/>
-  <text x="235" y="157" fill="#3730a3" font-family="sans-serif" font-size="5" font-weight="600" text-anchor="middle">React.js</text>
+  <text x="218" y="125" fill="#4f46e5" font-family="sans-serif" font-size="7" font-weight="bold">TECHNICAL SKILLS</text>
+  <rect x="218" y="131" width="36" height="11" rx="2.5" fill="#e0e7ff"/>
+  <text x="236" y="139" fill="#3730a3" font-family="sans-serif" font-size="5.5" font-weight="600" text-anchor="middle">React.js</text>
 
-  <rect x="256" y="150" width="38" height="10" rx="2" fill="#e0e7ff"/>
-  <text x="275" y="157" fill="#3730a3" font-family="sans-serif" font-size="5" font-weight="600" text-anchor="middle">TypeScript</text>
+  <rect x="259" y="131" width="40" height="11" rx="2.5" fill="#e0e7ff"/>
+  <text x="279" y="139" fill="#3730a3" font-family="sans-serif" font-size="5.5" font-weight="600" text-anchor="middle">TypeScript</text>
 
-  <rect x="298" y="150" width="34" height="10" rx="2" fill="#e0e7ff"/>
-  <text x="315" y="157" fill="#3730a3" font-family="sans-serif" font-size="5" font-weight="600" text-anchor="middle">Vite/CSS</text>
+  <rect x="304" y="131" width="36" height="11" rx="2.5" fill="#e0e7ff"/>
+  <text x="322" y="139" fill="#3730a3" font-family="sans-serif" font-size="5.5" font-weight="600" text-anchor="middle">Vite/CSS</text>
 
   <!-- Education Section -->
-  <text x="218" y="172" fill="#4f46e5" font-family="sans-serif" font-size="6.5" font-weight="bold">EDUCATION &amp; HONORS</text>
-  <text x="218" y="180" fill="#1e293b" font-family="sans-serif" font-size="6">B.Tech in Computer Engineering (GTU)</text>
-  <text x="368" y="180" fill="#64748b" font-family="sans-serif" font-size="5">GPA: 8.6</text>
+  <text x="218" y="157" fill="#4f46e5" font-family="sans-serif" font-size="7" font-weight="bold">EDUCATION &amp; HONORS</text>
+  <text x="218" y="166" fill="#1e293b" font-family="sans-serif" font-size="6.5">B.Tech in Computer Engineering (GTU)</text>
+  <text x="368" y="166" fill="#64748b" font-family="sans-serif" font-size="5.5">GPA: 8.6</text>
 
   <!-- Projects Section -->
-  <text x="218" y="193" fill="#4f46e5" font-family="sans-serif" font-size="6.5" font-weight="bold">FEATURED PROJECTS</text>
-  <text x="218" y="201" fill="#1e293b" font-family="sans-serif" font-size="6" font-weight="bold">ResuCraft AI &amp; CineVerse Platform</text>
-  <text x="218" y="208" fill="#475569" font-family="sans-serif" font-size="5">Full-stack React &amp; AI-driven user experience architecture</text>
+  <text x="218" y="181" fill="#4f46e5" font-family="sans-serif" font-size="7" font-weight="bold">FEATURED PROJECTS</text>
+  <text x="218" y="190" fill="#1e293b" font-family="sans-serif" font-size="6.5" font-weight="bold">ResuCraft AI &amp; CineVerse</text>
+  <text x="218" y="198" fill="#475569" font-family="sans-serif" font-size="5.5">Full-stack React &amp; AI-driven user experience architecture</text>
 
   <!-- Floating Quality Badge -->
-  <rect x="250" y="224" width="138" height="24" rx="12" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
-  <text x="319" y="239" fill="#38bdf8" font-family="sans-serif" font-size="7.5" font-weight="700" text-anchor="middle">★ ATS Score: 98/100</text>
+  <rect x="245" y="222" width="148" height="26" rx="13" fill="#0f172a" stroke="#6366f1" stroke-width="1.2"/>
+  <text x="319" y="238.5" fill="#38bdf8" font-family="sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">★ ATS Score: 98/100</text>
 
   <!-- Bottom Accent Line -->
-  <rect x="1" y="278" width="417" height="2" rx="1" fill="url(#accentGrad)"/>
+  <rect x="0" y="278" width="419" height="2" fill="url(#accentGrad)"/>
 </svg>
