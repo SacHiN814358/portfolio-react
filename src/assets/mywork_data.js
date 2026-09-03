@@ -12,8 +12,8 @@ const mywork_data = [
         w_name: "Smart ATS Resume & Cover Letter Builder with Google Gemini AI, Real-time Live Visualizer & Vector PDF Export",
         w_img: project1_img,
         w_tech: ["React", "Gemini AI", "Tailwind CSS", "html2pdf.js", "Vitest"],
-        w_live: "https://sachin-resucraft.vercel.app",
-        w_github: "https://github.com/SacHiN814358/ai-resume-builder",
+        w_live: "https://resumate-ai-ivory.vercel.app",
+        w_github: "https://github.com/SacHiN814358/resumate-ai",
     },
     {
         w_no: 2,
