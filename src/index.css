@@ -3,20 +3,28 @@
 ===================================================== */
 
 :root {
-    /* Brand Palette — Option 2: Midnight Obsidian Slate */
-    --primary-red: #0F172A;
-    --primary-red-hover: #1E293B;
-    --primary-red-subtle: rgba(15, 23, 42, 0.06);
-    --primary-red-border: rgba(15, 23, 42, 0.16);
-    --primary-blue: #0F172A;
-    --primary-blue-hover: #1E293B;
+    /* Brand Palette — Midnight Slate Hero with Electric Blue Accent */
+    --brand-accent: #2563EB;
+    --brand-accent-hover: #1D4ED8;
+    --brand-accent-light: #38BDF8;
+    --brand-accent-gradient: linear-gradient(135deg, #2563EB 0%, #0284C7 50%, #38BDF8 100%);
+    --brand-accent-subtle: rgba(37, 99, 235, 0.08);
+    --brand-accent-border: rgba(37, 99, 235, 0.22);
+
+    --primary-red: #2563EB;
+    --primary-red-hover: #1D4ED8;
+    --primary-red-subtle: rgba(37, 99, 235, 0.08);
+    --primary-red-border: rgba(37, 99, 235, 0.22);
+    --primary-blue: #2563EB;
+    --primary-blue-hover: #1D4ED8;
     --primary-blue-dark: #020617;
     --hero-bg: #0F172A;
     --navbar-bg: rgba(2, 6, 23, 0.90);
-    --bg-white: #ffffff;
+    --bg-navy-minimal: #E8EFF8;
+    --bg-white: #E8EFF8;
     --bg-card: #ffffff;
-    --bg-input: #fbfbfb;
-    --bg-subtle: #f8f8f8;
+    --bg-input: #ffffff;
+    --bg-subtle: #F1F6FB;
     --text-primary: #111111;
     --text-secondary: #555555;
     --text-muted: #888888;
@@ -238,20 +246,20 @@ body {
 
 .input-wrapper:focus-within,
 .textarea-wrapper:focus-within {
-    border-color: var(--primary-red) !important;
+    border-color: var(--brand-accent) !important;
     background-color: var(--bg-white) !important;
-    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.12) !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
 }
 
-/* Primary Red Button */
+/* Primary Button */
 .submit-btn {
-    background: var(--primary-red) !important;
+    background: linear-gradient(135deg, #1E40AF 0%, #2563EB 100%) !important;
     color: #ffffff !important;
 }
 
 .submit-btn:hover:not(:disabled) {
-    background: var(--primary-red-hover) !important;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25) !important;
+    background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%) !important;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.30) !important;
 }
 
 /* =====================================================

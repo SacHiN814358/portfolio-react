@@ -10,7 +10,7 @@
     padding: var(--section-padding-y) var(--container-padding-x);
     box-sizing: border-box;
     scroll-margin-top: var(--scroll-offset);
-    background: #ffffff;
+    background: transparent;
 }
 
 
@@ -42,12 +42,13 @@
 
 .skills-label span {
     width: 32px;
-    height: 1px;
+    height: 2px;
+    border-radius: 2px;
 
     background: linear-gradient(
         90deg,
-        #0F172A,
-        #0F172A
+        #2563EB,
+        #38BDF8
     );
 }
 
@@ -89,8 +90,9 @@
 .skills-heading-wrap h2 span {
     background: linear-gradient(
         110deg,
-        #0F172A,
-        #0F172A
+        #1E40AF 0%,
+        #2563EB 50%,
+        #38BDF8 100%
     );
 
     background-clip: text;
@@ -277,8 +279,8 @@
 
     background: linear-gradient(
         180deg,
-        #0F172A,
-        #0F172A
+        #2563EB,
+        #38BDF8
     );
 
     transition:
@@ -357,43 +359,24 @@
 
 .skill-card:hover {
     transform: translateY(-3px);
-
-    border-color: #0F172A;
-
-    background:
-        linear-gradient(
-            100deg,
-            rgba(
-                180,
-                21,
-                255,
-                0.06
-            ),
-            rgba(
-                223,
-                137,
-                8,
-                0.025
-            )
-        ),
-        #171619;
+    border-color: #2563EB;
+    background: rgba(37, 99, 235, 0.04);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
 }
 
 .skill-card:hover .skill-index {
-    color: #0F172A;
+    color: #2563EB;
 }
 
 .skill-card:hover .skill-name {
-    color: #222222; font-weight: 600;;
-
+    color: #111111;
+    font-weight: 600;
     transform: translateX(3px);
 }
 
 .skill-card:hover .skill-arrow {
-    color: #d36aff;
-
+    color: #2563EB;
     opacity: 1;
-
     transform:
         translate(
             3px,
@@ -488,25 +471,8 @@ body.light-theme .skill-card {
 }
 
 body.light-theme .skill-card:hover {
-    border-color: #0F172A;
-
-    background:
-        linear-gradient(
-            100deg,
-            rgba(
-                180,
-                21,
-                255,
-                0.045
-            ),
-            rgba(
-                223,
-                137,
-                8,
-                0.02
-            )
-        ),
-        #ffffff;
+    border-color: #2563EB;
+    background: rgba(37, 99, 235, 0.04);
 }
 
 body.light-theme .skill-index {
@@ -776,12 +742,12 @@ body.light-theme .skills-bottom p {
     width: 38px;
     height: 38px;
     object-fit: contain;
-    filter: drop-shadow(0 0 14px rgba(180, 21, 255, 0.28));
+    filter: drop-shadow(0 0 14px rgba(37, 99, 235, 0.28));
 }
 
 .skill-icon img[src*="github"],
 .skill-icon img[src*="nextjs"] {
-    filter: invert(1) brightness(2) drop-shadow(0 0 14px rgba(180, 21, 255, 0.28));
+    filter: invert(1) brightness(2) drop-shadow(0 0 14px rgba(37, 99, 235, 0.28));
 }
 
 body.light-theme .skill-icon img[src*="github"],

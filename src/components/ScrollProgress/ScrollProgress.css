@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     height: 3px;
-    background: linear-gradient(90deg, #0F172A, #38BDF8);
+    background: linear-gradient(90deg, #2563EB, #38BDF8);
     z-index: 9999;
     transition: width 0.1s ease;
 }

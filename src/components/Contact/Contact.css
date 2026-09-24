@@ -9,7 +9,7 @@
     box-sizing: border-box;
     overflow: hidden;
     scroll-margin-top: var(--scroll-offset);
-    background: #ffffff;
+    background: transparent;
 }
 
 .contact-glow {
@@ -26,13 +26,13 @@
 .contact-glow-1 {
     top: 10%;
     left: -5%;
-    background: #0F172A;
+    background: #2563EB;
 }
 
 .contact-glow-2 {
     bottom: 5%;
     right: -5%;
-    background: #0F172A;
+    background: #0284C7;
 }
 
 .contact-container {
@@ -67,7 +67,7 @@
 .contact-label span {
     width: 32px;
     height: 2px;
-    background: #0F172A;
+    background: linear-gradient(90deg, #2563EB, #38BDF8);
     border-radius: 2px;
 }
 
@@ -81,9 +81,10 @@
 }
 
 .contact-heading-wrap h2 span {
-    color: #0F172A;
-    background: none;
-    -webkit-text-fill-color: #0F172A;
+    background: linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #38BDF8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact-heading-wrap p {
@@ -204,27 +205,27 @@
 
 .contact-card:hover {
     transform: translateY(-3px);
-    border-color: #0F172A;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    border-color: #2563EB;
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.10);
 }
 
 .card-icon-box {
     width: 46px;
     height: 46px;
     border-radius: 14px;
-    background: rgba(15, 23, 42, 0.08);
-    border: 1px solid rgba(15, 23, 42, 0.15);
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.18);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0F172A;
+    color: #2563EB;
     flex-shrink: 0;
     transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
 .contact-card:hover .card-icon-box {
     transform: scale(1.06);
-    background: #0F172A;
+    background: #2563EB;
     color: #ffffff;
 }
 
@@ -278,7 +279,7 @@
 }
 
 .contact-card:hover .copy-action-btn {
-    color: #0F172A;
+    color: #2563EB;
 }
 
 .copied-tag {
@@ -298,7 +299,7 @@
 }
 
 .contact-card:hover .card-arrow {
-    color: #0F172A;
+    color: #2563EB;
     transform: translate(3px, -3px);
 }
 
@@ -346,10 +347,10 @@
 
 .social-pill:hover {
     transform: translateY(-2px);
-    border-color: #0F172A;
-    background: #0F172A;
+    border-color: #2563EB;
+    background: #2563EB;
     color: #ffffff;
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.25);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.28);
 }
 
 .social-pill svg {
@@ -420,16 +421,16 @@
 }
 
 .service-chip:hover {
-    border-color: #0F172A;
-    color: #0F172A;
-    background: rgba(15, 23, 42, 0.05);
+    border-color: #2563EB;
+    color: #2563EB;
+    background: rgba(37, 99, 235, 0.06);
 }
 
 .service-chip.active {
-    background: #0F172A;
-    border-color: #0F172A;
+    background: #2563EB;
+    border-color: #2563EB;
     color: #ffffff;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28);
 }
 
 
@@ -469,9 +470,9 @@
 }
 
 .input-wrapper:focus-within {
-    border-color: #0F172A;
+    border-color: #2563EB;
     background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 .input-icon {
@@ -483,7 +484,7 @@
 }
 
 .input-wrapper:focus-within .input-icon {
-    color: #0F172A;
+    color: #2563EB;
 }
 
 .input-wrapper input {
@@ -534,7 +535,7 @@
     border-radius: 12px;
     border: none;
     cursor: pointer;
-    background: #0F172A;
+    background: linear-gradient(135deg, #1E40AF 0%, #2563EB 100%);
     color: #ffffff !important;
     font-family: inherit;
     font-size: 15px;
@@ -543,13 +544,13 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.3s ease;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
 }
 
 .submit-btn:hover:not(:disabled) {
     transform: translateY(-2px);
-    background: #1E293B;
-    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.35);
+    background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
 }
 
 .submit-btn:disabled {
@@ -662,7 +663,7 @@
 }
 
 .direct-email-note a {
-    color: #0F172A;
+    color: #2563EB;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.25s ease;

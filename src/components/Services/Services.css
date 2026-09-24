@@ -10,7 +10,7 @@
     padding: var(--section-padding-y) var(--container-padding-x);
     box-sizing: border-box;
     scroll-margin-top: var(--scroll-offset);
-    background: #ffffff;
+    background: transparent;
 }
 
 
@@ -42,12 +42,13 @@
 
 .services-label span {
     width: 35px;
-    height: 1px;
+    height: 2px;
+    border-radius: 2px;
 
     background: linear-gradient(
         90deg,
-        #0F172A,
-        #0F172A
+        #2563EB,
+        #38BDF8
     );
 }
 
@@ -95,8 +96,9 @@
 .services-heading-wrap h2 span {
     background: linear-gradient(
         110deg,
-        #0F172A 20%,
-        #0F172A 100%
+        #1E40AF 0%,
+        #2563EB 50%,
+        #38BDF8 100%
     );
 
     background-clip: text;
@@ -145,12 +147,12 @@
 
     padding: 38px 0;
 
-    border-top: 1px solid #29282e;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 
 .services-section:last-child {
-    border-bottom: 1px solid #29282e;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 
@@ -216,7 +218,10 @@
 ===================================================== */
 
 .services-list {
-    border-top: 1px solid #29282e;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-top: none;
 }
 
 
@@ -229,26 +234,28 @@
 
     width: 100%;
 
-    min-height: 80px;
+    min-height: 76px;
 
     display: grid;
 
     grid-template-columns:
-        50px
+        48px
         minmax(0, 1fr)
-        55px;
+        46px;
 
     align-items: center;
 
-    gap: 20px;
+    gap: 18px;
 
-    padding: 20px 0;
+    padding: 18px 24px;
 
-    border: none;
+    border-radius: 16px;
 
-    border-bottom: 1px solid #eaeaea;
+    border: 1.5px solid rgba(226, 232, 240, 0.9);
 
-    background: transparent;
+    background: #ffffff;
+
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
 
     color: inherit;
 
@@ -261,9 +268,10 @@
     overflow: hidden;
 
     transition:
-        padding-left 0.45s ease,
-        background 0.45s ease,
-        border-color 0.45s ease;
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
 }
 
 
@@ -272,35 +280,12 @@
 ===================================================== */
 
 .service-item::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: -1px;
-
-    width: 0;
-    height: 1px;
-
-    background: linear-gradient(
-        90deg,
-        #0F172A,
-        #0F172A
-    );
-
-    transition:
-        width 0.55s
-        cubic-bezier(
-            0.22,
-            1,
-            0.36,
-            1
-        );
+    display: none;
 }
 
 
 .service-item:hover::before {
-    width: 100%;
+    display: none;
 }
 
 
@@ -311,7 +296,7 @@
 .service-number {
     color: #888888;
 
-    font-size: 10px;
+    font-size: 11px;
 
     font-weight: 600;
 
@@ -323,7 +308,7 @@
 
 
 .service-item:hover .service-number {
-    color: #888888;
+    color: #2563EB;
 }
 
 
@@ -358,7 +343,7 @@
 
 
 .service-item:hover .service-main h3 {
-    color: #111111;
+    color: #2563EB;
 
     transform: translateX(4px);
 }
@@ -475,7 +460,7 @@
     filter: invert(1) brightness(2)
         drop-shadow(
             0 0 14px
-            rgba(180, 21, 255, 0.18)
+            rgba(37, 99, 235, 0.18)
         );
 }
 
@@ -505,61 +490,63 @@
 .service-arrow {
     position: relative;
 
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    border: 1px solid #302f36;
+    border: 1.5px solid #e2e8f0;
 
     border-radius: 50%;
 
-    color: #777780;
+    color: #64748b;
 
-    font-size: 17px;
+    background: #f8fafc;
+
+    font-size: 16px;
 
     z-index: 3;
 
     transition:
-        transform 0.5s
+        transform 0.4s
         cubic-bezier(
             0.22,
             1,
             0.36,
             1
         ),
-        color 0.35s ease,
-        border-color 0.35s ease,
-        background 0.35s ease,
-        box-shadow 0.35s ease;
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
 .service-item:hover .service-arrow {
     color: #ffffff;
 
-    border-color: #0F172A;
+    border-color: #2563EB;
 
     background: linear-gradient(
         135deg,
-        #0F172A,
-        #0F172A
+        #1E40AF,
+        #2563EB
     );
 
     transform:
-        translate(4px, -4px)
-        rotate(7deg);
+        translate(3px, -3px)
+        rotate(8deg);
 
     box-shadow:
-        0 8px 25px
+        0 6px 20px
         rgba(
-            180,
-            21,
-            255,
-            0.16
+            37,
+            99,
+            235,
+            0.28
         );
 }
 
@@ -569,18 +556,13 @@
 ===================================================== */
 
 .service-item:hover {
-    padding-left: 10px;
+    transform: translateY(-3px);
 
-    background: linear-gradient(
-        90deg,
-        rgba(
-            180,
-            21,
-            255,
-            0.035
-        ),
-        transparent 70%
-    );
+    border-color: #2563EB;
+
+    box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
+
+    background: #ffffff;
 }
 
 
@@ -770,8 +752,9 @@
 
     background: linear-gradient(
         167deg,
-        #0F172A -10.09%,
-        #0F172A 106%
+        #1E40AF -10%,
+        #2563EB 50%,
+        #38BDF8 106%
     );
 
     background-clip: text;
@@ -827,9 +810,9 @@
 .service-modal-close:hover {
     color: #ffffff;
 
-    background: #0F172A;
+    background: #2563EB;
 
-    border-color: #0F172A;
+    border-color: #2563EB;
 
     transform: rotate(90deg);
 }
@@ -852,8 +835,8 @@
 
     background: linear-gradient(
         264deg,
-        #0F172A -10%,
-        #0F172A 99%
+        #1E40AF -10%,
+        #2563EB 99%
     );
 
     cursor: pointer;
@@ -863,19 +846,9 @@
         box-shadow 0.3s ease;
 }
 
-
 .service-modal-button:hover {
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 8px 20px
-        rgba(
-            180,
-            21,
-            255,
-            0.3
-        );
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
 }
 
 
@@ -943,12 +916,19 @@ body.light-theme .services-section {
 
 
 body.light-theme .services-list {
-    border-color: #e3e0e5;
+    border: none;
 }
 
 
 body.light-theme .service-item {
-    border-color: #e3e0e5;
+    background: #ffffff;
+
+    border-color: rgba(226, 232, 240, 0.9);
+}
+
+
+body.light-theme .service-item:hover {
+    border-color: #2563EB;
 }
 
 
@@ -978,14 +958,16 @@ body.light-theme .service-main h3 {
 
 
 body.light-theme .service-item:hover .service-main h3 {
-    color: #111111;
+    color: #2563EB;
 }
 
 
 body.light-theme .service-arrow {
-    color: #77727c;
+    color: #64748b;
 
-    border-color: #ddd8e0;
+    border-color: #e2e8f0;
+
+    background: #f8fafc;
 }
 
 
@@ -1087,6 +1069,10 @@ body.light-theme .services-bottom p {
     }
 
 
+    .services-list {
+        gap: 10px;
+    }
+
     .service-item {
         grid-template-columns:
             35px
@@ -1097,21 +1083,23 @@ body.light-theme .services-bottom p {
 
         min-height: 65px;
 
-        padding: 20px 0;
+        padding: 14px 18px;
+
+        border-radius: 14px;
     }
 
 
     /* NO DESKTOP HOVER ON MOBILE */
 
     .service-item:hover {
-        padding-left: 0;
+        padding-left: 18px;
 
-        background: transparent;
+        background: #ffffff;
     }
 
 
     .service-item:hover::before {
-        width: 0;
+        display: none;
     }
 
 
@@ -1128,11 +1116,11 @@ body.light-theme .services-bottom p {
 
 
     .service-item:hover .service-arrow {
-        color: #777780;
+        color: #64748b;
 
-        border-color: #302f36;
+        border-color: #e2e8f0;
 
-        background: transparent;
+        background: #f8fafc;
 
         transform: none;
 
@@ -1233,6 +1221,10 @@ body.light-theme .services-bottom p {
             34px;
 
         gap: 9px;
+
+        padding: 12px 14px;
+
+        border-radius: 12px;
     }
 
 
@@ -1294,7 +1286,7 @@ body.light-theme .services-bottom p {
 
     background: radial-gradient(
         circle,
-        rgba(180, 21, 255, 0.08),
+        rgba(37, 99, 235, 0.08),
         transparent 70%
     );
 
@@ -1338,8 +1330,8 @@ body.light-theme .services-bottom p {
 
     background: linear-gradient(
         180deg,
-        #0F172A,
-        #0F172A
+        #2563EB,
+        #38BDF8
     );
 }
 

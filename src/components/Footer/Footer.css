@@ -126,8 +126,8 @@
 
     background: linear-gradient(
         90deg,
-        #38BDF8,
-        #0F172A
+        #2563EB,
+        #38BDF8
     );
 
     border-radius: 5px;
@@ -246,8 +246,10 @@
 }
 
 .gupta {
-    color: #b05cff;
-    font-weight: 600;
+    background: linear-gradient(135deg, #38BDF8 0%, #60A5FA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
 
@@ -283,11 +285,12 @@
 .back-to-top:hover {
     transform: translateY(-4px);
 
-    border-color: #b000ff;
+    border-color: #38BDF8;
 
     box-shadow:
-        0 0 20px rgba(176, 0, 255, 0.25);
-    background: rgba(176, 0, 255, 0.1);
+        0 0 20px rgba(56, 189, 248, 0.3);
+    background: rgba(56, 189, 248, 0.1);
+    color: #38BDF8;
 }
 
 
@@ -297,8 +300,8 @@
 
 body.light-theme .footer {
     background:
-        radial-gradient(circle at 0% 50%, rgba(180, 21, 255, 0.06), transparent 30%),
-        radial-gradient(circle at 100% 40%, rgba(223, 137, 8, 0.05), transparent 30%),
+        radial-gradient(circle at 0% 50%, rgba(37, 99, 235, 0.05), transparent 30%),
+        radial-gradient(circle at 100% 40%, rgba(56, 189, 248, 0.04), transparent 30%),
         #ffffff;
     border-top: 1px solid #e2dfe6;
     color: #202024;
@@ -315,8 +318,8 @@ body.light-theme .footer-socials a {
 }
 
 body.light-theme .footer-socials a:hover {
-    border-color: #0F172A;
-    background: rgba(15, 23, 42, 0.08);
+    border-color: #2563EB;
+    background: rgba(37, 99, 235, 0.08);
 }
 
 body.light-theme .footer-column h3 {
@@ -328,7 +331,7 @@ body.light-theme .footer-column > a {
 }
 
 body.light-theme .footer-column > a:hover {
-    color: #0F172A;
+    color: #2563EB;
 }
 
 body.light-theme .footer-contact a,
@@ -337,7 +340,7 @@ body.light-theme .footer-contact-item {
 }
 
 body.light-theme .footer-contact a:hover {
-    color: #0F172A;
+    color: #2563EB;
 }
 
 body.light-theme .footer-bottom {
@@ -355,8 +358,9 @@ body.light-theme .back-to-top {
 }
 
 body.light-theme .back-to-top:hover {
-    border-color: #b000ff;
-    background: rgba(176, 0, 255, 0.1);
+    border-color: #2563EB;
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563EB;
 }
 
 
