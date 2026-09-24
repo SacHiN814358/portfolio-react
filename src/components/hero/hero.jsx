@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./hero.css";
-import DeveloperAvatar from "./DeveloperAvatar";
+import CursorTrackingAvatar from "./CursorTrackingAvatar";
 
 const Hero = () => {
     const words = [
@@ -37,11 +37,6 @@ const Hero = () => {
 
     return (
         <section id="home" className="hero">
-
-            {/* Background decoration */}
-            <div className="hero-glow hero-glow-one"></div>
-            <div className="hero-glow hero-glow-two"></div>
-
             <div className="hero-content">
 
                 {/* LEFT SIDE */}
@@ -92,20 +87,12 @@ const Hero = () => {
 
                 </div>
 
-                {/* RIGHT SIDE */}
+                {/* RIGHT SIDE — Character */}
                 <div className="hero-right">
-
-                    <DeveloperAvatar />
-
-                    <div className="hero-location">
-                        <span className="location-dot"></span>
-                        BASED IN INDIA
-                    </div>
-
+                    <CursorTrackingAvatar />
                 </div>
 
             </div>
-
         </section>
     );
 };

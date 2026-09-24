@@ -1,0 +1,77 @@
+/* =====================================================
+   CURSOR-TRACKING 3D AVATAR — CLEAN & SEAMLESS
+===================================================== */
+
+.ct-avatar-container {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.ct-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    will-change: transform;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+===================================================== */
+
+@media (max-width: 1200px) {
+    .ct-avatar-container {
+        max-width: 460px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ct-avatar-container {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ct-avatar-container {
+        max-width: 320px;
+        margin: 20px auto 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .ct-avatar-container {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 360px) {
+    .ct-avatar-container {
+        max-width: 240px;
+    }
+}
+
+/* =====================================================
+   ACCESSIBILITY: PREFERS REDUCED MOTION
+===================================================== */
+@media (prefers-reduced-motion: reduce) {
+    .ct-canvas {
+        transform: none !important;
+        will-change: auto;
+    }
+}

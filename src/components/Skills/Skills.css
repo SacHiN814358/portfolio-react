@@ -4,19 +4,13 @@
 
 .skills {
     position: relative;
-
-    width: min(
-        1200px,
-        calc(100% - 120px)
-    );
-
-    margin: 105px auto 75px;
-
-    padding: 30px 0;
-
-    color: #ffffff;
-
-    scroll-margin-top: 80px;
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: var(--section-padding-y) var(--container-padding-x);
+    box-sizing: border-box;
+    scroll-margin-top: var(--scroll-offset);
+    background: #ffffff;
 }
 
 
@@ -52,8 +46,8 @@
 
     background: linear-gradient(
         90deg,
-        #b415ff,
-        #df8908
+        #E63946,
+        #E63946
     );
 }
 
@@ -89,14 +83,14 @@
 
     font-weight: 700;
 
-    color: #ffffff;
+    color: #111111;
 }
 
 .skills-heading-wrap h2 span {
     background: linear-gradient(
         110deg,
-        #b415ff,
-        #df8908
+        #E63946,
+        #E63946
     );
 
     background-clip: text;
@@ -126,7 +120,7 @@
 ===================================================== */
 
 .skills-list {
-    border-top: 1px solid #29282e;
+    border-top: 1px solid #eaeaea;
 }
 
 
@@ -145,7 +139,7 @@
 
     padding: 30px 0;
 
-    border-bottom: 1px solid #29282e;
+    border-bottom: 1px solid #eaeaea;
 }
 
 
@@ -156,7 +150,7 @@
 .skill-group-number {
     padding-top: 4px;
 
-    color: #62626b;
+    color: #888888;
 
     font-size: 10px;
 
@@ -190,7 +184,7 @@
 .skill-group-info h3 {
     margin: 0 0 9px;
 
-    color: #eeeeef;
+    color: #111111;
 
     font-size: 15px;
 
@@ -204,7 +198,7 @@
 
     margin: 0;
 
-    color: #777780;
+    color: #555555;
 
     font-size: 12px;
 
@@ -245,9 +239,9 @@
 
     box-sizing: border-box;
 
-    border: 1px solid #2d2c33;
+    border: 1px solid #e5e5e5;
 
-    background: #151416;
+    background: #ffffff;
 
     overflow: hidden;
 
@@ -283,8 +277,8 @@
 
     background: linear-gradient(
         180deg,
-        #b415ff,
-        #df8908
+        #E63946,
+        #E63946
     );
 
     transition:
@@ -325,7 +319,7 @@
 ===================================================== */
 
 .skill-name {
-    color: #aaa7b0;
+    color: #222222; font-weight: 600;;
 
     font-size: 12px;
 
@@ -364,7 +358,7 @@
 .skill-card:hover {
     transform: translateY(-3px);
 
-    border-color: #403c47;
+    border-color: #E63946;
 
     background:
         linear-gradient(
@@ -386,11 +380,11 @@
 }
 
 .skill-card:hover .skill-index {
-    color: #b415ff;
+    color: #E63946;
 }
 
 .skill-card:hover .skill-name {
-    color: #ffffff;
+    color: #222222; font-weight: 600;;
 
     transform: translateX(3px);
 }
@@ -471,15 +465,15 @@ body.light-theme .skill-group {
 }
 
 body.light-theme .skill-group-number {
-    color: #96919a;
+    color: #888888;
 }
 
 body.light-theme .skill-group-info h3 {
-    color: #2b292f;
+    color: #111111;
 }
 
 body.light-theme .skill-group-info p {
-    color: #77727c;
+    color: #555555;
 }
 
 
@@ -490,11 +484,11 @@ body.light-theme .skill-group-info p {
 body.light-theme .skill-card {
     border-color: #ded9e1;
 
-    background: #faf9fb;
+    background: #ffffff;
 }
 
 body.light-theme .skill-card:hover {
-    border-color: #c9c2ce;
+    border-color: #E63946;
 
     background:
         linear-gradient(
@@ -524,11 +518,11 @@ body.light-theme .skill-card:hover .skill-index {
 }
 
 body.light-theme .skill-name {
-    color: #6e6972;
+    color: #222222; font-weight: 600;;
 }
 
 body.light-theme .skill-card:hover .skill-name {
-    color: #27242b;
+    color: #222222; font-weight: 600;;
 }
 
 body.light-theme .skill-arrow {
@@ -553,26 +547,8 @@ body.light-theme .skills-bottom p {
 ===================================================== */
 
 @media (max-width: 1000px) {
-
-    .skills {
-        width: min(
-            calc(100% - 80px),
-            850px
-        );
-
-        margin-top: 90px;
-    }
-
     .skills-heading-wrap {
         gap: 40px;
-    }
-
-    .skills-heading-wrap h2 {
-        font-size: clamp(
-            52px,
-            8vw,
-            75px
-        );
     }
 
     .skills-heading-wrap > p {
@@ -599,15 +575,6 @@ body.light-theme .skills-bottom p {
 ===================================================== */
 
 @media (max-width: 768px) {
-
-    .skills {
-        width: calc(100% - 40px);
-
-        margin: 75px auto 55px;
-
-        padding: 20px 0;
-    }
-
 
     /* HEADER */
 
@@ -748,10 +715,6 @@ body.light-theme .skills-bottom p {
 ===================================================== */
 
 @media (max-width: 400px) {
-
-    .skills {
-        width: calc(100% - 30px);
-    }
 
     .skills-heading-wrap h2 {
         font-size: 46px;

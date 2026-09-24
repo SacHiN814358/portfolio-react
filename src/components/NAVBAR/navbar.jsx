@@ -24,13 +24,24 @@ const Navbar = () => {
         setMenu(menuName);
         setOpen(false);
 
+        if (id === "home") {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+            return;
+        }
+
         const navbar = document.querySelector(".navbar");
-        const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+        const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 68;
+        const navbarTop = 22; // fixed top position
+        const breathingSpace = 25; // comfortable visual distance
+        const totalOffset = navbarHeight + navbarTop + breathingSpace;
+
         const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-        const offset = navbarHeight + 25;
 
         window.scrollTo({
-            top: Math.max(0, elementPosition - offset),
+            top: Math.max(0, elementPosition - totalOffset),
             behavior: "smooth",
         });
     };
@@ -115,6 +126,10 @@ const Navbar = () => {
 
                     <li className={menu === "about" ? "active" : ""}>
                         <a href="#about" onClick={(e) => handleMenuClick(e, "about", "about")}>ABOUT</a>
+                    </li>
+
+                    <li className={menu === "skills" ? "active" : ""}>
+                        <a href="#skills" onClick={(e) => handleMenuClick(e, "skills", "skills")}>SKILLS</a>
                     </li>
 
                     <li className={menu === "services" ? "active" : ""}>

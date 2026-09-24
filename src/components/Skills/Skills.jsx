@@ -89,7 +89,7 @@ const Skills = () => {
 
                 <div className="skills-label">
                     <span></span>
-                    03 — MY TOOLKIT
+                    02 — MY TOOLKIT
                 </div>
 
                 <div className="skills-heading-wrap">

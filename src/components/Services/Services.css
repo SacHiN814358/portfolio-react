@@ -3,19 +3,14 @@
 ===================================================== */
 
 .services {
-    width: min(1200px, calc(100% - 120px));
-
-    margin: 100px auto 70px;
-
-    padding: 30px 0;
-
-    color: #eeeeef;
-
-    font-family: inherit;
-
+    position: relative;
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: var(--section-padding-y) var(--container-padding-x);
     box-sizing: border-box;
-
-    scroll-margin-top: 80px;
+    scroll-margin-top: var(--scroll-offset);
+    background: #ffffff;
 }
 
 
@@ -51,8 +46,8 @@
 
     background: linear-gradient(
         90deg,
-        #b415ff,
-        #df8908
+        #E63946,
+        #E63946
     );
 }
 
@@ -87,7 +82,7 @@
 
     font-weight: 700;
 
-    color: #eeeeef;
+    color: #111111;
 
     flex: 1;
 
@@ -100,8 +95,8 @@
 .services-heading-wrap h2 span {
     background: linear-gradient(
         110deg,
-        #b415ff 20%,
-        #df8908 100%
+        #E63946 20%,
+        #E63946 100%
     );
 
     background-clip: text;
@@ -179,7 +174,7 @@
 .section-number {
     padding-top: 4px;
 
-    color: #62626b;
+    color: #888888;
 
     font-size: 10px;
     font-weight: 600;
@@ -191,7 +186,7 @@
 .section-content h3 {
     margin: 0 0 12px;
 
-    color: #eeeeef;
+    color: #111111;
 
     font-size: 20px;
 
@@ -208,7 +203,7 @@
 
     margin: 0;
 
-    color: #85858e;
+    color: #555555;
 
     font-size: 13px;
 
@@ -251,7 +246,7 @@
 
     border: none;
 
-    border-bottom: 1px solid #29282e;
+    border-bottom: 1px solid #eaeaea;
 
     background: transparent;
 
@@ -289,8 +284,8 @@
 
     background: linear-gradient(
         90deg,
-        #b415ff,
-        #df8908
+        #E63946,
+        #E63946
     );
 
     transition:
@@ -314,7 +309,7 @@
 ===================================================== */
 
 .service-number {
-    color: #62626b;
+    color: #888888;
 
     font-size: 10px;
 
@@ -328,7 +323,7 @@
 
 
 .service-item:hover .service-number {
-    color: #b415ff;
+    color: #888888;
 }
 
 
@@ -348,7 +343,7 @@
 .service-main h3 {
     margin: 0;
 
-    color: #eeeeef;
+    color: #111111;
 
     font-size: 15px;
 
@@ -363,7 +358,7 @@
 
 
 .service-item:hover .service-main h3 {
-    color: #ffffff;
+    color: #111111;
 
     transform: translateX(4px);
 }
@@ -546,12 +541,12 @@
 .service-item:hover .service-arrow {
     color: #ffffff;
 
-    border-color: #b415ff;
+    border-color: #E63946;
 
     background: linear-gradient(
         135deg,
-        #b415ff,
-        #df8908
+        #E63946,
+        #E63946
     );
 
     transform:
@@ -775,8 +770,8 @@
 
     background: linear-gradient(
         167deg,
-        #df8908 -10.09%,
-        #b415ff 106%
+        #E63946 -10.09%,
+        #E63946 106%
     );
 
     background-clip: text;
@@ -832,9 +827,9 @@
 .service-modal-close:hover {
     color: #ffffff;
 
-    background: #b415ff;
+    background: #E63946;
 
-    border-color: #b415ff;
+    border-color: #E63946;
 
     transform: rotate(90deg);
 }
@@ -857,8 +852,8 @@
 
     background: linear-gradient(
         264deg,
-        #df8908 -10%,
-        #b415ff 99%
+        #E63946 -10%,
+        #E63946 99%
     );
 
     cursor: pointer;
@@ -958,32 +953,32 @@ body.light-theme .service-item {
 
 
 body.light-theme .section-number {
-    color: #9b969f;
+    color: #888888;
 }
 
 
 body.light-theme .section-content h3 {
-    color: #29292f;
+    color: #111111;
 }
 
 
 body.light-theme .section-content p {
-    color: #69656e;
+    color: #555555;
 }
 
 
 body.light-theme .service-number {
-    color: #9b969f;
+    color: #888888;
 }
 
 
 body.light-theme .service-main h3 {
-    color: #29292f;
+    color: #111111;
 }
 
 
 body.light-theme .service-item:hover .service-main h3 {
-    color: #17171b;
+    color: #111111;
 }
 
 
@@ -1009,18 +1004,6 @@ body.light-theme .services-bottom p {
 ===================================================== */
 
 @media (max-width: 768px) {
-
-    .services {
-        width: calc(100% - 40px);
-
-        margin:
-            75px auto
-            55px;
-
-        padding:
-            20px 0;
-    }
-
 
     .services-header {
         margin-bottom: 45px;
@@ -1133,12 +1116,12 @@ body.light-theme .services-bottom p {
 
 
     .service-item:hover .service-number {
-        color: #62626b;
+        color: #888888;
     }
 
 
     .service-item:hover .service-main h3 {
-        color: #eeeeef;
+        color: #111111;
 
         transform: none;
     }
@@ -1355,8 +1338,8 @@ body.light-theme .services-bottom p {
 
     background: linear-gradient(
         180deg,
-        #b415ff,
-        #df8908
+        #E63946,
+        #E63946
     );
 }
 
@@ -1371,7 +1354,7 @@ body.light-theme .services-bottom p {
     border: 1px solid #2e2d34;
     border-radius: 20px;
 
-    color: #a4a3aa;
+    color: #888888;
 }
 
 .services-heading-wrap {

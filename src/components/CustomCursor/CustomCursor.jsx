@@ -19,16 +19,16 @@ const CustomCursor = () => {
         let isMouseDown = false
         let animationFrameId = null
 
-        // Silky smooth multi-node spline trail
-        const trailLength = 26
+        // Silky smooth multi-node trail
+        const trailLength = 22
         const trail = []
         for (let i = 0; i < trailLength; i++) {
-            trail.push({ x: -100, y: -100, vx: 0, vy: 0 })
+            trail.push({ x: -100, y: -100 })
         }
 
         // Smoothly animated properties
         let currentRingRadius = 14
-        let currentHaloRadius = 22
+        let currentHaloRadius = 20
         let currentCornerDist = 0
         let currentAlpha = 0
 
@@ -40,7 +40,7 @@ const CustomCursor = () => {
                 this.x = x
                 this.y = y
                 this.radius = 4
-                this.maxRadius = 55
+                this.maxRadius = 50
                 this.alpha = 1
             }
             update() {
@@ -52,10 +52,10 @@ const CustomCursor = () => {
                 ctx.save()
                 ctx.beginPath()
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
-                ctx.strokeStyle = `rgba(223, 137, 8, ${Math.max(0, this.alpha)})`
-                ctx.shadowColor = "#b415ff"
-                ctx.shadowBlur = 18
-                ctx.lineWidth = 2
+                ctx.strokeStyle = `rgba(230, 57, 70, ${Math.max(0, this.alpha * 0.85)})`
+                ctx.shadowColor = "#E63946"
+                ctx.shadowBlur = 12
+                ctx.lineWidth = 1.5
                 ctx.stroke()
                 ctx.restore()
             }
@@ -117,9 +117,7 @@ const CustomCursor = () => {
             for (let i = 1; i < trailLength; i++) {
                 const prev = trail[i - 1]
                 const curr = trail[i]
-
-                // Fluid spring damping for silky liquid drag
-                const spring = 0.48 - (i / trailLength) * 0.08
+                const spring = 0.50 - (i / trailLength) * 0.08
                 curr.x += (prev.x - curr.x) * spring
                 curr.y += (prev.y - curr.y) * spring
             }
@@ -136,19 +134,19 @@ const CustomCursor = () => {
 
             if (currentAlpha > 0.01 && mouse.x > 0 && mouse.y > 0) {
                 pulseTime += 0.04
-                const pulse = Math.sin(pulseTime) * 1.5
+                const pulse = Math.sin(pulseTime) * 1.2
 
                 // Smooth radius interpolation
-                const targetRing = isMouseDown ? 10 : isHovered ? 28 : 15
+                const targetRing = isMouseDown ? 10 : isHovered ? 26 : 14
                 currentRingRadius += (targetRing - currentRingRadius) * 0.18
 
-                const targetHalo = isHovered ? 42 : 24
+                const targetHalo = isHovered ? 38 : 22
                 currentHaloRadius += (targetHalo - currentHaloRadius) * 0.15
 
-                const targetCorner = isHovered ? currentRingRadius + 5 : 0
+                const targetCorner = isHovered ? currentRingRadius + 4 : 0
                 currentCornerDist += (targetCorner - currentCornerDist) * 0.2
 
-                // 1. LIQUID SILK RIBBON USING QUADRATIC CURVES
+                // 1. LIQUID RED TRAIL
                 ctx.save()
                 ctx.globalAlpha = currentAlpha
 
@@ -157,38 +155,26 @@ const CustomCursor = () => {
                     const p2 = trail[i - 1]
 
                     const progress = 1 - i / trailLength
-                    const lineWidth = (isHovered ? 14 : 9) * progress
-
-                    // Smooth Theme Gradient Transitions along the curve
-                    let strokeColor
-                    if (progress > 0.65) {
-                        strokeColor = `rgba(223, 137, 8, ${progress * 0.88})`
-                    } else if (progress > 0.35) {
-                        strokeColor = `rgba(209, 77, 157, ${progress * 0.82})`
-                    } else {
-                        strokeColor = `rgba(180, 21, 255, ${progress * 0.72})`
-                    }
+                    const lineWidth = (isHovered ? 12 : 7) * progress
 
                     ctx.beginPath()
                     ctx.moveTo(p1.x, p1.y)
-
-                    // Curve smoothly between node midpoints
                     const midX = (p1.x + p2.x) / 2
                     const midY = (p1.y + p2.y) / 2
                     ctx.quadraticCurveTo(p1.x, p1.y, midX, midY)
                     ctx.lineTo(p2.x, p2.y)
 
-                    ctx.strokeStyle = strokeColor
+                    ctx.strokeStyle = `rgba(230, 57, 70, ${progress * 0.85})`
                     ctx.lineWidth = lineWidth
                     ctx.lineCap = "round"
                     ctx.lineJoin = "round"
-                    ctx.shadowColor = progress > 0.5 ? "#df8908" : "#b415ff"
-                    ctx.shadowBlur = isHovered ? 20 : 14
+                    ctx.shadowColor = "#E63946"
+                    ctx.shadowBlur = isHovered ? 16 : 10
                     ctx.stroke()
                 }
                 ctx.restore()
 
-                // 2. SOFT AMBIENT GLOW ORB
+                // 2. SOFT AMBIENT GLOW ORB (Pure Red)
                 ctx.save()
                 ctx.globalAlpha = currentAlpha
                 const orbGrad = ctx.createRadialGradient(
@@ -199,8 +185,8 @@ const CustomCursor = () => {
                     smoothMouse.y,
                     currentHaloRadius
                 )
-                orbGrad.addColorStop(0, isHovered ? "rgba(223, 137, 8, 0.4)" : "rgba(180, 21, 255, 0.35)")
-                orbGrad.addColorStop(0.55, isHovered ? "rgba(209, 77, 157, 0.18)" : "rgba(180, 21, 255, 0.12)")
+                orbGrad.addColorStop(0, isHovered ? "rgba(230, 57, 70, 0.35)" : "rgba(230, 57, 70, 0.22)")
+                orbGrad.addColorStop(0.6, "rgba(230, 57, 70, 0.08)")
                 orbGrad.addColorStop(1, "transparent")
 
                 ctx.fillStyle = orbGrad
@@ -209,29 +195,29 @@ const CustomCursor = () => {
                 ctx.fill()
                 ctx.restore()
 
-                // 3. TARGET FOCUS RING (Seamless Eased Morphing)
+                // 3. TARGET FOCUS RING
                 ctx.save()
                 ctx.globalAlpha = currentAlpha
                 const finalRingR = Math.max(2, currentRingRadius + pulse)
 
                 ctx.beginPath()
                 ctx.arc(smoothMouse.x, smoothMouse.y, finalRingR, 0, Math.PI * 2)
-                ctx.strokeStyle = isHovered ? "#df8908" : "rgba(255, 255, 255, 0.85)"
-                ctx.lineWidth = isHovered ? 2.2 : 1.5
-                ctx.shadowColor = isHovered ? "#df8908" : "#b415ff"
-                ctx.shadowBlur = isHovered ? 20 : 12
+                ctx.strokeStyle = isHovered ? "#E63946" : "rgba(255, 255, 255, 0.9)"
+                ctx.lineWidth = isHovered ? 2.0 : 1.4
+                ctx.shadowColor = "#E63946"
+                ctx.shadowBlur = isHovered ? 14 : 8
                 ctx.stroke()
 
                 // Smoothly fading Corner Marks
-                if (currentCornerDist > 5) {
-                    const markAlpha = Math.min(1, (currentCornerDist - 5) / 15)
-                    ctx.strokeStyle = `rgba(255, 60, 172, ${markAlpha})`
-                    ctx.lineWidth = 2
-                    ctx.shadowColor = "#ff3cac"
-                    ctx.shadowBlur = 10
+                if (currentCornerDist > 4) {
+                    const markAlpha = Math.min(1, (currentCornerDist - 4) / 12)
+                    ctx.strokeStyle = `rgba(230, 57, 70, ${markAlpha})`
+                    ctx.lineWidth = 1.8
+                    ctx.shadowColor = "#E63946"
+                    ctx.shadowBlur = 8
 
                     const d = currentCornerDist
-                    const l = 6
+                    const l = 5
 
                     // Top
                     ctx.beginPath()
@@ -260,10 +246,10 @@ const CustomCursor = () => {
 
                 // 4. PRECISION CENTER CORE DOT
                 ctx.beginPath()
-                ctx.arc(smoothMouse.x, smoothMouse.y, isHovered ? 3.5 : 2.5, 0, Math.PI * 2)
+                ctx.arc(smoothMouse.x, smoothMouse.y, isHovered ? 3.0 : 2.0, 0, Math.PI * 2)
                 ctx.fillStyle = "#ffffff"
-                ctx.shadowColor = "#ffffff"
-                ctx.shadowBlur = 12
+                ctx.shadowColor = "#E63946"
+                ctx.shadowBlur = 8
                 ctx.fill()
                 ctx.restore()
             }
@@ -285,6 +271,7 @@ const CustomCursor = () => {
             window.removeEventListener("resize", onResize)
             window.removeEventListener("mousemove", onMouseMove)
             window.removeEventListener("mousedown", onMouseDown)
+            window.removeEventListener("mouseup", onMouseUp)
             document.removeEventListener("mouseleave", onMouseLeave)
             document.removeEventListener("mouseenter", onMouseEnter)
             window.removeEventListener("mouseover", onMouseOver)

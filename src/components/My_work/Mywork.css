@@ -3,13 +3,14 @@
 ===================================================== */
 
 .mywork {
+    position: relative;
     width: 100%;
-
-    padding: 60px 6.5% 80px;
-
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: var(--section-padding-y) var(--container-padding-x);
     box-sizing: border-box;
-
-    scroll-margin-top: 80px;
+    scroll-margin-top: var(--scroll-offset);
+    background: #ffffff;
 }
 
 
@@ -51,8 +52,8 @@
 
     background: linear-gradient(
         90deg,
-        #b415ff,
-        #df8908
+        #E63946,
+        #E63946
     );
 }
 
@@ -80,7 +81,7 @@
 
     max-width: 850px;
 
-    color: #ffffff;
+    color: #111111;
 
     font-size: clamp(55px, 7vw, 100px);
 
@@ -94,9 +95,9 @@
 .mywork-heading-wrap h2 span {
     background: linear-gradient(
         135deg,
-        #b415ff 0%,
-        #d14d9d 45%,
-        #df8908 100%
+        #E63946 0%,
+        #E63946 45%,
+        #E63946 100%
     );
 
     background-clip: text;
@@ -152,9 +153,9 @@
 .work-card {
     min-width: 0;
 
-    border: 1px solid #29272d;
+    border: 1px solid #eaeaea;
 
-    background: #121112;
+    background: #ffffff;
 
     overflow: hidden;
 
@@ -167,7 +168,7 @@
 .work-card:hover {
     transform: translateY(-8px);
 
-    border-color: #4a4050;
+    border-color: #E63946;
 
     box-shadow:
         0 25px 55px rgba(0, 0, 0, 0.35);
@@ -375,7 +376,7 @@
 .work-content h3 {
     margin: 0 0 5px;
 
-    color: #eeeeef;
+    color: #111111;
 
     font-size: 18px;
 
@@ -391,7 +392,7 @@
 .work-content p {
     margin: 0 0 12px;
 
-    color: #777780;
+    color: #666666;
 
     font-size: 11px;
 
@@ -418,11 +419,11 @@
 .work-tech span {
     padding: 5px 10px;
 
-    border: 1px solid #2d2c33;
+    border: 1px solid #e5e5e5; background: #f8f8f8;
 
     border-radius: 30px;
 
-    color: #777780;
+    color: #555555;
 
     font-size: 9px;
 
@@ -459,7 +460,7 @@
     align-items: center;
     justify-content: center;
 
-    border: 1px solid #302f36;
+    border: 1px solid #e5e5e5; background: #ffffff;
 
     border-radius: 50%;
 
@@ -490,13 +491,13 @@
 ===================================================== */
 
 .work-card:hover .work-content h3 {
-    color: #ffffff;
+    color: #111111;
 
     transform: translateX(3px);
 }
 
 .work-card:hover .work-tech span {
-    color: #aaa6b0;
+    color: #555555;
 
     border-color: #403c47;
 }
@@ -504,12 +505,12 @@
 .work-card:hover .work-links button {
     color: #ffffff;
 
-    border-color: #b415ff;
+    border-color: #E63946;
 
     background: linear-gradient(
         135deg,
-        #b415ff,
-        #df8908
+        #E63946,
+        #E63946
     );
 
     transform: translateY(-3px);
@@ -582,24 +583,24 @@ body.light-theme .mywork-label {
 }
 
 body.light-theme .work-card {
-    background: #faf9fb;
+    background: #ffffff;
 
     border-color: #ded9e2;
 }
 
 body.light-theme .work-card:hover {
-    border-color: #c7bdd0;
+    border-color: #E63946;
 
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.08);
 }
 
 body.light-theme .work-content h3 {
-    color: #28262c;
+    color: #111111;
 }
 
 body.light-theme .work-content p {
-    color: #77727d;
+    color: #666666;
 }
 
 body.light-theme .work-number {
@@ -607,7 +608,7 @@ body.light-theme .work-number {
 }
 
 body.light-theme .work-tech span {
-    border-color: #ded9e2;
+    border-color: #555555;
 
     color: #77727d;
 
@@ -622,11 +623,11 @@ body.light-theme .work-placeholder {
 }
 
 body.light-theme .work-card:hover .work-content h3 {
-    color: #18171b;
+    color: #111111;
 }
 
 body.light-theme .work-card:hover .work-tech span {
-    color: #625c68;
+    color: #555555;
 
     border-color: #cfc6d5;
 }
@@ -848,10 +849,6 @@ body.light-theme .mywork-bottom-line span {
 ===================================================== */
 
 @media (max-width: 400px) {
-
-    .mywork {
-        padding: 90px 15px 50px;
-    }
 
     .mywork-heading-wrap h2 {
         font-size: 43px;

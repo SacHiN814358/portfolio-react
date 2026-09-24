@@ -1,12 +1,9 @@
 .footer {
     position: relative;
     width: 100%;
-    margin-top: 100px;
-    padding: 75px 7% 25px;
-    background:
-        radial-gradient(circle at 0% 50%, rgba(128, 0, 255, 0.08), transparent 30%),
-        radial-gradient(circle at 100% 40%, rgba(255, 120, 0, 0.07), transparent 30%),
-        #080808;
+    margin-top: 0;
+    padding: 80px var(--container-padding-x) 30px;
+    background: #111111;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     color: #fff;
     box-sizing: border-box;
@@ -19,17 +16,16 @@
 ========================= */
 
 .footer-container {
-    max-width: 1350px;
-    margin: auto;
-
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    width: 100%;
     display: grid;
     grid-template-columns:
         1.25fr
         0.8fr
         1fr
         1.1fr;
-
-    gap: 70px;
+    gap: 60px;
 }
 
 
@@ -97,10 +93,10 @@
 
 .footer-socials a:hover {
     transform: translateY(-5px);
-    border-color: #b400ff;
+    border-color: #E63946;
 
     box-shadow:
-        0 0 15px rgba(180, 0, 255, 0.35);
+        0 0 15px rgba(230, 57, 70, 0.3);
 }
 
 
@@ -130,8 +126,8 @@
 
     background: linear-gradient(
         90deg,
-        #a000ff,
-        #ff4b9b
+        #E63946,
+        #E63946
     );
 
     border-radius: 5px;
@@ -172,7 +168,7 @@
 }
 
 .footer-column > a:hover .footer-arrow {
-    color: #b400ff;
+    color: #E63946;
 }
 
 
@@ -207,7 +203,7 @@
     width: 17px;
     height: 17px;
     flex-shrink: 0;
-    stroke: #b400ff;
+    stroke: #E63946;
 }
 
 .footer-contact a {
@@ -244,7 +240,7 @@
 }
 
 .heart {
-    color: #ff3d68;
+    color: #E63946;
     font-size: 18px;
     margin: 0 4px;
 }
@@ -319,7 +315,7 @@ body.light-theme .footer-socials a {
 }
 
 body.light-theme .footer-socials a:hover {
-    border-color: #b400ff;
+    border-color: #E63946;
     background: rgba(180, 0, 255, 0.08);
 }
 
@@ -332,7 +328,7 @@ body.light-theme .footer-column > a {
 }
 
 body.light-theme .footer-column > a:hover {
-    color: #b400ff;
+    color: #E63946;
 }
 
 body.light-theme .footer-contact a,
@@ -341,7 +337,7 @@ body.light-theme .footer-contact-item {
 }
 
 body.light-theme .footer-contact a:hover {
-    color: #b400ff;
+    color: #E63946;
 }
 
 body.light-theme .footer-bottom {
