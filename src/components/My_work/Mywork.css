@@ -52,8 +52,8 @@
 
     background: linear-gradient(
         90deg,
-        #E63946,
-        #E63946
+        #1D4ED8,
+        #1D4ED8
     );
 }
 
@@ -95,9 +95,9 @@
 .mywork-heading-wrap h2 span {
     background: linear-gradient(
         135deg,
-        #E63946 0%,
-        #E63946 45%,
-        #E63946 100%
+        #1D4ED8 0%,
+        #1D4ED8 45%,
+        #1D4ED8 100%
     );
 
     background-clip: text;
@@ -168,7 +168,7 @@
 .work-card:hover {
     transform: translateY(-8px);
 
-    border-color: #E63946;
+    border-color: #1D4ED8;
 
     box-shadow:
         0 25px 55px rgba(0, 0, 0, 0.35);
@@ -505,12 +505,12 @@
 .work-card:hover .work-links button {
     color: #ffffff;
 
-    border-color: #E63946;
+    border-color: #1D4ED8;
 
     background: linear-gradient(
         135deg,
-        #E63946,
-        #E63946
+        #1D4ED8,
+        #1D4ED8
     );
 
     transform: translateY(-3px);
@@ -589,7 +589,7 @@ body.light-theme .work-card {
 }
 
 body.light-theme .work-card:hover {
-    border-color: #E63946;
+    border-color: #1D4ED8;
 
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.08);

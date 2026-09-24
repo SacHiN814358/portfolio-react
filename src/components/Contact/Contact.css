@@ -26,13 +26,13 @@
 .contact-glow-1 {
     top: 10%;
     left: -5%;
-    background: #E63946;
+    background: #1D4ED8;
 }
 
 .contact-glow-2 {
     bottom: 5%;
     right: -5%;
-    background: #E63946;
+    background: #1D4ED8;
 }
 
 .contact-container {
@@ -67,7 +67,7 @@
 .contact-label span {
     width: 32px;
     height: 2px;
-    background: #E63946;
+    background: #1D4ED8;
     border-radius: 2px;
 }
 
@@ -81,9 +81,9 @@
 }
 
 .contact-heading-wrap h2 span {
-    color: #E63946;
+    color: #1D4ED8;
     background: none;
-    -webkit-text-fill-color: #E63946;
+    -webkit-text-fill-color: #1D4ED8;
 }
 
 .contact-heading-wrap p {
@@ -204,7 +204,7 @@
 
 .contact-card:hover {
     transform: translateY(-3px);
-    border-color: #E63946;
+    border-color: #1D4ED8;
     box-shadow: 0 12px 30px rgba(230, 57, 70, 0.08);
 }
 
@@ -217,14 +217,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #E63946;
+    color: #1D4ED8;
     flex-shrink: 0;
     transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
 .contact-card:hover .card-icon-box {
     transform: scale(1.06);
-    background: #E63946;
+    background: #1D4ED8;
     color: #ffffff;
 }
 
@@ -278,7 +278,7 @@
 }
 
 .contact-card:hover .copy-action-btn {
-    color: #E63946;
+    color: #1D4ED8;
 }
 
 .copied-tag {
@@ -298,7 +298,7 @@
 }
 
 .contact-card:hover .card-arrow {
-    color: #E63946;
+    color: #1D4ED8;
     transform: translate(3px, -3px);
 }
 
@@ -346,8 +346,8 @@
 
 .social-pill:hover {
     transform: translateY(-2px);
-    border-color: #E63946;
-    background: #E63946;
+    border-color: #1D4ED8;
+    background: #1D4ED8;
     color: #ffffff;
     box-shadow: 0 6px 18px rgba(230, 57, 70, 0.25);
 }
@@ -420,14 +420,14 @@
 }
 
 .service-chip:hover {
-    border-color: #E63946;
-    color: #E63946;
+    border-color: #1D4ED8;
+    color: #1D4ED8;
     background: rgba(230, 57, 70, 0.05);
 }
 
 .service-chip.active {
-    background: #E63946;
-    border-color: #E63946;
+    background: #1D4ED8;
+    border-color: #1D4ED8;
     color: #ffffff;
     box-shadow: 0 4px 14px rgba(230, 57, 70, 0.25);
 }
@@ -469,7 +469,7 @@
 }
 
 .input-wrapper:focus-within {
-    border-color: #E63946;
+    border-color: #1D4ED8;
     background: #ffffff;
     box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.12);
 }
@@ -483,7 +483,7 @@
 }
 
 .input-wrapper:focus-within .input-icon {
-    color: #E63946;
+    color: #1D4ED8;
 }
 
 .input-wrapper input {
@@ -534,7 +534,7 @@
     border-radius: 12px;
     border: none;
     cursor: pointer;
-    background: #E63946;
+    background: #1D4ED8;
     color: #ffffff !important;
     font-family: inherit;
     font-size: 15px;
@@ -662,7 +662,7 @@
 }
 
 .direct-email-note a {
-    color: #E63946;
+    color: #1D4ED8;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.25s ease;

@@ -3,11 +3,16 @@
 ===================================================== */
 
 :root {
-    /* Brand Palette — Strict White + Red */
-    --primary-red: #E63946;
-    --primary-red-hover: #d62839;
-    --primary-red-subtle: rgba(230, 57, 70, 0.08);
-    --primary-red-border: rgba(230, 57, 70, 0.2);
+    /* Brand Palette — Modern White + Blue */
+    --primary-red: #1D4ED8;
+    --primary-red-hover: #1E40AF;
+    --primary-red-subtle: rgba(29, 78, 216, 0.08);
+    --primary-red-border: rgba(29, 78, 216, 0.2);
+    --primary-blue: #1D4ED8;
+    --primary-blue-hover: #1E40AF;
+    --primary-blue-dark: #172554;
+    --hero-bg: #1D4ED8;
+    --navbar-bg: rgba(23, 37, 84, 0.88);
     --bg-white: #ffffff;
     --bg-card: #ffffff;
     --bg-input: #fbfbfb;

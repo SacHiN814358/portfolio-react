@@ -46,8 +46,8 @@
 
     background: linear-gradient(
         90deg,
-        #E63946,
-        #E63946
+        #1D4ED8,
+        #1D4ED8
     );
 }
 
@@ -95,8 +95,8 @@
 .services-heading-wrap h2 span {
     background: linear-gradient(
         110deg,
-        #E63946 20%,
-        #E63946 100%
+        #1D4ED8 20%,
+        #1D4ED8 100%
     );
 
     background-clip: text;
@@ -284,8 +284,8 @@
 
     background: linear-gradient(
         90deg,
-        #E63946,
-        #E63946
+        #1D4ED8,
+        #1D4ED8
     );
 
     transition:
@@ -541,12 +541,12 @@
 .service-item:hover .service-arrow {
     color: #ffffff;
 
-    border-color: #E63946;
+    border-color: #1D4ED8;
 
     background: linear-gradient(
         135deg,
-        #E63946,
-        #E63946
+        #1D4ED8,
+        #1D4ED8
     );
 
     transform:
@@ -770,8 +770,8 @@
 
     background: linear-gradient(
         167deg,
-        #E63946 -10.09%,
-        #E63946 106%
+        #1D4ED8 -10.09%,
+        #1D4ED8 106%
     );
 
     background-clip: text;
@@ -827,9 +827,9 @@
 .service-modal-close:hover {
     color: #ffffff;
 
-    background: #E63946;
+    background: #1D4ED8;
 
-    border-color: #E63946;
+    border-color: #1D4ED8;
 
     transform: rotate(90deg);
 }
@@ -852,8 +852,8 @@
 
     background: linear-gradient(
         264deg,
-        #E63946 -10%,
-        #E63946 99%
+        #1D4ED8 -10%,
+        #1D4ED8 99%
     );
 
     cursor: pointer;
@@ -1338,8 +1338,8 @@ body.light-theme .services-bottom p {
 
     background: linear-gradient(
         180deg,
-        #E63946,
-        #E63946
+        #1D4ED8,
+        #1D4ED8
     );
 }
 
