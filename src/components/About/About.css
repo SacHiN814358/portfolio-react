@@ -95,21 +95,30 @@
 
 .about-intro {
     max-width: 500px;
+    background: #ffffff;
+    border: 1.5px solid rgba(226, 232, 240, 0.95);
+    border-radius: 20px;
+    padding: 34px 32px;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.035), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
 }
 
 .about-intro p {
-    margin: 0 0 22px;
-    color: #555555;
+    margin: 0 0 18px;
+    color: #64748B;
     font-size: 15px;
     line-height: 1.8;
 }
 
+.about-intro p:last-child {
+    margin-bottom: 0;
+}
+
 .about-intro .about-lead {
-    margin-bottom: 24px;
-    color: #111111;
-    font-size: 22px;
+    margin-bottom: 20px;
+    color: #0F172A;
+    font-size: 21px;
     line-height: 1.55;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 
@@ -120,21 +129,32 @@
 .about-details {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #eaeaea;
+    gap: 16px;
+    border: none;
 }
 
 .about-detail {
+    position: relative;
     display: grid;
-    grid-template-columns: 55px 1fr;
-    gap: 20px;
-    padding: 22px 0;
-    border-bottom: 1px solid #eaeaea;
-    transition: padding-left 0.4s ease, border-color 0.4s ease;
+    grid-template-columns: 46px 1fr;
+    gap: 18px;
+    padding: 24px 26px;
+    background: #ffffff;
+    border: 1.5px solid rgba(226, 232, 240, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.035), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+    transition:
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .about-detail:hover {
-    padding-left: 8px;
+    transform: translateY(-4px);
     border-color: #2563EB;
+    box-shadow:
+        0 16px 32px -8px rgba(37, 99, 235, 0.14),
+        0 0 0 1px rgba(37, 99, 235, 0.15);
 }
 
 
@@ -143,11 +163,27 @@
 ===================================================== */
 
 .detail-number {
-    padding-top: 3px;
-    color: #888888;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: #2563EB;
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    padding: 4px 8px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 2px;
+    transition: all 0.3s ease;
+}
+
+.about-detail:hover .detail-number {
+    background: rgba(37, 99, 235, 0.14);
+    border-color: #2563EB;
 }
 
 
@@ -157,18 +193,24 @@
 
 .detail-content h3 {
     margin: 0 0 8px;
-    color: #111111;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
+    color: #0F172A;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    transition: color 0.3s ease;
+}
+
+.about-detail:hover .detail-content h3 {
+    color: #2563EB;
 }
 
 .detail-content p {
     max-width: 570px;
     margin: 0;
-    color: #555555;
-    font-size: 13px;
-    line-height: 1.7;
+    color: #64748B;
+    font-size: 13.5px;
+    line-height: 1.65;
+    font-weight: 400;
 }
 
 
@@ -184,20 +226,26 @@
 }
 
 .tech-list span {
-    padding: 6px 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 50px;
-    color: #555555;
-    font-size: 10px;
+    padding: 5px 12px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background: #F1F5F9;
+    color: #334155;
+    font-size: 11px;
     font-weight: 500;
-    letter-spacing: 0.7px;
-    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    letter-spacing: 0.2px;
+    transition: all 0.25s ease;
+}
+
+.about-detail:hover .tech-list span {
+    border-color: rgba(37, 99, 235, 0.25);
 }
 
 .tech-list span:hover {
     color: #2563EB;
     border-color: #2563EB;
     background: rgba(37, 99, 235, 0.08);
+    transform: translateY(-1px);
 }
 
 
@@ -284,6 +332,8 @@
 
     .about-intro {
         max-width: none;
+        padding: 24px 22px;
+        border-radius: 16px;
     }
 
     .about-intro .about-lead {
@@ -296,14 +346,20 @@
         line-height: 1.75;
     }
 
+    .about-details {
+        gap: 12px;
+    }
+
     .about-detail {
-        grid-template-columns: 40px 1fr;
-        gap: 15px;
-        padding: 20px 0;
+        grid-template-columns: 36px 1fr;
+        gap: 14px;
+        padding: 18px 20px;
+        border-radius: 14px;
     }
 
     .about-detail:hover {
-        padding-left: 5px;
+        padding-left: 20px;
+        transform: translateY(-2px);
     }
 
     .detail-number {
@@ -367,6 +423,8 @@
     .about-detail {
         grid-template-columns: 30px 1fr;
         gap: 12px;
+        padding: 16px;
+        border-radius: 12px;
     }
 }
 
