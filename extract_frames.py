@@ -1,9 +1,9 @@
 """
-Frame Extraction Script for Cursor-Tracking 3D Avatar (Blue Theme)
-==================================================================
+Frame Extraction Script for Cursor-Tracking 3D Avatar (Obsidian Slate Theme)
+=============================================================================
 This script extracts 64 evenly-spaced frames from character.mp4,
 seamlessly replaces the video's natural red background with the
-exact Hero section Blue color (#1D4ED8), removes any red edge spill/halo,
+exact Hero section Midnight Obsidian color (#0F172A), removes any red edge spill/halo,
 and saves high-quality WebP frames.
 """
 
@@ -23,8 +23,8 @@ START_FRAME = 15
 END_FRAME = 140
 WEBP_QUALITY = 95
 
-# Target Hero Blue: #1D4ED8 -> BGR: [216, 78, 29]
-HERO_BGR = np.array([216, 78, 29], dtype=np.float32)
+# Target Hero Obsidian Slate: #0F172A -> BGR: [42, 23, 15]
+HERO_BGR = np.array([42, 23, 15], dtype=np.float32)
 
 # Elliptical kernel for edge mask dilation
 KERNEL = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
@@ -56,7 +56,7 @@ def process_frame(frame):
     fg_r[spill_mask] = np.maximum(fg_g[spill_mask], fg_b[spill_mask])
     fg_cleaned = cv2.merge([fg_b, fg_g, fg_r])
 
-    # 7. Seamlessly blend to exact Hero Blue background (#1D4ED8)
+    # 7. Seamlessly blend to exact Hero Obsidian background (#0F172A)
     blended = (fg_cleaned.astype(np.float32) * (1.0 - bg_mask_smooth) + HERO_BGR * bg_mask_smooth).astype(np.uint8)
 
     return blended
@@ -76,7 +76,7 @@ def main():
     t0 = time.time()
     total_video_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     print(f"Video: {VIDEO_PATH} ({total_video_frames} frames)")
-    print(f"Target Background: #1D4ED8 (RGB: 29, 78, 216)")
+    print(f"Target Background: #0F172A (RGB: 15, 23, 42)")
     print(f"Processing {TOTAL_LOOP_FRAMES} directional frames + center.webp...")
 
     # 1. Process neutral center frame (Video Frame 0)
@@ -86,7 +86,7 @@ def main():
         center_proc = process_frame(frame_0)
         center_path = os.path.join(OUTPUT_DIR, "center.webp")
         cv2.imwrite(center_path, center_proc, [cv2.IMWRITE_WEBP_QUALITY, WEBP_QUALITY])
-        print("   [OK] center.webp (neutral pose, exact #1D4ED8 blue background)")
+        print("   [OK] center.webp (neutral pose, exact #0F172A obsidian background)")
     else:
         print("   [ERROR] Failed to read frame 0 for center.webp")
 

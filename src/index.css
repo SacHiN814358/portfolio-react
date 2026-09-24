@@ -3,16 +3,16 @@
 ===================================================== */
 
 :root {
-    /* Brand Palette — Modern White + Blue */
-    --primary-red: #1D4ED8;
-    --primary-red-hover: #1E40AF;
-    --primary-red-subtle: rgba(29, 78, 216, 0.08);
-    --primary-red-border: rgba(29, 78, 216, 0.2);
-    --primary-blue: #1D4ED8;
-    --primary-blue-hover: #1E40AF;
-    --primary-blue-dark: #172554;
-    --hero-bg: #1D4ED8;
-    --navbar-bg: rgba(23, 37, 84, 0.88);
+    /* Brand Palette — Option 2: Midnight Obsidian Slate */
+    --primary-red: #0F172A;
+    --primary-red-hover: #1E293B;
+    --primary-red-subtle: rgba(15, 23, 42, 0.06);
+    --primary-red-border: rgba(15, 23, 42, 0.16);
+    --primary-blue: #0F172A;
+    --primary-blue-hover: #1E293B;
+    --primary-blue-dark: #020617;
+    --hero-bg: #0F172A;
+    --navbar-bg: rgba(2, 6, 23, 0.90);
     --bg-white: #ffffff;
     --bg-card: #ffffff;
     --bg-input: #fbfbfb;
@@ -240,7 +240,7 @@ body {
 .textarea-wrapper:focus-within {
     border-color: var(--primary-red) !important;
     background-color: var(--bg-white) !important;
-    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12) !important;
+    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.12) !important;
 }
 
 /* Primary Red Button */
@@ -251,7 +251,7 @@ body {
 
 .submit-btn:hover:not(:disabled) {
     background: var(--primary-red-hover) !important;
-    box-shadow: 0 8px 24px rgba(29, 78, 216, 0.25) !important;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25) !important;
 }
 
 /* =====================================================

@@ -16,12 +16,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 100px;
-    background: rgba(23, 37, 84, 0.88);
+    background: rgba(2, 6, 23, 0.90);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
     transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -124,7 +124,7 @@
     padding: 13px 19px;
     border-radius: 50px;
     text-decoration: none;
-    color: #1D4ED8;
+    color: #0F172A;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.7px;
@@ -239,7 +239,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: #1D4ED8;
+    background: #0F172A;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease;
 }
@@ -256,7 +256,7 @@
 
 .theme-switch.light .switch-circle {
     left: 29px;
-    background: #1D4ED8;
+    background: #0F172A;
 }
 
 .theme-switch.light .switch-icon {
@@ -319,8 +319,8 @@
         min-height: 58px;
         padding: 0 9px 0 17px;
         border-radius: 22px;
-        background: rgba(23, 37, 84, 0.94);
-        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(2, 6, 23, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .nav-logo {
@@ -347,7 +347,7 @@
         align-items: stretch;
         gap: 4px;
         border-radius: 20px;
-        border: 1px solid rgba(29, 78, 216, 0.15);
+        border: 1px solid rgba(15, 23, 42, 0.12);
         background: rgba(255, 255, 255, 0.97);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -383,8 +383,8 @@
 
     .navmenu a:hover {
         padding-left: 18px;
-        background: rgba(29, 78, 216, 0.08);
-        color: #1D4ED8;
+        background: rgba(15, 23, 42, 0.08);
+        color: #0F172A;
     }
 
     .navmenu li::after {
@@ -392,8 +392,8 @@
     }
 
     .navmenu li.active a {
-        color: #1D4ED8;
-        background: rgba(29, 78, 216, 0.08);
+        color: #0F172A;
+        background: rgba(15, 23, 42, 0.08);
         font-weight: 700;
     }
 

@@ -52,8 +52,8 @@ const CustomCursor = () => {
                 ctx.save()
                 ctx.beginPath()
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
-                ctx.strokeStyle = `rgba(29, 78, 216, ${Math.max(0, this.alpha * 0.85)})`
-                ctx.shadowColor = "#1D4ED8"
+                ctx.strokeStyle = `rgba(56, 189, 248, ${Math.max(0, this.alpha * 0.85)})`
+                ctx.shadowColor = "#38BDF8"
                 ctx.shadowBlur = 12
                 ctx.lineWidth = 1.5
                 ctx.stroke()
@@ -164,17 +164,17 @@ const CustomCursor = () => {
                     ctx.quadraticCurveTo(p1.x, p1.y, midX, midY)
                     ctx.lineTo(p2.x, p2.y)
 
-                    ctx.strokeStyle = `rgba(29, 78, 216, ${progress * 0.85})`
+                    ctx.strokeStyle = `rgba(56, 189, 248, ${progress * 0.85})`
                     ctx.lineWidth = lineWidth
                     ctx.lineCap = "round"
                     ctx.lineJoin = "round"
-                    ctx.shadowColor = "#1D4ED8"
+                    ctx.shadowColor = "#38BDF8"
                     ctx.shadowBlur = isHovered ? 16 : 10
                     ctx.stroke()
                 }
                 ctx.restore()
 
-                // 2. SOFT AMBIENT GLOW ORB (Pure Blue)
+                // 2. SOFT AMBIENT GLOW ORB (Ice Blue)
                 ctx.save()
                 ctx.globalAlpha = currentAlpha
                 const orbGrad = ctx.createRadialGradient(
@@ -185,8 +185,8 @@ const CustomCursor = () => {
                     smoothMouse.y,
                     currentHaloRadius
                 )
-                orbGrad.addColorStop(0, isHovered ? "rgba(29, 78, 216, 0.35)" : "rgba(29, 78, 216, 0.22)")
-                orbGrad.addColorStop(0.6, "rgba(29, 78, 216, 0.08)")
+                orbGrad.addColorStop(0, isHovered ? "rgba(56, 189, 248, 0.35)" : "rgba(56, 189, 248, 0.22)")
+                orbGrad.addColorStop(0.6, "rgba(56, 189, 248, 0.08)")
                 orbGrad.addColorStop(1, "transparent")
 
                 ctx.fillStyle = orbGrad
@@ -202,18 +202,18 @@ const CustomCursor = () => {
 
                 ctx.beginPath()
                 ctx.arc(smoothMouse.x, smoothMouse.y, finalRingR, 0, Math.PI * 2)
-                ctx.strokeStyle = isHovered ? "#1D4ED8" : "rgba(255, 255, 255, 0.9)"
+                ctx.strokeStyle = isHovered ? "#38BDF8" : "rgba(255, 255, 255, 0.9)"
                 ctx.lineWidth = isHovered ? 2.0 : 1.4
-                ctx.shadowColor = "#1D4ED8"
+                ctx.shadowColor = "#38BDF8"
                 ctx.shadowBlur = isHovered ? 14 : 8
                 ctx.stroke()
 
                 // Smoothly fading Corner Marks
                 if (currentCornerDist > 4) {
                     const markAlpha = Math.min(1, (currentCornerDist - 4) / 12)
-                    ctx.strokeStyle = `rgba(29, 78, 216, ${markAlpha})`
+                    ctx.strokeStyle = `rgba(56, 189, 248, ${markAlpha})`
                     ctx.lineWidth = 1.8
-                    ctx.shadowColor = "#1D4ED8"
+                    ctx.shadowColor = "#38BDF8"
                     ctx.shadowBlur = 8
 
                     const d = currentCornerDist
@@ -248,7 +248,7 @@ const CustomCursor = () => {
                 ctx.beginPath()
                 ctx.arc(smoothMouse.x, smoothMouse.y, isHovered ? 3.0 : 2.0, 0, Math.PI * 2)
                 ctx.fillStyle = "#ffffff"
-                ctx.shadowColor = "#1D4ED8"
+                ctx.shadowColor = "#38BDF8"
                 ctx.shadowBlur = 8
                 ctx.fill()
                 ctx.restore()

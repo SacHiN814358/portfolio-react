@@ -46,8 +46,8 @@
 
     background: linear-gradient(
         90deg,
-        #1D4ED8,
-        #1D4ED8
+        #0F172A,
+        #0F172A
     );
 }
 
@@ -89,8 +89,8 @@
 .skills-heading-wrap h2 span {
     background: linear-gradient(
         110deg,
-        #1D4ED8,
-        #1D4ED8
+        #0F172A,
+        #0F172A
     );
 
     background-clip: text;
@@ -277,8 +277,8 @@
 
     background: linear-gradient(
         180deg,
-        #1D4ED8,
-        #1D4ED8
+        #0F172A,
+        #0F172A
     );
 
     transition:
@@ -358,7 +358,7 @@
 .skill-card:hover {
     transform: translateY(-3px);
 
-    border-color: #1D4ED8;
+    border-color: #0F172A;
 
     background:
         linear-gradient(
@@ -380,7 +380,7 @@
 }
 
 .skill-card:hover .skill-index {
-    color: #1D4ED8;
+    color: #0F172A;
 }
 
 .skill-card:hover .skill-name {
@@ -488,7 +488,7 @@ body.light-theme .skill-card {
 }
 
 body.light-theme .skill-card:hover {
-    border-color: #1D4ED8;
+    border-color: #0F172A;
 
     background:
         linear-gradient(

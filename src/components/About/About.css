@@ -55,7 +55,7 @@
 .about-label span {
     width: 32px;
     height: 1px;
-    background: #1D4ED8;
+    background: #0F172A;
 }
 
 .about-header h2 {
@@ -69,9 +69,9 @@
 }
 
 .about-header h2 span {
-    color: #1D4ED8;
+    color: #0F172A;
     background: none;
-    -webkit-text-fill-color: #1D4ED8;
+    -webkit-text-fill-color: #0F172A;
 }
 
 
@@ -132,7 +132,7 @@
 
 .about-detail:hover {
     padding-left: 8px;
-    border-color: #1D4ED8;
+    border-color: #0F172A;
 }
 
 
@@ -193,9 +193,9 @@
 }
 
 .tech-list span:hover {
-    color: #1D4ED8;
-    border-color: #1D4ED8;
-    background: rgba(29, 78, 216, 0.05);
+    color: #0F172A;
+    border-color: #0F172A;
+    background: rgba(15, 23, 42, 0.05);
 }
 
 
