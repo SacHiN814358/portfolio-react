@@ -205,15 +205,15 @@
 .contact-card:hover {
     transform: translateY(-3px);
     border-color: #1D4ED8;
-    box-shadow: 0 12px 30px rgba(230, 57, 70, 0.08);
+    box-shadow: 0 12px 30px rgba(29, 78, 216, 0.08);
 }
 
 .card-icon-box {
     width: 46px;
     height: 46px;
     border-radius: 14px;
-    background: rgba(230, 57, 70, 0.08);
-    border: 1px solid rgba(230, 57, 70, 0.15);
+    background: rgba(29, 78, 216, 0.08);
+    border: 1px solid rgba(29, 78, 216, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -349,7 +349,7 @@
     border-color: #1D4ED8;
     background: #1D4ED8;
     color: #ffffff;
-    box-shadow: 0 6px 18px rgba(230, 57, 70, 0.25);
+    box-shadow: 0 6px 18px rgba(29, 78, 216, 0.25);
 }
 
 .social-pill svg {
@@ -422,14 +422,14 @@
 .service-chip:hover {
     border-color: #1D4ED8;
     color: #1D4ED8;
-    background: rgba(230, 57, 70, 0.05);
+    background: rgba(29, 78, 216, 0.05);
 }
 
 .service-chip.active {
     background: #1D4ED8;
     border-color: #1D4ED8;
     color: #ffffff;
-    box-shadow: 0 4px 14px rgba(230, 57, 70, 0.25);
+    box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
 }
 
 
@@ -471,7 +471,7 @@
 .input-wrapper:focus-within {
     border-color: #1D4ED8;
     background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.12);
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
 }
 
 .input-icon {
@@ -543,13 +543,13 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.3s ease;
-    box-shadow: 0 4px 14px rgba(230, 57, 70, 0.25);
+    box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
 }
 
 .submit-btn:hover:not(:disabled) {
     transform: translateY(-2px);
     background: #d62839;
-    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.35);
+    box-shadow: 0 8px 25px rgba(29, 78, 216, 0.35);
 }
 
 .submit-btn:disabled {

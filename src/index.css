@@ -240,7 +240,7 @@ body {
 .textarea-wrapper:focus-within {
     border-color: var(--primary-red) !important;
     background-color: var(--bg-white) !important;
-    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.12) !important;
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12) !important;
 }
 
 /* Primary Red Button */
@@ -251,7 +251,7 @@ body {
 
 .submit-btn:hover:not(:disabled) {
     background: var(--primary-red-hover) !important;
-    box-shadow: 0 8px 24px rgba(230, 57, 70, 0.25) !important;
+    box-shadow: 0 8px 24px rgba(29, 78, 216, 0.25) !important;
 }
 
 /* =====================================================

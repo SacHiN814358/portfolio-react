@@ -319,8 +319,8 @@
         min-height: 58px;
         padding: 0 9px 0 17px;
         border-radius: 22px;
-        background: rgba(230, 57, 70, 0.92);
-        border-color: rgba(255, 255, 255, 0.15);
+        background: rgba(23, 37, 84, 0.94);
+        border: 1px solid rgba(255, 255, 255, 0.18);
     }
 
     .nav-logo {
@@ -347,7 +347,7 @@
         align-items: stretch;
         gap: 4px;
         border-radius: 20px;
-        border: 1px solid rgba(230, 57, 70, 0.15);
+        border: 1px solid rgba(29, 78, 216, 0.15);
         background: rgba(255, 255, 255, 0.97);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -383,7 +383,7 @@
 
     .navmenu a:hover {
         padding-left: 18px;
-        background: rgba(230, 57, 70, 0.08);
+        background: rgba(29, 78, 216, 0.08);
         color: #1D4ED8;
     }
 
@@ -393,7 +393,7 @@
 
     .navmenu li.active a {
         color: #1D4ED8;
-        background: rgba(230, 57, 70, 0.08);
+        background: rgba(29, 78, 216, 0.08);
         font-weight: 700;
     }
 
