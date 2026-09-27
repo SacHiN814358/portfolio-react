@@ -1,0 +1,288 @@
+/* =====================================================
+   PRELOADER v4 — Center Name + Expanding Side Lines
+   Compact · Smooth · GPU-only
+===================================================== */
+
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #060C1B;
+    overflow: hidden;
+    pointer-events: all;
+}
+
+.preloader.preloader--exit {
+    animation: preloaderExit 0.9s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+/* ---- Grid ---- */
+.preloader__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(37, 99, 235, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.02) 1px, transparent 1px);
+    background-size: 70px 70px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.1s forwards;
+}
+
+/* ---- Ambient ---- */
+.preloader__ambient {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.preloader__ambient--1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 65%);
+    top: 30%;
+    left: -5%;
+    animation: fadeIn 1.5s ease-out 0.3s forwards;
+}
+
+.preloader__ambient--2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.06) 0%, transparent 65%);
+    top: 25%;
+    right: -5%;
+    animation: fadeIn 1.5s ease-out 0.5s forwards;
+}
+
+/* ---- Vignette ---- */
+.preloader__vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ---- Content ---- */
+.preloader__content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* ============================
+   NAME ROW — line · name · line
+   ============================ */
+.preloader__name-row {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    max-width: 900px;
+    gap: 24px;
+}
+
+/* Side lines — grow outward from the name */
+.preloader__side-line {
+    flex: 1;
+    height: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.preloader__side-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.5), rgba(56, 189, 248, 0.35));
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Left line: grows from right → left */
+.preloader__side-line--left::after {
+    right: 0;
+    transform-origin: right center;
+    transform: scaleX(0);
+    animation: lineGrow 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.45), rgba(56, 189, 248, 0.4));
+}
+
+/* Right line: grows from left → right */
+.preloader__side-line--right::after {
+    left: 0;
+    transform-origin: left center;
+    transform: scaleX(0);
+    animation: lineGrow 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+    background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), rgba(37, 99, 235, 0.45), transparent);
+}
+
+/* Name text */
+.preloader__name {
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(20px, 3.2vw, 32px);
+    font-weight: 600;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+    white-space: nowrap;
+    text-align: center;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: scale(0.85);
+    animation: nameIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    text-shadow: 0 0 25px rgba(37, 99, 235, 0.3), 0 0 60px rgba(37, 99, 235, 0.08);
+}
+
+/* ---- Role ---- */
+.preloader__role {
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(10px, 1.4vw, 13px);
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: rgba(37, 99, 235, 0.7);
+    text-align: center;
+    margin-top: 18px;
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fadeUp 0.6s ease-out 1.2s forwards;
+    text-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+}
+
+/* ---- Progress bar ---- */
+.preloader__progress {
+    position: relative;
+    width: min(260px, 55vw);
+    height: 1.5px;
+    margin-top: 36px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 2px;
+    overflow: visible;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-out 1.5s forwards;
+}
+
+.preloader__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #2563EB, #38BDF8);
+    transform-origin: left;
+    transform: scaleX(0);
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.5), 0 0 20px rgba(37, 99, 235, 0.15);
+}
+
+.preloader__bar--animate {
+    animation: progressFill 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.6s forwards;
+}
+
+.preloader__bar::after {
+    content: "";
+    position: absolute;
+    right: -3px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #38BDF8;
+    box-shadow: 0 0 6px rgba(56, 189, 248, 0.9), 0 0 16px rgba(56, 189, 248, 0.4);
+}
+
+/* ---- Percent ---- */
+.preloader__percent {
+    font-family: "Outfit", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.25);
+    margin-top: 12px;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-out 1.6s forwards;
+    font-variant-numeric: tabular-nums;
+}
+
+.preloader__percent span {
+    color: rgba(56, 189, 248, 0.65);
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   KEYFRAMES
+===================================================== */
+
+@keyframes nameIn {
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes lineGrow {
+    to { transform: scaleX(1); }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes progressFill {
+    0%   { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+
+@keyframes preloaderExit {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .preloader, .preloader * {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .preloader__name { opacity: 1; transform: none; }
+    .preloader__side-line--left::after,
+    .preloader__side-line--right::after { transform: scaleX(1); }
+    .preloader__role, .preloader__progress,
+    .preloader__percent { opacity: 1; transform: none; }
+    .preloader__bar--animate { transform: scaleX(1); }
+    .preloader__grid, .preloader__ambient { opacity: 1; }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+    .preloader__name-row { width: 92%; gap: 16px; }
+    .preloader__name { letter-spacing: 6px; }
+    .preloader__role { letter-spacing: 4px; margin-top: 14px; }
+}
+
+@media (max-width: 400px) {
+    .preloader__name-row { gap: 10px; }
+    .preloader__name { letter-spacing: 4px; font-size: 16px; }
+    .preloader__role { letter-spacing: 3px; font-size: 9px; }
+    .preloader__progress { width: 160px; }
+}

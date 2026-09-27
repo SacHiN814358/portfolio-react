@@ -1,7 +1,7 @@
 import "./Footer.css"
 import { useTheme } from "../../context/ThemeContext"
-import logoWhite from "../../assets/logo-whitee.png"
-import logoBlack from "../../assets/logo-blackk.png"
+import logoDark from "../../assets/logo-dark.svg"
+import logoLight from "../../assets/logo-light.svg"
 
 const Footer = () => {
   const { isLight } = useTheme()
@@ -21,7 +21,7 @@ const Footer = () => {
         {/* BRAND */}
         <div className="footer-brand">
           <img
-            src={isLight ? logoWhite : logoBlack}
+            src={isLight ? logoLight : logoDark}
             alt="Sachin Logo"
             className="footer-brand-logo"
           />

@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Navbar from "./components/NAVBAR/navbar"
 import Hero from "./components/hero/hero"
 import About from "./components/About/About"
@@ -8,38 +9,47 @@ import Footer from "./components/Footer/Footer.jsx"
 import CustomCursor from "./components/CustomCursor/CustomCursor"
 import Skills from "./components/Skills/Skills"
 import ScrollReveal from "./components/ScrollReveal/ScrollReveal"
+import Preloader from "./components/Preloader/Preloader"
 
 const App = () => {
+  const [loading, setLoading] = useState(true)
+
   return (
-    <div>
-      <CustomCursor />
-      <Navbar />
-      <Hero />
+    <>
+      {loading && <Preloader onComplete={() => setLoading(false)} />}
 
-      <ScrollReveal>
-        <About />
-      </ScrollReveal>
+      {/* Main site — rendered but visually hidden behind the preloader
+          so it is fully painted by the time the preloader exits. */}
+      <div style={loading ? { visibility: "hidden", overflow: "hidden", height: 0 } : undefined}>
+        <CustomCursor />
+        <Navbar />
+        <Hero />
 
-      <ScrollReveal>
-        <Skills />
-      </ScrollReveal>
+        <ScrollReveal>
+          <About />
+        </ScrollReveal>
 
-      <ScrollReveal>
-        <Services />
-      </ScrollReveal>
+        <ScrollReveal>
+          <Skills />
+        </ScrollReveal>
 
-      <ScrollReveal>
-        <Mywork />
-      </ScrollReveal>
+        <ScrollReveal>
+          <Services />
+        </ScrollReveal>
 
-      <ScrollReveal>
-        <Contact />
-      </ScrollReveal>
+        <ScrollReveal>
+          <Mywork />
+        </ScrollReveal>
 
-      <ScrollReveal>
-        <Footer />
-      </ScrollReveal>
-    </div>
+        <ScrollReveal>
+          <Contact />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Footer />
+        </ScrollReveal>
+      </div>
+    </>
   )
 }
 

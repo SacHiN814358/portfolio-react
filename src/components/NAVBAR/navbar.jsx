@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./navbar.css";
 import { useTheme } from "../../context/ThemeContext";
-import logoWhite from "../../assets/logo-whitee.png";
-import logoBlack from "../../assets/logo-blackk.png";
+import logoDark from "../../assets/logo-dark.svg";
+import logoLight from "../../assets/logo-light.svg";
 
 const Navbar = () => {
     const { isLight } = useTheme();
@@ -112,7 +112,7 @@ const Navbar = () => {
                 >
                     <img
                         className="nav-logo"
-                        src={isLight ? logoWhite : logoBlack}
+                        src={isLight ? logoLight : logoDark}
                         alt="Sachin"
                     />
                 </a>

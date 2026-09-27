@@ -103,17 +103,14 @@
 }
 
 .skills-heading-wrap > p {
-    width: 300px;
-
+    width: 280px;
     flex-shrink: 0;
-
     margin: 0 0 5px;
-
+    padding-left: 16px;
     color: #85858e;
-
     font-size: 13px;
-
-    line-height: 1.8;
+    line-height: 1.85;
+    border-left: 2px solid var(--brand-accent, #2563EB);
 }
 
 
@@ -214,11 +211,8 @@
 
 .skills-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(180px, 1fr));
-
-    gap: 10px;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 14px;
 }
 
 
@@ -228,37 +222,22 @@
 
 .skill-card {
     position: relative;
-
     min-height: 65px;
-
     display: flex;
-
     align-items: center;
-
     gap: 14px;
-
-    padding: 0 15px;
-
+    padding: 0 18px;
     box-sizing: border-box;
-
     border: 1px solid #e5e5e5;
-
+    border-radius: 10px;
     background: #ffffff;
-
     overflow: hidden;
-
     cursor: default;
-
     transition:
-        transform 0.45s
-        cubic-bezier(
-            0.22,
-            1,
-            0.36,
-            1
-        ),
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
         border-color 0.35s ease,
-        background-color 0.35s ease;
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 
@@ -268,29 +247,14 @@
 
 .skill-card::before {
     content: "";
-
     position: absolute;
-
     left: 0;
     top: 0;
-
-    width: 2px;
+    width: 3px;
     height: 0;
-
-    background: linear-gradient(
-        180deg,
-        #2563EB,
-        #38BDF8
-    );
-
-    transition:
-        height 0.45s
-        cubic-bezier(
-            0.22,
-            1,
-            0.36,
-            1
-        );
+    border-radius: 0 2px 2px 0;
+    background: linear-gradient(180deg, #2563EB, #38BDF8);
+    transition: height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .skill-card:hover::before {
@@ -359,9 +323,9 @@
 
 .skill-card:hover {
     transform: translateY(-3px);
-    border-color: #2563EB;
-    background: rgba(37, 99, 235, 0.04);
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
+    border-color: rgba(37, 99, 235, 0.4);
+    background: rgba(37, 99, 235, 0.03);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.1);
 }
 
 .skill-card:hover .skill-index {
