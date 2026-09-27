@@ -1,6 +1,6 @@
 import project1_img from "../assets/project_1.svg";
 import anand_sports_img from "../assets/anand-sports.webp";
-import project3_img from "../assets/project_3.svg";
+import blossom_img from "../assets/blossom-gallery.webp";
 import project4_img from "../assets/project_4.svg";
 import project5_img from "../assets/project_5.svg";
 import project6_img from "../assets/project_6.svg";
@@ -26,12 +26,12 @@ const mywork_data = [
     },
     {
         w_no: 3,
-        w_title: "Project 03",
-        w_name: "Web Design",
-        w_img: project3_img,
-        w_tech: ["HTML", "CSS", "JavaScript"],
-        w_live: null,
-        w_github: null,
+        w_title: "Blossom Gift Gallery",
+        w_name: "A modern gift-gifting e-commerce website built with a clean, elegant interface for browsing and purchasing gifts online.",
+        w_img: blossom_img,
+        w_tech: ["React", "Vite", "Tailwind CSS", "Supabase"],
+        w_live: "https://blossomgiftsgallery.vercel.app",
+        w_github: "https://github.com/SacHiN814358/Blossom",
     },
     {
         w_no: 4,
