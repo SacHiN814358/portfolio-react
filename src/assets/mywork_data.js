@@ -1,5 +1,5 @@
 import project1_img from "../assets/project_1.svg";
-import project2_img from "../assets/project_2.svg";
+import anand_sports_img from "../assets/anand-sports.webp";
 import project3_img from "../assets/project_3.svg";
 import project4_img from "../assets/project_4.svg";
 import project5_img from "../assets/project_5.svg";
@@ -19,7 +19,7 @@ const mywork_data = [
         w_no: 2,
         w_title: "Anand Sports",
         w_name: "Modern E-Commerce Platform for Sports Apparel & Equipment with Next.js 14, Dynamic Product Showcase, Cart & Wholesaler Management",
-        w_img: project2_img,
+        w_img: anand_sports_img,
         w_tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Radix UI", "E-Commerce"],
         w_live: "https://anand-sports.vercel.app",
         w_github: "https://github.com/SacHiN814358/anand-sports",
