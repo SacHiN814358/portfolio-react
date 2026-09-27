@@ -17,12 +17,12 @@ const mywork_data = [
     },
     {
         w_no: 2,
-        w_title: "Project 02",
-        w_name: "Web Design",
+        w_title: "Anand Sports",
+        w_name: "Modern E-Commerce Platform for Sports Apparel & Equipment with Next.js 14, Dynamic Product Showcase, Cart & Wholesaler Management",
         w_img: project2_img,
-        w_tech: ["HTML", "CSS", "JavaScript"],
-        w_live: null,
-        w_github: null,
+        w_tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Radix UI", "E-Commerce"],
+        w_live: "https://anand-sports.vercel.app",
+        w_github: "https://github.com/SacHiN814358/anand-sports",
     },
     {
         w_no: 3,
